@@ -1,6 +1,6 @@
 import os
 import sys
-from ui_interface import *
+from ui_UserForm2 import *
 from PySide2.QtWidgets import QMainWindow, QApplication
 from Custom_Widgets.Widgets import *
 
@@ -14,11 +14,11 @@ class MainWindowApp(QMainWindow):
 
         self.show()
 
-        self.ui.settingsBtn.clicked.connect(lambda: self.ui.centerMenuContainer.expandMenu())
-        self.ui.helpBtn.clicked.connect(lambda: self.ui.centerMenuContainer.expandMenu())
-        self.ui.infoBtn.clicked.connect(lambda: self.ui.centerMenuContainer.expandMenu())
+        self.ui.settingsBtn.clicked.connect(lambda: self.ui.centerMenuSubContainer.expandMenu())
+        self.ui.helpBtn.clicked.connect(lambda: self.ui.centerMenuSubContainer.expandMenu())
+        self.ui.infoBtn.clicked.connect(lambda: self.ui.centerMenuSubContainer.expandMenu())
         
-        self.ui.closeCenterMenuBtn.clicked.connect(lambda: self.ui.centerMenuContainer.collapseMenu())
+        self.ui.closeCenterMenuBtn.clicked.connect(lambda: self.ui.centerMenuSubContainer.collapseMenu())
 
         self.ui.moreMenuBtn.clicked.connect(lambda: self.ui.rightMenuContainer.expandMenu())
         self.ui.profileMenuBtn.clicked.connect(lambda: self.ui.rightMenuContainer.expandMenu())
