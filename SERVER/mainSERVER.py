@@ -5,9 +5,7 @@ app = Flask(__name__)
 
 @app.route('/get_png')
 def get_png():
-    # Đường dẫn đến file PNG
     png_path = 'icon-app-user.png'
-    # Gửi file về client
     return send_file(png_path, mimetype='image/png')
 
 # ALL ROUTE
