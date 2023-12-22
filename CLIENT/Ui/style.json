@@ -1,0 +1,195 @@
+{
+	"QMainWindow":[
+		{
+			"tittle":"Games Trader",
+			"icon":":/Icons/IconsFolder/briefcase.svg",
+			"frameless": true,
+			"transluscentBg": true,
+			"sizeGrip": "sizeGrip",
+			"navigation":[
+				{
+					"minimize":"minimizeBtn",
+					"close": "closeBtn",
+					"restore":[
+						{	
+							"buttonName": "restoreBtn",
+							"normalIcon": ":/Icons/IconsFolder/square.svg",
+							"maximizedIcon": ":/Icons/IconsFolder/copy.svg"
+						}
+					],
+					"moveWindow": "headerContainer",
+					"tittleBar": "headerContainer"
+				}
+			]
+		}
+	],
+    "QCustomSlideMenu": [
+        {
+            "name": "leftMenuContainer",
+            "defaultSize": [{
+                "width": 45,
+                "height": "parent"
+            }],
+            "collapsedSize": [{
+                "width": 45,
+                "height": "parent"
+            }],
+            "expandedSize": [{
+                "width": 150,
+                "height": "parent"
+            }],
+            "toggleButton": [{
+                "buttonName": "menuBtn",
+                "icons": [{
+                    "whenMenuIsCollapsed": ":/Icons/IconsFolder/align-justify.svg",
+                    "whenMenuIsExpanded": ":/Icons/IconsFolder/chevron-left.svg"
+                }]
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 100,
+                "animationEasingCurve": "Linear"
+            }]
+        },
+        {
+            "name": "centerMenuContainer",
+            "defaultSize": [{
+                "width": 0,
+                "height": "parent"
+            }],
+            "collapsedSize": [{
+                "width": 0,
+                "height": "parent"
+            }],
+            "expandedSize": [{
+                "width": 200,
+                "height": "parent"
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 100,
+                "animationEasingCurve": "Linear"
+            }]
+        },
+        {
+            "name": "rightMenuContainer",
+            "defaultSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "collapsedSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "expandedSize": [{
+                "width": 210,
+                "height": "auto"
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 100,
+                "animationEasingCurve": "Linear"
+            }]
+        },
+        {
+            "name": "popupNotificationContainer",
+            "defaultSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "collapsedSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "expandedSize": [{
+                "width": 920,
+                "height": 120
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 100,
+                "animationEasingCurve": "Linear"
+            }],
+            "floatPosition": [
+                {
+                    "relativeTo": "centralwidget",
+                    "position": "bottom-center",
+                    "shadow":[
+                        {
+                            "color": "#000",
+                            "blurRadius": 20,
+                            "xOffset": 0,
+                            "yOffset": 0
+                        }
+                    ]
+                }
+            ],
+            "toggleButton": [{
+                "buttonName": "notificationBtn"
+            }]
+        }
+    ],
+    "QCustomQStackedWidget":[
+		{
+			"name":"mainPages",
+			"navigation":[
+				{
+					"navigationButtons":[
+						{
+							"homeBtn": "homePage",
+                            "dataBtn": "dataPage",
+							"reportBtn": "reportPage"
+						}
+					]
+				}
+			]
+		},
+        {
+			"name":"centerMenuPages",
+			"navigation":[
+				{
+					"navigationButtons":[
+						{
+							"settingsBtn": "settingsPage",
+                            "infoBtn": "infoPage",
+							"helpBtn": "helpPage"
+						}
+					]
+				}
+			]
+		},
+        {
+			"name":"rightMenuPages",
+			"navigation":[
+				{
+					"navigationButtons":[
+						{
+							"profileMenuBtn": "profilePage",
+                            "moreMenuBtn": "morePage"
+						}
+					]
+				}
+			]
+		}
+	],
+    "QPushButtonGroup": [
+        {
+            "Buttons": [
+                "homeBtn",
+                "dataBtn",
+                "reportBtn"
+            ],
+            "Style":[{
+                "Active": "background-color: #1f232a;",
+                "NotActive": "background-color: transparent;"
+            }]
+        },
+        {
+            "Buttons": [
+                "settingsBtn",
+                "infoBtn",
+                "helpBtn"
+            ],
+            "Style":[{
+                "Active": "background-color: #2c313c;",
+                "NotActive": "background-color: transparent;"
+            }]
+        }
+    ]
+}

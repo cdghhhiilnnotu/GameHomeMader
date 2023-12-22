@@ -1,0 +1,224 @@
+{
+	"QMainWindow":[
+		{
+			"tittle":"Games Traders",
+			"icon":":/images/icon-app-user.png",
+			"frameless": true,
+			"transluscentBg": true,
+			"sizeGrip": "sizeGrip",
+			"navigation":[
+				{
+					"minimize":"minimizeBtn",
+					"close": "closeBtn",
+					"restore":[
+						{	
+							"buttonName": "restoreBtn",
+							"normalIcon": ":/icons/EC8482/square.svg",
+							"maximizedIcon": ":/icons/EC8482/copy.svg"
+						}
+					],
+					"moveWindow": "headerContainer",
+					"tittleBar": "headerContainer"
+				}
+			]
+		}
+	],
+    "QCustomSlideMenu": [
+        {
+            "name": "leftMenuContainer",
+            "defaultSize": [{
+                "width": 55,
+                "height": "parent"
+            }],
+            "collapsedSize": [{
+                "width": 55,
+                "height": "parent"
+            }],
+            "expandedSize": [{
+                "width": 200,
+                "height": "parent"
+            }],
+            "toggleButton": [{
+                "buttonName": "menuBtn",
+                "icons": [{
+                    "whenMenuIsCollapsed": ":/icons/EC8482/align-justify.svg",
+                    "whenMenuIsExpanded": ":/icons/EC8482/chevron-left.svg"
+                }]
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 100,
+                "animationEasingCurve": "Linear"
+            }]
+        },
+        {
+            "name": "centerMenuSubContainer",
+            "defaultSize": [{
+                "width": 0,
+                "height": "parent"
+            }],
+            "collapsedSize": [{
+                "width": 0,
+                "height": "parent"
+            }],
+            "expandedSize": [{
+                "width": 1000,
+                "height": "parent"
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 100,
+                "animationEasingCurve": "Linear"
+            }],
+            "floatPosition": [
+                {
+                    "relativeTo": "centralwidget",
+                    "position": "top-center",
+                    "shadow":[
+                        {
+                            "color": "#000",
+                            "blurRadius": 20,
+                            "xOffset": 0,
+                            "yOffset": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "rightMenuContainer",
+            "defaultSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "collapsedSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "expandedSize": [{
+                "width": 1000,
+                "height": "auto"
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 100,
+                "animationEasingCurve": "Linear"
+            }],
+            "floatPosition": [
+                {
+                    "relativeTo": "centralwidget",
+                    "position": "top-center",
+                    "shadow":[
+                        {
+                            "color": "#000",
+                            "blurRadius": 20,
+                            "xOffset": 0,
+                            "yOffset": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "popupNotificationContainer",
+            "defaultSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "collapsedSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "expandedSize": [{
+                "width": 900,
+                "height": 120
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 100,
+                "animationEasingCurve": "Linear"
+            }],
+            "floatPosition": [
+                {
+                    "relativeTo": "centralwidget",
+                    "position": "top-center",
+                    "shadow":[
+                        {
+                            "color": "#000",
+                            "blurRadius": 20,
+                            "xOffset": 0,
+                            "yOffset": 0
+                        }
+                    ]
+                }
+            ],
+            "toggleButton": [{
+                "buttonName": "notificationBtn"
+            }]
+        }
+    ],
+    "QCustomQStackedWidget":[
+		{
+			"name":"mainPages",
+			"navigation":[
+				{
+					"navigationButtons":[
+						{
+							"homeBtn": "homePage",
+                            "gamesBtn": "gamesPage",
+							"cartsBtn": "cartsPage"
+						}
+					]
+				}
+			]
+		},
+        {
+			"name":"centerMenuPages",
+			"navigation":[
+				{
+					"navigationButtons":[
+						{
+							"settingsBtn": "settingsPage",
+                            "infoBtn": "infoPage",
+							"helpBtn": "helpPage"
+						}
+					]
+				}
+			]
+		},
+        {
+			"name":"rightMenuPages",
+			"navigation":[
+				{
+					"navigationButtons":[
+						{
+							"profileMenuBtn": "profilePage",
+                            "moreMenuBtn": "morePage"
+						}
+					]
+				}
+			]
+		}
+	],
+    "QPushButtonGroup": [
+        {
+            "Buttons": [
+                "homeBtn",
+                "gamesBtn",
+                "cartsBtn"
+            ],
+            "Style":[{
+                "Active": "background-color: #1f232a;",
+                "NotActive": "background-color: transparent;"
+            }]
+        },
+        {
+            "Buttons": [
+                "settingsBtn",
+                "infoBtn",
+                "helpBtn",
+                "closeCenterMenuBtn"
+            ],
+            "Style":[{
+                "Active": "background-color: #2c313c;",
+                "NotActive": "background-color: transparent;"
+            }]
+        }
+    ]
+}
