@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
+    <width>1391</width>
     <height>726</height>
    </rect>
   </property>
@@ -656,7 +656,7 @@
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap resource="resources.qrc">:/images/icon-app-user.png</pixmap>
+                <pixmap>:/images/icon-app-user.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -1764,7 +1764,7 @@ border: 2px solid rgba(0,0,0,100)</string>
                      <enum>Qt::MarkdownText</enum>
                     </property>
                     <property name="pixmap">
-                     <pixmap resource="resources.qrc">:/images/icon-app-user.png</pixmap>
+                     <pixmap>:/images/icon-app-user.png</pixmap>
                     </property>
                     <property name="scaledContents">
                      <bool>true</bool>
