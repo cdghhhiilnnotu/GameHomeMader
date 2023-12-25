@@ -1745,9 +1745,9 @@ QPushButton:hover
                     <property name="geometry">
                      <rect>
                       <x>30</x>
-                      <y>20</y>
+                      <y>10</y>
                       <width>151</width>
-                      <height>171</height>
+                      <height>191</height>
                      </rect>
                     </property>
                     <property name="styleSheet">
@@ -1788,6 +1788,22 @@ border: 2px solid rgba(0,0,0,100)</string>
                     <property name="styleSheet">
                      <string notr="true">border: 2px SOLID rgba(0,0,0,100)</string>
                     </property>
+                    <widget class="QLabel" name="videoLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>8</x>
+                       <y>9</y>
+                       <width>371</width>
+                       <height>201</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
                    </widget>
                    <widget class="QPushButton" name="doneBtn_2">
                     <property name="geometry">

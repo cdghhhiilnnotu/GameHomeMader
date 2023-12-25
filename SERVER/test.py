@@ -24,9 +24,9 @@ dataNew = {
     'transaction_id_number' : '4278967967896789'
 }
 
-# response = requests.post(BASE + 'payments', data=dataNew)
+response = requests.post(BASE + 'payments', data=dataNew)
 # response = requests.put(BASE + 'payments/6', data=dataNew)
-response = requests.delete(BASE + 'payments/6')
-print(response.json()['payments'])
+# response = requests.delete(BASE + 'payments/6')
+print(response.json())
 
 

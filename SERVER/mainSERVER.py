@@ -1,7 +1,36 @@
-from flask import Flask, request, jsonify, send_file
-from Data.mainDATA import jsonDict
+from flask import Flask, request, jsonify, send_file, send_from_directory
+from Data.mainDATABASE import *
+import os
+import shutil
 
 app = Flask(__name__)
+
+@app.route('/get_video')
+def get_video():
+    video_path = 'Assets\\videos\\video1.mp4'
+    return send_file(video_path, mimetype='video/mp4', as_attachment=True, download_name='downloaded_video.mp4')
+
+video_path = 'video1.mp4'
+VIDEO_DIR = 'Assets\\videos\\'
+@app.route('/download')
+def download_video():
+    # Validate file path
+    if not video_path or video_path.startswith('/') or video_path.endswith('/'):
+        return "Invalid video path", 400
+
+    try:
+        # Try opening the video file
+        video_file = open(f"{VIDEO_DIR}/{video_path}", 'rb')
+    except FileNotFoundError:
+        return "Video not found", 404
+
+    # Get file extension and set content type
+    file_extension = video_path.split(".")[-1]
+    content_type = f"video/{file_extension}"
+
+    # Send the video file to the client
+    return send_from_directory(VIDEO_DIR, video_path, as_attachment=True, content_type=content_type)
+
 
 @app.route('/get_png')
 def get_png():
@@ -174,12 +203,12 @@ def post_payment():
         data = {}
         data['amount'] = float(request.form['amount'])
         data['id'] = int(request.form['id'])
-        data['payment_method'] = request.form['payment_method']
+        data['payment_method'] = str(request.form['payment_method'])
         data['transaction_id'] = float(request.form['transaction_id'])
         data['transaction_id_number'] = request.form['transaction_id_number']
 
         jsonDict['payments'][f'payment{len(jsonDict["payments"])}'] = data
-
+        database.insertPayment(data)
     return jsonify(jsonDict), 201
 
 @app.route('/payments/<int:payment_id_put>', methods=['PUT'])
@@ -207,4 +236,6 @@ def delete_payment_by_id(payment_id_delete):
 
 
 if __name__ == "__main__":
+    database = DATABASE()
+    jsonDict = database.jsonData
     app.run(host='0.0.0.0', port=5000, debug=True)
