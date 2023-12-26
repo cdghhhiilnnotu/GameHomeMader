@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'UserFormEgtLvY.ui'
+## Form generated from reading UI file 'UserFormviaQLz.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -15,13 +15,13 @@ from PySide2.QtWidgets import *
 from Custom_Widgets.QCustomSlideMenu import QCustomSlideMenu
 from Custom_Widgets.QCustomQStackedWidget import QCustomQStackedWidget
 
-import resources_rc
+import Ui.resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1280, 726)
+        MainWindow.resize(1391, 726)
         MainWindow.setStyleSheet(u"* {\n"
 "	border:none;\n"
 "	background-color: transparent;\n"
@@ -706,7 +706,7 @@ class Ui_MainWindow(object):
         self.descriptionGameLine.setStyleSheet(u"color: rgb(0, 0, 0);")
         self.AvatarLabel_2 = QLabel(self.gameInfo)
         self.AvatarLabel_2.setObjectName(u"AvatarLabel_2")
-        self.AvatarLabel_2.setGeometry(QRect(30, 20, 151, 171))
+        self.AvatarLabel_2.setGeometry(QRect(30, 10, 151, 191))
         self.AvatarLabel_2.setStyleSheet(u"border-radius: 20px;\n"
 "border: 2px solid rgba(0,0,0,100)")
         self.AvatarLabel_2.setLineWidth(0)
@@ -719,6 +719,10 @@ class Ui_MainWindow(object):
         self.videoWidget.setObjectName(u"videoWidget")
         self.videoWidget.setGeometry(QRect(580, 10, 384, 216))
         self.videoWidget.setStyleSheet(u"border: 2px SOLID rgba(0,0,0,100)")
+        self.videoLabel = QLabel(self.videoWidget)
+        self.videoLabel.setObjectName(u"videoLabel")
+        self.videoLabel.setGeometry(QRect(8, 9, 371, 201))
+        self.videoLabel.setAlignment(Qt.AlignCenter)
         self.doneBtn_2 = QPushButton(self.gameInfo)
         self.doneBtn_2.setObjectName(u"doneBtn_2")
         self.doneBtn_2.setGeometry(QRect(580, 400, 181, 41))
@@ -1115,6 +1119,7 @@ class Ui_MainWindow(object):
         self.idGameLine.setText(QCoreApplication.translate("MainWindow", u"2055010153", None))
         self.nameGameLine.setText("")
         self.AvatarLabel_2.setText("")
+        self.videoLabel.setText("")
         self.doneBtn_2.setText(QCoreApplication.translate("MainWindow", u" Play", None))
         self.rightMenuTile.setText(QCoreApplication.translate("MainWindow", u"   Menu", None))
 #if QT_CONFIG(tooltip)

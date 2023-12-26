@@ -15,7 +15,7 @@ from PySide2.QtWidgets import *
 from Custom_Widgets.QCustomSlideMenu import QCustomSlideMenu
 from Custom_Widgets.QCustomQStackedWidget import QCustomQStackedWidget
 
-import resources_rc
+import Ui.resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):

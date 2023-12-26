@@ -1,6 +1,6 @@
 class Game():
     game_number=4
-    def __init__(self, demo_file, description, gender, id:int, images, name, price:float, videos) -> None:
+    def __init__(self, demo_file, description, gender, id:int, images, name, price:float, videos):
         Game.game_number+=1
         self.demo_file = demo_file
         self.description = description
