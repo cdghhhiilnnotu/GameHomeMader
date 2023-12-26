@@ -1,6 +1,7 @@
 import requests
 from Models import *
 
+
 class CLIENT:
     def __init__(self) -> None:
         self.BASE = "http://127.0.0.1:5000/"
