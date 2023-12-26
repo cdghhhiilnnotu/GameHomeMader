@@ -1,6 +1,4 @@
 import requests
-from Models import *
-
 
 class CLIENT:
     def __init__(self) -> None:
