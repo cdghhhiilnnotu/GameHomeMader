@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/get_video')
 def get_video():
     video_path = 'Assets\\videos\\video1.mp4'
-    return send_file(video_path, mimetype='video/mp4', as_attachment=True, download_name='downloaded_video.mp4')
+    return send_file(video_path, mimetype='video/mp4')
 
 video_path = 'video1.mp4'
 VIDEO_DIR = 'Assets\\videos\\'
@@ -32,9 +32,9 @@ def download_video():
     return send_from_directory(VIDEO_DIR, video_path, as_attachment=True, content_type=content_type)
 
 
-@app.route('/get_png')
-def get_png():
-    png_path = 'icon-app-user.png'
+@app.route('/images/games/<game_image_path>')
+def get_png(game_image_path):
+    png_path = 'Assets/images/games/' + game_image_path
     return send_file(png_path, mimetype='image/png')
 
 # ALL ROUTE
@@ -46,6 +46,10 @@ def get_all():
 @app.route('/games', methods=['GET'])
 def get_all_games():
     return jsonify(jsonDict['games'])
+
+@app.route('/games/where/<searchStr>', methods=['GET'])
+def get_all_games_where(searchStr):
+    return jsonify(database.selectGameWhere(searchStr))
 
 @app.route('/games/<int:game_id_get>', methods=['GET'])
 def get_game_by_id(game_id_get):

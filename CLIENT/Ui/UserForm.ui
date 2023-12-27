@@ -896,7 +896,7 @@
                 </size>
                </property>
                <property name="currentIndex">
-                <number>3</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="homePage">
                 <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -1031,7 +1031,7 @@ background-color: rgb(0, 0, 0);</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../../DLcghhhiinnotu/image.png</iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1070,7 +1070,7 @@ background-color: rgb(0, 0, 0);</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../../DLcghhhiinnotu/image.png</iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1106,7 +1106,7 @@ background-color: rgb(0, 0, 0);</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../../DLcghhhiinnotu/image.png</iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1142,7 +1142,7 @@ background-color: rgb(0, 0, 0);</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../../DLcghhhiinnotu/image.png</iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1178,7 +1178,7 @@ background-color: rgb(0, 0, 0);</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../../DLcghhhiinnotu/image.png</iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1214,7 +1214,7 @@ background-color: rgb(0, 0, 0);</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../../DLcghhhiinnotu/image.png</iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1250,7 +1250,7 @@ background-color: rgb(0, 0, 0);</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../../DLcghhhiinnotu/image.png</iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1286,7 +1286,7 @@ background-color: rgb(0, 0, 0);</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../../DLcghhhiinnotu/image.png</iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1322,7 +1322,7 @@ background-color: rgb(0, 0, 0);</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../../DLcghhhiinnotu/image.png</iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1358,7 +1358,7 @@ background-color: rgb(0, 0, 0);</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../../DLcghhhiinnotu/image.png</iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1394,7 +1394,7 @@ background-color: rgb(0, 0, 0);</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../../DLcghhhiinnotu/image.png</iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1430,7 +1430,7 @@ background-color: rgb(0, 0, 0);</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../../DLcghhhiinnotu/image.png</iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1632,116 +1632,7 @@ QPushButton:hover
                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                     </property>
                    </widget>
-                   <widget class="QLineEdit" name="idGameLine">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="geometry">
-                     <rect>
-                      <x>290</x>
-                      <y>20</y>
-                      <width>250</width>
-                      <height>41</height>
-                     </rect>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Terminal</family>
-                      <pointsize>15</pointsize>
-                      <weight>50</weight>
-                      <italic>false</italic>
-                      <bold>false</bold>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">color: rgb(0, 0, 0);</string>
-                    </property>
-                    <property name="inputMask">
-                     <string/>
-                    </property>
-                    <property name="text">
-                     <string>2055010153</string>
-                    </property>
-                   </widget>
-                   <widget class="QLineEdit" name="nameGameLine">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="geometry">
-                     <rect>
-                      <x>290</x>
-                      <y>90</y>
-                      <width>250</width>
-                      <height>41</height>
-                     </rect>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Terminal</family>
-                      <pointsize>15</pointsize>
-                      <weight>50</weight>
-                      <italic>false</italic>
-                      <bold>false</bold>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">color: rgb(0, 0, 0);</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                   </widget>
-                   <widget class="QLineEdit" name="priceGameLine">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="geometry">
-                     <rect>
-                      <x>290</x>
-                      <y>160</y>
-                      <width>250</width>
-                      <height>41</height>
-                     </rect>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Terminal</family>
-                      <pointsize>15</pointsize>
-                      <weight>50</weight>
-                      <italic>false</italic>
-                      <bold>false</bold>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">color: rgb(0, 0, 0);</string>
-                    </property>
-                   </widget>
-                   <widget class="QLineEdit" name="descriptionGameLine">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="geometry">
-                     <rect>
-                      <x>20</x>
-                      <y>230</y>
-                      <width>531</width>
-                      <height>211</height>
-                     </rect>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Terminal</family>
-                      <pointsize>15</pointsize>
-                      <weight>50</weight>
-                      <italic>false</italic>
-                      <bold>false</bold>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">color: rgb(0, 0, 0);</string>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="AvatarLabel_2">
+                   <widget class="QLabel" name="avtGame">
                     <property name="geometry">
                      <rect>
                       <x>30</x>
@@ -1788,7 +1679,7 @@ border: 2px solid rgba(0,0,0,100)</string>
                     <property name="styleSheet">
                      <string notr="true">border: 2px SOLID rgba(0,0,0,100)</string>
                     </property>
-                    <widget class="QLabel" name="videoLabel">
+                    <widget class="QLabel" name="vidGame">
                      <property name="geometry">
                       <rect>
                        <x>8</x>
@@ -1833,6 +1724,134 @@ background-color: rgb(0, 255, 255);</string>
                     <property name="icon">
                      <iconset resource="resources.qrc">
                       <normaloff>:/icons/EC8482/airplay.svg</normaloff>:/icons/EC8482/airplay.svg</iconset>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="descriptionGame">
+                    <property name="geometry">
+                     <rect>
+                      <x>44</x>
+                      <y>225</y>
+                      <width>491</width>
+                      <height>221</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>11</pointsize>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">border-radius: 20px;
+border: 2px solid rgba(0,0,0,100);
+background-color: rgba(255,255,255,255);
+color: rgb(0,0,0);
+padding-top: 7px;
+padding-left: 7px;</string>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="margin">
+                     <number>0</number>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="idGame">
+                    <property name="geometry">
+                     <rect>
+                      <x>290</x>
+                      <y>10</y>
+                      <width>261</width>
+                      <height>51</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>13</pointsize>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">border-radius: 20px;
+border: 2px solid rgba(0,0,0,100);
+background-color: rgba(255,255,255,255);
+color: rgb(0,0,0);
+padding-left: 7px;</string>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="margin">
+                     <number>0</number>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="nameGame">
+                    <property name="geometry">
+                     <rect>
+                      <x>290</x>
+                      <y>80</y>
+                      <width>261</width>
+                      <height>51</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>13</pointsize>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">border-radius: 20px;
+border: 2px solid rgba(0,0,0,100);
+background-color: rgba(255,255,255,255);
+color: rgb(0,0,0);
+padding-left: 7px;</string>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="margin">
+                     <number>0</number>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="priceGame">
+                    <property name="geometry">
+                     <rect>
+                      <x>290</x>
+                      <y>150</y>
+                      <width>261</width>
+                      <height>51</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>13</pointsize>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">border-radius: 20px;
+border: 2px solid rgba(0,0,0,100);
+background-color: rgba(255,255,255,255);
+color: rgb(0,0,0);
+padding-left: 7px;</string>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="margin">
+                     <number>0</number>
                     </property>
                    </widget>
                   </widget>

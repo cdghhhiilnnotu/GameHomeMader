@@ -1,6 +1,6 @@
 import psycopg2
 import json
-from Commons.helper import tuple2dict, listDict, getListData
+from Commons.helper import tuple2dict, listDict, getListData, getListDataWhere
 
 class DATABASE():
     def __init__(self):
@@ -15,6 +15,15 @@ class DATABASE():
 
         self.cur = self.conn.cursor()
 
+    def selectGameWhere(self, searchStr):
+        self.initConnection()
+        games, gamesColumn = getListDataWhere(self.cur, "games", searchStr)
+        listGames = listDict(games, gamesColumn)
+        dictGames = {}
+        for i in range(len(listGames)):
+            dictGames[f'game{listGames[i]["id"]-1}'] = listGames[i]
+        return dictGames
+    
     def selectGame(self):
         games, gamesColumn = getListData(self.cur, "games")
         listGames = listDict(games, gamesColumn)

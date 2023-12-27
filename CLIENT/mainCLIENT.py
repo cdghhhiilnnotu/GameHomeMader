@@ -1,4 +1,6 @@
 import requests
+import os
+import shutil
 
 class CLIENT:
     def __init__(self) -> None:
@@ -23,6 +25,9 @@ class CLIENT:
         if id==-1:
             return requests.get(self.BASE + 'games').json()
         return requests.get(self.BASE + f'games/{id}').json()
+    
+    def getGameByStr(self, str):
+        return requests.get(self.BASE + f'games/where/{str}').json()
 
     def postGame(self, new_game):
         return requests.post(self.BASE + 'games', data=new_game)
@@ -75,5 +80,15 @@ class CLIENT:
         if id != -1:
             return requests.delete(self.BASE + f'users/{id}')
         return 'CANNOT DO'
+    
+    def get_game_image_path(self, filename):
+        img_data = requests.get(self.BASE + f'/images/games/{filename}').content
+        if not os.path.exists(f'Assets/images/games/{filename}'):
+            open(filename, 'w').close()
+        if not os.path.exists(f'Assets/images/games/{filename}'):
+            os.rename(filename, f'Assets/images/games/{filename}')
+        with open(f'Assets/images/games/{filename}', 'wb') as handler:
+            handler.write(img_data)
+        return f'Assets/images/games/{filename}'
 
 

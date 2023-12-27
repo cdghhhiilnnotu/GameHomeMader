@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'UserFormEgtLvY.ui'
+## Form generated from reading UI file 'UserFormraNCJH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -21,7 +21,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1280, 726)
+        MainWindow.resize(1391, 726)
         MainWindow.setStyleSheet(u"* {\n"
 "	border:none;\n"
 "	background-color: transparent;\n"
@@ -506,7 +506,7 @@ class Ui_MainWindow(object):
         self.game1.setStyleSheet(u"color: #EC8482;\n"
 "background-color: rgb(0, 0, 0);")
         icon15 = QIcon()
-        icon15.addFile(u"../../../../../../../DLcghhhiinnotu/image.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon15.addFile(u"../../../../../../DLcghhhiinnotu/image.png", QSize(), QIcon.Normal, QIcon.Off)
         self.game1.setIcon(icon15)
         self.game1.setIconSize(QSize(115, 115))
         self.game1.setAutoRepeat(False)
@@ -680,45 +680,25 @@ class Ui_MainWindow(object):
         self.emailLabel_2.setGeometry(QRect(200, 160, 80, 30))
         self.emailLabel_2.setFont(font5)
         self.emailLabel_2.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.idGameLine = QLineEdit(self.gameInfo)
-        self.idGameLine.setObjectName(u"idGameLine")
-        self.idGameLine.setEnabled(False)
-        self.idGameLine.setGeometry(QRect(290, 20, 250, 41))
-        self.idGameLine.setFont(font4)
-        self.idGameLine.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.nameGameLine = QLineEdit(self.gameInfo)
-        self.nameGameLine.setObjectName(u"nameGameLine")
-        self.nameGameLine.setEnabled(False)
-        self.nameGameLine.setGeometry(QRect(290, 90, 250, 41))
-        self.nameGameLine.setFont(font4)
-        self.nameGameLine.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.priceGameLine = QLineEdit(self.gameInfo)
-        self.priceGameLine.setObjectName(u"priceGameLine")
-        self.priceGameLine.setEnabled(False)
-        self.priceGameLine.setGeometry(QRect(290, 160, 250, 41))
-        self.priceGameLine.setFont(font4)
-        self.priceGameLine.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.descriptionGameLine = QLineEdit(self.gameInfo)
-        self.descriptionGameLine.setObjectName(u"descriptionGameLine")
-        self.descriptionGameLine.setEnabled(False)
-        self.descriptionGameLine.setGeometry(QRect(20, 230, 531, 211))
-        self.descriptionGameLine.setFont(font4)
-        self.descriptionGameLine.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.AvatarLabel_2 = QLabel(self.gameInfo)
-        self.AvatarLabel_2.setObjectName(u"AvatarLabel_2")
-        self.AvatarLabel_2.setGeometry(QRect(30, 20, 151, 171))
-        self.AvatarLabel_2.setStyleSheet(u"border-radius: 20px;\n"
+        self.avtGame = QLabel(self.gameInfo)
+        self.avtGame.setObjectName(u"avtGame")
+        self.avtGame.setGeometry(QRect(30, 10, 151, 191))
+        self.avtGame.setStyleSheet(u"border-radius: 20px;\n"
 "border: 2px solid rgba(0,0,0,100)")
-        self.AvatarLabel_2.setLineWidth(0)
-        self.AvatarLabel_2.setTextFormat(Qt.MarkdownText)
-        self.AvatarLabel_2.setPixmap(QPixmap(u":/images/icon-app-user.png"))
-        self.AvatarLabel_2.setScaledContents(True)
-        self.AvatarLabel_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-        self.AvatarLabel_2.setMargin(6)
+        self.avtGame.setLineWidth(0)
+        self.avtGame.setTextFormat(Qt.MarkdownText)
+        self.avtGame.setPixmap(QPixmap(u":/images/icon-app-user.png"))
+        self.avtGame.setScaledContents(True)
+        self.avtGame.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.avtGame.setMargin(6)
         self.videoWidget = QWidget(self.gameInfo)
         self.videoWidget.setObjectName(u"videoWidget")
         self.videoWidget.setGeometry(QRect(580, 10, 384, 216))
         self.videoWidget.setStyleSheet(u"border: 2px SOLID rgba(0,0,0,100)")
+        self.vidGame = QLabel(self.videoWidget)
+        self.vidGame.setObjectName(u"vidGame")
+        self.vidGame.setGeometry(QRect(8, 9, 371, 201))
+        self.vidGame.setAlignment(Qt.AlignCenter)
         self.doneBtn_2 = QPushButton(self.gameInfo)
         self.doneBtn_2.setObjectName(u"doneBtn_2")
         self.doneBtn_2.setGeometry(QRect(580, 400, 181, 41))
@@ -728,6 +708,56 @@ class Ui_MainWindow(object):
         icon17 = QIcon()
         icon17.addFile(u":/icons/EC8482/airplay.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.doneBtn_2.setIcon(icon17)
+        self.descriptionGame = QLabel(self.gameInfo)
+        self.descriptionGame.setObjectName(u"descriptionGame")
+        self.descriptionGame.setGeometry(QRect(44, 225, 491, 221))
+        font7 = QFont()
+        font7.setPointSize(11)
+        self.descriptionGame.setFont(font7)
+        self.descriptionGame.setStyleSheet(u"border-radius: 20px;\n"
+"border: 2px solid rgba(0,0,0,100);\n"
+"background-color: rgba(255,255,255,255);\n"
+"color: rgb(0,0,0);\n"
+"padding-top: 7px;\n"
+"padding-left: 7px;")
+        self.descriptionGame.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.descriptionGame.setWordWrap(True)
+        self.descriptionGame.setMargin(0)
+        self.idGame = QLabel(self.gameInfo)
+        self.idGame.setObjectName(u"idGame")
+        self.idGame.setGeometry(QRect(290, 10, 261, 51))
+        font8 = QFont()
+        font8.setPointSize(13)
+        self.idGame.setFont(font8)
+        self.idGame.setStyleSheet(u"border-radius: 20px;\n"
+"border: 2px solid rgba(0,0,0,100);\n"
+"background-color: rgba(255,255,255,255);\n"
+"color: rgb(0,0,0);\n"
+"padding-left: 7px;")
+        self.idGame.setWordWrap(True)
+        self.idGame.setMargin(0)
+        self.nameGame = QLabel(self.gameInfo)
+        self.nameGame.setObjectName(u"nameGame")
+        self.nameGame.setGeometry(QRect(290, 80, 261, 51))
+        self.nameGame.setFont(font8)
+        self.nameGame.setStyleSheet(u"border-radius: 20px;\n"
+"border: 2px solid rgba(0,0,0,100);\n"
+"background-color: rgba(255,255,255,255);\n"
+"color: rgb(0,0,0);\n"
+"padding-left: 7px;")
+        self.nameGame.setWordWrap(True)
+        self.nameGame.setMargin(0)
+        self.priceGame = QLabel(self.gameInfo)
+        self.priceGame.setObjectName(u"priceGame")
+        self.priceGame.setGeometry(QRect(290, 150, 261, 51))
+        self.priceGame.setFont(font8)
+        self.priceGame.setStyleSheet(u"border-radius: 20px;\n"
+"border: 2px solid rgba(0,0,0,100);\n"
+"background-color: rgba(255,255,255,255);\n"
+"color: rgb(0,0,0);\n"
+"padding-left: 7px;")
+        self.priceGame.setWordWrap(True)
+        self.priceGame.setMargin(0)
 
         self.verticalLayout_19.addWidget(self.gameInfo)
 
@@ -886,9 +916,9 @@ class Ui_MainWindow(object):
         self.doneBtn = QPushButton(self.userBtn)
         self.doneBtn.setObjectName(u"doneBtn")
         self.doneBtn.setGeometry(QRect(730, 40, 181, 41))
-        font7 = QFont()
-        font7.setPointSize(12)
-        self.doneBtn.setFont(font7)
+        font9 = QFont()
+        font9.setPointSize(12)
+        self.doneBtn.setFont(font9)
         self.doneBtn.setStyleSheet(u"color: rgb(0, 0, 0);\n"
 "background-color: rgb(0, 255, 255);")
         icon18 = QIcon()
@@ -897,7 +927,7 @@ class Ui_MainWindow(object):
         self.cancelBtn = QPushButton(self.userBtn)
         self.cancelBtn.setObjectName(u"cancelBtn")
         self.cancelBtn.setGeometry(QRect(530, 40, 181, 41))
-        self.cancelBtn.setFont(font7)
+        self.cancelBtn.setFont(font9)
         self.cancelBtn.setStyleSheet(u"color: rgb(0, 0, 0);\n"
 "background-color: rgb(206, 103, 114);")
         icon19 = QIcon()
@@ -941,11 +971,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
         self.notificationTitle = QLabel(self.popupNotificationSubContainer)
         self.notificationTitle.setObjectName(u"notificationTitle")
-        font8 = QFont()
-        font8.setPointSize(10)
-        font8.setBold(True)
-        font8.setWeight(75)
-        self.notificationTitle.setFont(font8)
+        font10 = QFont()
+        font10.setPointSize(10)
+        font10.setBold(True)
+        font10.setWeight(75)
+        self.notificationTitle.setFont(font10)
 
         self.verticalLayout_18.addWidget(self.notificationTitle)
 
@@ -1111,11 +1141,13 @@ class Ui_MainWindow(object):
         self.idLabel_2.setText(QCoreApplication.translate("MainWindow", u"ID:", None))
         self.nameLabel_2.setText(QCoreApplication.translate("MainWindow", u"Name:", None))
         self.emailLabel_2.setText(QCoreApplication.translate("MainWindow", u"Price:", None))
-        self.idGameLine.setInputMask("")
-        self.idGameLine.setText(QCoreApplication.translate("MainWindow", u"2055010153", None))
-        self.nameGameLine.setText("")
-        self.AvatarLabel_2.setText("")
+        self.avtGame.setText("")
+        self.vidGame.setText("")
         self.doneBtn_2.setText(QCoreApplication.translate("MainWindow", u" Play", None))
+        self.descriptionGame.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.idGame.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.nameGame.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.priceGame.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.rightMenuTile.setText(QCoreApplication.translate("MainWindow", u"   Menu", None))
 #if QT_CONFIG(tooltip)
         self.closeRightMenuBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close Menu", None))
