@@ -2,7 +2,7 @@ import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from mainCLIENT import *
-from ui_UserForm4 import *
+from ui_UserForm5 import *
 from PySide2.QtWidgets import QMainWindow, QApplication
 from PySide2 import QtGui
 from Custom_Widgets.Widgets import *
@@ -18,6 +18,7 @@ class MainUserApp(QMainWindow):
         self.show()
         # self.initHomePage()
         self.initListGames()
+        self.initLibrary()
         self.initUserProfile()
 
         self.ui.settingsBtn.clicked.connect(lambda: self.ui.centerMenuSubContainer.expandMenu())
@@ -33,10 +34,10 @@ class MainUserApp(QMainWindow):
 
         self.ui.closeNotificationBtn.clicked.connect(lambda: self.ui.popupNotificationContainer.collapseMenu())
         self.ui.searchBtn.clicked.connect(lambda: self.initListGames(str(self.ui.searchLine.text())))
+        self.ui.searchLibraryBtn.clicked.connect(lambda: self.initLibrary(str(self.ui.searchLibraryLine.text())))
 
         self.ui.doneBtn.clicked.connect(self.updateUser)
         self.ui.cancelBtn.clicked.connect(self.resetUser)
-        self.initLibrary()
 
     def resetUser(self):
         userJson = self.client.user.toJson()
@@ -69,11 +70,12 @@ class MainUserApp(QMainWindow):
         if searchStr == '':
             gamesJson = self.client.getLibrary()
             for item in gamesJson:
-                self.listLibrary.append(gamesJson[item])
+                self.listLibrary.append(item)
         else:
             gamesJson = self.client.getLibraryByStr(searchStr)
             for item in gamesJson:
-                self.listLibrary.append(gamesJson[item])
+                self.listLibrary.append(item)
+        self.initLibraryPage()
 
     def initUserProfile(self):
         userJson = self.client.user.toJson()
@@ -102,6 +104,35 @@ class MainUserApp(QMainWindow):
         if len(self.listGames) <= 12:
             self.ui.moreGameBtn.hide()
 
+    def initLibraryPage(self):
+        self.listLibraryBtn = [
+            self.ui.game1_2,
+            self.ui.game2_2,
+            self.ui.game3_2,
+            self.ui.game4_2,
+            self.ui.game5_2,
+            self.ui.game6_2,
+            self.ui.game7_2,
+            self.ui.game8_2,
+            self.ui.game9_2,
+            self.ui.game10_2,
+            self.ui.game11_2,
+            self.ui.game12_2
+        ]
+        for i in range(len(self.listGamesBtn)):
+            self.initLibraryBtn(i)
+        if len(self.listGames) <= 12:
+            self.ui.moreGameLibraryBtn.hide()
+
+    def initLibraryBtn(self, idxBtn):
+        if idxBtn >= len(self.listLibrary):
+            self.listLibraryBtn[idxBtn].hide()
+        else:
+            self.listLibraryBtn[idxBtn].show()
+            iconBtn = QtGui.QPixmap(self.client.get_game_image_path(self.listLibrary[idxBtn]["images"]))
+            self.listLibraryBtn[idxBtn].setIcon(QtGui.QIcon(iconBtn))
+        self.listLibraryBtn[idxBtn].clicked.connect(lambda: self.show_Game_Info(self.listLibrary[idxBtn]))
+
     def initGameBtn(self, thisIndex, gameIdx):
         if thisIndex >= len(self.listGames):
             self.listGamesBtn[thisIndex].hide()
@@ -109,17 +140,16 @@ class MainUserApp(QMainWindow):
             self.listGamesBtn[thisIndex].show()
             iconBtn = QtGui.QPixmap(self.client.get_game_image_path(self.listGames[gameIdx]["images"]))
             self.listGamesBtn[thisIndex].setIcon(QtGui.QIcon(iconBtn))
-        self.listGamesBtn[thisIndex].clicked.connect(lambda: self.show_Game_Info(gameIdx))
+        self.listGamesBtn[thisIndex].clicked.connect(lambda: self.show_Game_Info(self.listGames[gameIdx]))
         
-    def show_Game_Info(self, idx):
-        if idx < len(self.listGames):
-            self.ui.mainPages.setCurrentWidget(self.ui.gameInfoPage)
-            self.ui.descriptionGame.setText(self.listGames[idx]["description"])
-            self.ui.idGame.setText(str(self.listGames[idx]["id"]))
-            self.ui.nameGame.setText(self.listGames[idx]["name"])
-            self.ui.priceGame.setText(str(self.listGames[idx]["price"]))
-            pixmap = QtGui.QPixmap(self.client.get_game_image_path(self.listGames[idx]["images"]))
-            self.ui.avtGame.setPixmap(pixmap)
+    def show_Game_Info(self, thisGame):
+        self.ui.mainPages.setCurrentWidget(self.ui.gameInfoPage)
+        self.ui.descriptionGame.setText(thisGame["description"])
+        self.ui.idGame.setText(str(thisGame["id"]))
+        self.ui.nameGame.setText(thisGame["name"])
+        self.ui.priceGame.setText(str(thisGame["price"]))
+        pixmap = QtGui.QPixmap(self.client.get_game_image_path(thisGame["images"]))
+        self.ui.avtGame.setPixmap(pixmap)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

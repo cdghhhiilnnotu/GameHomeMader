@@ -54,15 +54,17 @@ class CLIENT:
         return requests.get(self.BASE + f'games/{id}').json()
     
     def getLibrary(self):
-        transaction_id = [self.dataJson['transactions'][item].values['game_id'] for item in getElementsBy('user_id', self.user.id, self.dataJson['transactions'])]
-        print(transaction_id)
-        return requests.get(self.BASE + 'games').json()
+        transaction_id = [self.dataJson['transactions'][item]['game_id'] for item in getElementsBy('user_id', self.user.id, self.dataJson['transactions'])]
+        # print(transaction_id)
+
+        return [self.dataJson['games'][item] for item in self.dataJson['games'] if self.dataJson['games'][item]['id'] in transaction_id]
     
-    def getLibraryByStr(self):
-        return requests.get(self.BASE + 'games').json()
+    def getLibraryByStr(self, strSearch):
+        transaction_id = [self.dataJson['transactions'][item]['game_id'] for item in getElementsBy('user_id', self.user.id, self.dataJson['transactions'])]
+        return [self.dataJson['games'][item] for item in self.dataJson['games'] if (self.dataJson['games'][item]['id'] in transaction_id and (str(self.dataJson['games'][item]['id']) == strSearch or self.dataJson['games'][item]['name'] == strSearch))]
     
-    def getGameByStr(self, str):
-        return requests.get(self.BASE + f'games/where/{str}').json()
+    def getGameByStr(self, strSearch):
+        return requests.get(self.BASE + f'games/where/{strSearch}').json()
 
     def postGame(self, new_game):
         return requests.post(self.BASE + 'games', data=new_game)

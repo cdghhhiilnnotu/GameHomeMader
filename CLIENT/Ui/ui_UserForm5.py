@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'UserFormPITUoD.ui'
+## Form generated from reading UI file 'UserFormVWkfHy.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -612,11 +612,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_14.addWidget(self.headerHome)
 
         self.mainPages.addWidget(self.homePage)
-        self.librarysPage = QWidget()
-        self.librarysPage.setObjectName(u"librarysPage")
-        self.verticalLayout_15 = QVBoxLayout(self.librarysPage)
+        self.libraryPage = QWidget()
+        self.libraryPage.setObjectName(u"libraryPage")
+        self.verticalLayout_15 = QVBoxLayout(self.libraryPage)
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
-        self.headerLibrary = QWidget(self.librarysPage)
+        self.headerLibrary = QWidget(self.libraryPage)
         self.headerLibrary.setObjectName(u"headerLibrary")
         self.headerLibrary.setStyleSheet(u"QLineEdit\n"
 "{\n"
@@ -763,7 +763,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_15.addWidget(self.headerLibrary)
 
-        self.mainPages.addWidget(self.librarysPage)
+        self.mainPages.addWidget(self.libraryPage)
         self.cartsPage = QWidget()
         self.cartsPage.setObjectName(u"cartsPage")
         self.verticalLayout_16 = QVBoxLayout(self.cartsPage)
