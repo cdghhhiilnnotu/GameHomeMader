@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'UserFormBAHzCC.ui'
+## Form generated from reading UI file 'UserFormPITUoD.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -612,18 +612,158 @@ class Ui_MainWindow(object):
         self.verticalLayout_14.addWidget(self.headerHome)
 
         self.mainPages.addWidget(self.homePage)
-        self.gamesPage = QWidget()
-        self.gamesPage.setObjectName(u"gamesPage")
-        self.verticalLayout_15 = QVBoxLayout(self.gamesPage)
+        self.librarysPage = QWidget()
+        self.librarysPage.setObjectName(u"librarysPage")
+        self.verticalLayout_15 = QVBoxLayout(self.librarysPage)
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
-        self.gamesLabel = QLabel(self.gamesPage)
-        self.gamesLabel.setObjectName(u"gamesLabel")
-        self.gamesLabel.setFont(font3)
-        self.gamesLabel.setAlignment(Qt.AlignCenter)
+        self.headerLibrary = QWidget(self.librarysPage)
+        self.headerLibrary.setObjectName(u"headerLibrary")
+        self.headerLibrary.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	background-color: #fff;\n"
+"	border-radius: 20px;\n"
+"	border: 1px solid rgba(0, 0, 0, 100);\n"
+"	padding: 10px;\n"
+"	padding-left: 17px;\n"
+"	color: #rgb(0,255,255);\n"
+"}\n"
+"QPushButton\n"
+"{\n"
+"	border-radius: 20px;\n"
+"	border: 1px solid rgba(0, 0, 0, 100);\n"
+"	font: 14pt \"Terminal\";\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color: rgb(244, 244, 244);\n"
+"}")
+        self.searchLibraryLine = QLineEdit(self.headerLibrary)
+        self.searchLibraryLine.setObjectName(u"searchLibraryLine")
+        self.searchLibraryLine.setEnabled(True)
+        self.searchLibraryLine.setGeometry(QRect(440, 10, 351, 42))
+        self.searchLibraryLine.setFont(font4)
+        self.searchLibraryLine.setStyleSheet(u"color: rgb(0, 0, 0);")
+        self.searchLibraryLabel = QLabel(self.headerLibrary)
+        self.searchLibraryLabel.setObjectName(u"searchLibraryLabel")
+        self.searchLibraryLabel.setGeometry(QRect(320, 20, 111, 30))
+        self.searchLibraryLabel.setFont(font5)
+        self.searchLibraryLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.searchLibraryBtn = QPushButton(self.headerLibrary)
+        self.searchLibraryBtn.setObjectName(u"searchLibraryBtn")
+        self.searchLibraryBtn.setGeometry(QRect(800, 10, 161, 41))
+        self.searchLibraryBtn.setFont(font6)
+        self.searchLibraryBtn.setStyleSheet(u"color: #EC8482;\n"
+"background-color: rgb(0, 0, 0);")
+        self.searchLibraryBtn.setIcon(icon14)
+        self.game1_2 = QPushButton(self.headerLibrary)
+        self.game1_2.setObjectName(u"game1_2")
+        self.game1_2.setGeometry(QRect(10, 70, 121, 171))
+        self.game1_2.setFont(font6)
+        self.game1_2.setStyleSheet(u"color: #EC8482;\n"
+"background-color: rgb(0, 0, 0);")
+        self.game1_2.setIcon(icon15)
+        self.game1_2.setIconSize(QSize(115, 115))
+        self.game1_2.setAutoRepeat(False)
+        self.game2_2 = QPushButton(self.headerLibrary)
+        self.game2_2.setObjectName(u"game2_2")
+        self.game2_2.setGeometry(QRect(160, 70, 121, 171))
+        self.game2_2.setFont(font6)
+        self.game2_2.setStyleSheet(u"color: #EC8482;\n"
+"background-color: rgb(0, 0, 0);")
+        self.game2_2.setIcon(icon15)
+        self.game2_2.setIconSize(QSize(115, 115))
+        self.game3_2 = QPushButton(self.headerLibrary)
+        self.game3_2.setObjectName(u"game3_2")
+        self.game3_2.setGeometry(QRect(310, 70, 121, 171))
+        self.game3_2.setFont(font6)
+        self.game3_2.setStyleSheet(u"color: #EC8482;\n"
+"background-color: rgb(0, 0, 0);")
+        self.game3_2.setIcon(icon15)
+        self.game3_2.setIconSize(QSize(115, 115))
+        self.game6_2 = QPushButton(self.headerLibrary)
+        self.game6_2.setObjectName(u"game6_2")
+        self.game6_2.setGeometry(QRect(760, 70, 121, 171))
+        self.game6_2.setFont(font6)
+        self.game6_2.setStyleSheet(u"color: #EC8482;\n"
+"background-color: rgb(0, 0, 0);")
+        self.game6_2.setIcon(icon15)
+        self.game6_2.setIconSize(QSize(115, 115))
+        self.game5_2 = QPushButton(self.headerLibrary)
+        self.game5_2.setObjectName(u"game5_2")
+        self.game5_2.setGeometry(QRect(610, 70, 121, 171))
+        self.game5_2.setFont(font6)
+        self.game5_2.setStyleSheet(u"color: #EC8482;\n"
+"background-color: rgb(0, 0, 0);")
+        self.game5_2.setIcon(icon15)
+        self.game5_2.setIconSize(QSize(115, 115))
+        self.game4_2 = QPushButton(self.headerLibrary)
+        self.game4_2.setObjectName(u"game4_2")
+        self.game4_2.setGeometry(QRect(460, 70, 121, 171))
+        self.game4_2.setFont(font6)
+        self.game4_2.setStyleSheet(u"color: #EC8482;\n"
+"background-color: rgb(0, 0, 0);")
+        self.game4_2.setIcon(icon15)
+        self.game4_2.setIconSize(QSize(115, 115))
+        self.game12_2 = QPushButton(self.headerLibrary)
+        self.game12_2.setObjectName(u"game12_2")
+        self.game12_2.setGeometry(QRect(760, 330, 121, 171))
+        self.game12_2.setFont(font6)
+        self.game12_2.setStyleSheet(u"color: #EC8482;\n"
+"background-color: rgb(0, 0, 0);")
+        self.game12_2.setIcon(icon15)
+        self.game12_2.setIconSize(QSize(115, 115))
+        self.game9_2 = QPushButton(self.headerLibrary)
+        self.game9_2.setObjectName(u"game9_2")
+        self.game9_2.setGeometry(QRect(310, 330, 121, 171))
+        self.game9_2.setFont(font6)
+        self.game9_2.setStyleSheet(u"color: #EC8482;\n"
+"background-color: rgb(0, 0, 0);")
+        self.game9_2.setIcon(icon15)
+        self.game9_2.setIconSize(QSize(115, 115))
+        self.game10_2 = QPushButton(self.headerLibrary)
+        self.game10_2.setObjectName(u"game10_2")
+        self.game10_2.setGeometry(QRect(460, 330, 121, 171))
+        self.game10_2.setFont(font6)
+        self.game10_2.setStyleSheet(u"color: #EC8482;\n"
+"background-color: rgb(0, 0, 0);")
+        self.game10_2.setIcon(icon15)
+        self.game10_2.setIconSize(QSize(115, 115))
+        self.game8_2 = QPushButton(self.headerLibrary)
+        self.game8_2.setObjectName(u"game8_2")
+        self.game8_2.setGeometry(QRect(160, 330, 121, 171))
+        self.game8_2.setFont(font6)
+        self.game8_2.setStyleSheet(u"color: #EC8482;\n"
+"background-color: rgb(0, 0, 0);")
+        self.game8_2.setIcon(icon15)
+        self.game8_2.setIconSize(QSize(115, 115))
+        self.game7_2 = QPushButton(self.headerLibrary)
+        self.game7_2.setObjectName(u"game7_2")
+        self.game7_2.setGeometry(QRect(10, 330, 121, 171))
+        self.game7_2.setFont(font6)
+        self.game7_2.setStyleSheet(u"color: #EC8482;\n"
+"background-color: rgb(0, 0, 0);")
+        self.game7_2.setIcon(icon15)
+        self.game7_2.setIconSize(QSize(115, 115))
+        self.game11_2 = QPushButton(self.headerLibrary)
+        self.game11_2.setObjectName(u"game11_2")
+        self.game11_2.setGeometry(QRect(610, 330, 121, 171))
+        self.game11_2.setFont(font6)
+        self.game11_2.setStyleSheet(u"color: #EC8482;\n"
+"background-color: rgb(0, 0, 0);")
+        self.game11_2.setIcon(icon15)
+        self.game11_2.setIconSize(QSize(115, 115))
+        self.moreGameLibraryBtn = QPushButton(self.headerLibrary)
+        self.moreGameLibraryBtn.setObjectName(u"moreGameLibraryBtn")
+        self.moreGameLibraryBtn.setGeometry(QRect(890, 500, 71, 41))
+        self.moreGameLibraryBtn.setFont(font6)
+        self.moreGameLibraryBtn.setStyleSheet(u"color: #EC8482;\n"
+"background-color: rgb(0, 255, 255);")
+        self.moreGameLibraryBtn.setIcon(icon16)
+        self.moreGameLibraryBtn.setIconSize(QSize(30, 30))
 
-        self.verticalLayout_15.addWidget(self.gamesLabel)
+        self.verticalLayout_15.addWidget(self.headerLibrary)
 
-        self.mainPages.addWidget(self.gamesPage)
+        self.mainPages.addWidget(self.librarysPage)
         self.cartsPage = QWidget()
         self.cartsPage.setObjectName(u"cartsPage")
         self.verticalLayout_16 = QVBoxLayout(self.cartsPage)
@@ -699,15 +839,15 @@ class Ui_MainWindow(object):
         self.vidGame.setObjectName(u"vidGame")
         self.vidGame.setGeometry(QRect(8, 9, 371, 201))
         self.vidGame.setAlignment(Qt.AlignCenter)
-        self.doneBtn_2 = QPushButton(self.gameInfo)
-        self.doneBtn_2.setObjectName(u"doneBtn_2")
-        self.doneBtn_2.setGeometry(QRect(580, 400, 181, 41))
-        self.doneBtn_2.setFont(font6)
-        self.doneBtn_2.setStyleSheet(u"color: rgb(0, 0, 0);\n"
+        self.PlayBuyBtn = QPushButton(self.gameInfo)
+        self.PlayBuyBtn.setObjectName(u"PlayBuyBtn")
+        self.PlayBuyBtn.setGeometry(QRect(580, 400, 181, 41))
+        self.PlayBuyBtn.setFont(font6)
+        self.PlayBuyBtn.setStyleSheet(u"color: rgb(0, 0, 0);\n"
 "background-color: rgb(0, 255, 255);")
         icon17 = QIcon()
         icon17.addFile(u":/icons/EC8482/airplay.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.doneBtn_2.setIcon(icon17)
+        self.PlayBuyBtn.setIcon(icon17)
         self.descriptionGame = QLabel(self.gameInfo)
         self.descriptionGame.setObjectName(u"descriptionGame")
         self.descriptionGame.setGeometry(QRect(44, 225, 491, 221))
@@ -1062,7 +1202,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.centerMenuPages.setCurrentIndex(2)
-        self.mainPages.setCurrentIndex(3)
+        self.mainPages.setCurrentIndex(1)
         self.rightMenuPages.setCurrentIndex(0)
 
 
@@ -1146,14 +1286,29 @@ class Ui_MainWindow(object):
         self.game7.setText("")
         self.game11.setText("")
         self.moreGameBtn.setText("")
-        self.gamesLabel.setText(QCoreApplication.translate("MainWindow", u"Library", None))
+        self.searchLibraryLine.setText("")
+        self.searchLibraryLabel.setText(QCoreApplication.translate("MainWindow", u"T\u00ecm ki\u1ebfm:", None))
+        self.searchLibraryBtn.setText(QCoreApplication.translate("MainWindow", u" Search", None))
+        self.game1_2.setText("")
+        self.game2_2.setText("")
+        self.game3_2.setText("")
+        self.game6_2.setText("")
+        self.game5_2.setText("")
+        self.game4_2.setText("")
+        self.game12_2.setText("")
+        self.game9_2.setText("")
+        self.game10_2.setText("")
+        self.game8_2.setText("")
+        self.game7_2.setText("")
+        self.game11_2.setText("")
+        self.moreGameLibraryBtn.setText("")
         self.cartLabel.setText(QCoreApplication.translate("MainWindow", u"Carts", None))
         self.idLabel_2.setText(QCoreApplication.translate("MainWindow", u"ID:", None))
         self.nameLabel_2.setText(QCoreApplication.translate("MainWindow", u"Name:", None))
         self.emailLabel_2.setText(QCoreApplication.translate("MainWindow", u"Price:", None))
         self.avtGame.setText("")
         self.vidGame.setText("")
-        self.doneBtn_2.setText(QCoreApplication.translate("MainWindow", u" Play", None))
+        self.PlayBuyBtn.setText(QCoreApplication.translate("MainWindow", u" Play", None))
         self.descriptionGame.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.idGame.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.nameGame.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))

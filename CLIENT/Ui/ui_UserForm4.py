@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'UserFormBAHzCC.ui'
+## Form generated from reading UI file 'UserFormlcoUAO.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -699,15 +699,15 @@ class Ui_MainWindow(object):
         self.vidGame.setObjectName(u"vidGame")
         self.vidGame.setGeometry(QRect(8, 9, 371, 201))
         self.vidGame.setAlignment(Qt.AlignCenter)
-        self.doneBtn_2 = QPushButton(self.gameInfo)
-        self.doneBtn_2.setObjectName(u"doneBtn_2")
-        self.doneBtn_2.setGeometry(QRect(580, 400, 181, 41))
-        self.doneBtn_2.setFont(font6)
-        self.doneBtn_2.setStyleSheet(u"color: rgb(0, 0, 0);\n"
+        self.PlayBuyBtn = QPushButton(self.gameInfo)
+        self.PlayBuyBtn.setObjectName(u"PlayBuyBtn")
+        self.PlayBuyBtn.setGeometry(QRect(580, 400, 181, 41))
+        self.PlayBuyBtn.setFont(font6)
+        self.PlayBuyBtn.setStyleSheet(u"color: rgb(0, 0, 0);\n"
 "background-color: rgb(0, 255, 255);")
         icon17 = QIcon()
         icon17.addFile(u":/icons/EC8482/airplay.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.doneBtn_2.setIcon(icon17)
+        self.PlayBuyBtn.setIcon(icon17)
         self.descriptionGame = QLabel(self.gameInfo)
         self.descriptionGame.setObjectName(u"descriptionGame")
         self.descriptionGame.setGeometry(QRect(44, 225, 491, 221))
@@ -1153,7 +1153,7 @@ class Ui_MainWindow(object):
         self.emailLabel_2.setText(QCoreApplication.translate("MainWindow", u"Price:", None))
         self.avtGame.setText("")
         self.vidGame.setText("")
-        self.doneBtn_2.setText(QCoreApplication.translate("MainWindow", u" Play", None))
+        self.PlayBuyBtn.setText(QCoreApplication.translate("MainWindow", u" Play", None))
         self.descriptionGame.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.idGame.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.nameGame.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))

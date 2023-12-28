@@ -1,10 +1,37 @@
 import requests
 import os
 import shutil
+import json
+from Models import *
+
+def getElementBy(keyDict, targetValue, thisDict):
+    for key, value in thisDict.items():
+        if value[f"{keyDict}"] == targetValue:
+            return thisDict[key]
+    return {}
+
+def getElementsBy(keyDict, targetValue, thisDict):
+    eleDict = {}
+    for key, value in thisDict.items():
+        if value[f"{keyDict}"] == targetValue:
+            # return thisDict[key]
+            eleDict[key] = value
+    return eleDict
 
 class CLIENT:
-    def __init__(self) -> None:
+    def __init__(self, username) -> None:
         self.BASE = "http://127.0.0.1:5000/"
+        try:
+            data = requests.get(self.BASE).json()
+        except:
+            data = {"status":"ERROR"}
+        with open("api.json", "w", encoding='utf-8') as outfile:
+            json.dump(data, outfile,ensure_ascii=False)
+        f = open('api.json', 'r',encoding='utf-8')
+        self.dataJson = json.load(f)
+        print(getElementBy('id',username, self.dataJson['users']))
+        self.user = User.fromJson(getElementBy('id',username, self.dataJson['users']))
+        f.close()
 
     def getUser(self, id=-1):
         if id==-1:
@@ -25,6 +52,14 @@ class CLIENT:
         if id==-1:
             return requests.get(self.BASE + 'games').json()
         return requests.get(self.BASE + f'games/{id}').json()
+    
+    def getLibrary(self):
+        transaction_id = [self.dataJson['transactions'][item].values['game_id'] for item in getElementsBy('user_id', self.user.id, self.dataJson['transactions'])]
+        print(transaction_id)
+        return requests.get(self.BASE + 'games').json()
+    
+    def getLibraryByStr(self):
+        return requests.get(self.BASE + 'games').json()
     
     def getGameByStr(self, str):
         return requests.get(self.BASE + f'games/where/{str}').json()
@@ -90,5 +125,15 @@ class CLIENT:
         with open(f'Assets/images/games/{filename}', 'wb') as handler:
             handler.write(img_data)
         return f'Assets/images/games/{filename}'
+    
+    def get_user_image_path(self, filename):
+        img_data = requests.get(self.BASE + f'/images/users/{filename}').content
+        if not os.path.exists(f'Assets/images/users/{filename}'):
+            open(filename, 'w').close()
+        if not os.path.exists(f'Assets/images/users/{filename}'):
+            os.rename(filename, f'Assets/images/users/{filename}')
+        with open(f'Assets/images/users/{filename}', 'wb') as handler:
+            handler.write(img_data)
+        return f'Assets/images/users/{filename}'
 
 

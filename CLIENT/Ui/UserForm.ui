@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1391</width>
+    <width>1280</width>
     <height>726</height>
    </rect>
   </property>
@@ -896,7 +896,7 @@
                 </size>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="homePage">
                 <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -1479,23 +1479,583 @@ background-color: rgb(0, 255, 255);</string>
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="gamesPage">
+               <widget class="QWidget" name="librarysPage">
                 <layout class="QVBoxLayout" name="verticalLayout_15">
                  <item>
-                  <widget class="QLabel" name="gamesLabel">
-                   <property name="font">
-                    <font>
-                     <pointsize>13</pointsize>
-                     <weight>50</weight>
-                     <bold>false</bold>
-                    </font>
+                  <widget class="QWidget" name="headerLibrary" native="true">
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit
+{
+	background-color: #fff;
+	border-radius: 20px;
+	border: 1px solid rgba(0, 0, 0, 100);
+	padding: 10px;
+	padding-left: 17px;
+	color: #rgb(0,255,255);
+}
+QPushButton
+{
+	border-radius: 20px;
+	border: 1px solid rgba(0, 0, 0, 100);
+	font: 14pt &quot;Terminal&quot;;
+}
+QPushButton:hover
+{
+	background-color: rgb(244, 244, 244);
+}</string>
                    </property>
-                   <property name="text">
-                    <string>Library</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
+                   <widget class="QLineEdit" name="searchLibraryLine">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="geometry">
+                     <rect>
+                      <x>440</x>
+                      <y>10</y>
+                      <width>351</width>
+                      <height>42</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Terminal</family>
+                      <pointsize>15</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="searchLibraryLabel">
+                    <property name="geometry">
+                     <rect>
+                      <x>320</x>
+                      <y>20</y>
+                      <width>111</width>
+                      <height>30</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>15</pointsize>
+                      <weight>50</weight>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Tìm kiếm:</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="searchLibraryBtn">
+                    <property name="geometry">
+                     <rect>
+                      <x>800</x>
+                      <y>10</y>
+                      <width>161</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Terminal</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #EC8482;
+background-color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string> Search</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/icons/EC8482/search.svg</normaloff>:/icons/EC8482/search.svg</iconset>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="game1_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>70</y>
+                      <width>121</width>
+                      <height>171</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Terminal</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #EC8482;
+background-color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>115</width>
+                      <height>115</height>
+                     </size>
+                    </property>
+                    <property name="autoRepeat">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="game2_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>160</x>
+                      <y>70</y>
+                      <width>121</width>
+                      <height>171</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Terminal</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #EC8482;
+background-color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>115</width>
+                      <height>115</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="game3_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>310</x>
+                      <y>70</y>
+                      <width>121</width>
+                      <height>171</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Terminal</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #EC8482;
+background-color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>115</width>
+                      <height>115</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="game6_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>760</x>
+                      <y>70</y>
+                      <width>121</width>
+                      <height>171</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Terminal</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #EC8482;
+background-color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>115</width>
+                      <height>115</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="game5_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>610</x>
+                      <y>70</y>
+                      <width>121</width>
+                      <height>171</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Terminal</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #EC8482;
+background-color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>115</width>
+                      <height>115</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="game4_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>460</x>
+                      <y>70</y>
+                      <width>121</width>
+                      <height>171</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Terminal</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #EC8482;
+background-color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>115</width>
+                      <height>115</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="game12_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>760</x>
+                      <y>330</y>
+                      <width>121</width>
+                      <height>171</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Terminal</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #EC8482;
+background-color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>115</width>
+                      <height>115</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="game9_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>310</x>
+                      <y>330</y>
+                      <width>121</width>
+                      <height>171</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Terminal</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #EC8482;
+background-color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>115</width>
+                      <height>115</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="game10_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>460</x>
+                      <y>330</y>
+                      <width>121</width>
+                      <height>171</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Terminal</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #EC8482;
+background-color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>115</width>
+                      <height>115</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="game8_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>160</x>
+                      <y>330</y>
+                      <width>121</width>
+                      <height>171</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Terminal</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #EC8482;
+background-color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>115</width>
+                      <height>115</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="game7_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>330</y>
+                      <width>121</width>
+                      <height>171</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Terminal</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #EC8482;
+background-color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>115</width>
+                      <height>115</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="game11_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>610</x>
+                      <y>330</y>
+                      <width>121</width>
+                      <height>171</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Terminal</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #EC8482;
+background-color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>115</width>
+                      <height>115</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="moreGameLibraryBtn">
+                    <property name="geometry">
+                     <rect>
+                      <x>890</x>
+                      <y>500</y>
+                      <width>71</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Terminal</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #EC8482;
+background-color: rgb(0, 255, 255);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/icons/EC8482/chevrons-right.svg</normaloff>:/icons/EC8482/chevrons-right.svg</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>30</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                   </widget>
                   </widget>
                  </item>
                 </layout>
@@ -1696,7 +2256,7 @@ border: 2px solid rgba(0,0,0,100)</string>
                      </property>
                     </widget>
                    </widget>
-                   <widget class="QPushButton" name="doneBtn_2">
+                   <widget class="QPushButton" name="PlayBuyBtn">
                     <property name="geometry">
                      <rect>
                       <x>580</x>
@@ -2137,15 +2697,16 @@ QPushButton:hover
                        </property>
                        <property name="font">
                         <font>
-                         <family>Terminal</family>
-                         <pointsize>15</pointsize>
+                         <family>Arial</family>
+                         <pointsize>11</pointsize>
                          <weight>50</weight>
                          <italic>false</italic>
                          <bold>false</bold>
                         </font>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">color: rgb(0, 0, 0);</string>
+                        <string notr="true">color: rgb(0, 0, 0);
+padding: 0px 0px 0px 15px;</string>
                        </property>
                        <property name="inputMask">
                         <string/>
@@ -2168,18 +2729,19 @@ QPushButton:hover
                        </property>
                        <property name="font">
                         <font>
-                         <family>Terminal</family>
-                         <pointsize>15</pointsize>
+                         <family>Arial</family>
+                         <pointsize>11</pointsize>
                          <weight>50</weight>
                          <italic>false</italic>
                          <bold>false</bold>
                         </font>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">color: rgb(0, 0, 0);</string>
+                        <string notr="true">color: rgb(0, 0, 0);
+padding: 0px 0px 0px 15px;</string>
                        </property>
                        <property name="text">
-                        <string/>
+                        <string>Nguyễn Thành Dương</string>
                        </property>
                       </widget>
                       <widget class="QLineEdit" name="emailLine">
@@ -2193,15 +2755,16 @@ QPushButton:hover
                        </property>
                        <property name="font">
                         <font>
-                         <family>Terminal</family>
-                         <pointsize>15</pointsize>
+                         <family>Arial</family>
+                         <pointsize>11</pointsize>
                          <weight>50</weight>
                          <italic>false</italic>
                          <bold>false</bold>
                         </font>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">color: rgb(0, 0, 0);</string>
+                        <string notr="true">color: rgb(0, 0, 0);
+padding: 0px 0px 0px 15px;</string>
                        </property>
                       </widget>
                       <widget class="QLineEdit" name="passLine">
@@ -2215,15 +2778,16 @@ QPushButton:hover
                        </property>
                        <property name="font">
                         <font>
-                         <family>Terminal</family>
-                         <pointsize>15</pointsize>
+                         <family>Arial</family>
+                         <pointsize>11</pointsize>
                          <weight>50</weight>
                          <italic>false</italic>
                          <bold>false</bold>
                         </font>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">color: rgb(0, 0, 0);</string>
+                        <string notr="true">color: rgb(0, 0, 0);
+padding: 0px 0px 0px 15px;</string>
                        </property>
                       </widget>
                       <widget class="QLabel" name="AvatarLabel">
