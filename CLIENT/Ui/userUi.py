@@ -2,7 +2,7 @@ import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from mainCLIENT import *
-from ui_UserForm5 import *
+from ui_UserForm7 import *
 from PySide2.QtWidgets import QMainWindow, QApplication
 from PySide2 import QtGui
 from Custom_Widgets.Widgets import *
@@ -38,6 +38,16 @@ class MainUserApp(QMainWindow):
 
         self.ui.doneBtn.clicked.connect(self.updateUser)
         self.ui.cancelBtn.clicked.connect(self.resetUser)
+        self.initCartPage()
+
+    def initDeleteBtn(self):
+        pass
+
+    def initCartPage(self):
+        self.listCart = []
+        trasctionsJson = self.client.getTransaction()
+        print(trasctionsJson)
+
 
     def resetUser(self):
         userJson = self.client.user.toJson()

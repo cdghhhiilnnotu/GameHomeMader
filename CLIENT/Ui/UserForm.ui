@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>726</height>
+    <width>1232</width>
+    <height>738</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -416,6 +416,12 @@
         <height>0</height>
        </size>
       </property>
+      <property name="maximumSize">
+       <size>
+        <width>0</width>
+        <height>16777215</height>
+       </size>
+      </property>
       <property name="styleSheet">
        <string notr="true">border-radius: 10px;</string>
       </property>
@@ -514,7 +520,7 @@
              <string notr="true"/>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="settingsPage">
              <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -896,7 +902,7 @@
                 </size>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>2</number>
                </property>
                <widget class="QWidget" name="homePage">
                 <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -2061,28 +2067,583 @@ background-color: rgb(0, 255, 255);</string>
                 </layout>
                </widget>
                <widget class="QWidget" name="cartsPage">
-                <layout class="QVBoxLayout" name="verticalLayout_16">
-                 <item>
-                  <widget class="QLabel" name="cartLabel">
-                   <property name="font">
-                    <font>
-                     <pointsize>13</pointsize>
-                     <weight>50</weight>
-                     <bold>false</bold>
-                    </font>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <widget class="QScrollArea" name="listOrder">
+                 <property name="geometry">
+                  <rect>
+                   <x>11</x>
+                   <y>88</y>
+                   <width>981</width>
+                   <height>321</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border: 2px solid rgb(255,255,255);</string>
+                 </property>
+                 <property name="verticalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAlwaysOn</enum>
+                 </property>
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="scrollAreaWidgetContents">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>956</width>
+                    <height>1000</height>
+                   </rect>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>1000</height>
+                   </size>
+                  </property>
+                  <widget class="QWidget" name="gameOrderBox_1" native="true">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>10</y>
+                     <width>931</width>
+                     <height>101</height>
+                    </rect>
                    </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>Carts</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
+                   <widget class="QLabel" name="nameGameOrder_1">
+                    <property name="geometry">
+                     <rect>
+                      <x>110</x>
+                      <y>30</y>
+                      <width>191</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="avtGameOrder_1">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>10</y>
+                      <width>81</width>
+                      <height>81</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="deleteOrder_1">
+                    <property name="geometry">
+                     <rect>
+                      <x>850</x>
+                      <y>20</y>
+                      <width>61</width>
+                      <height>61</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
                   </widget>
-                 </item>
-                </layout>
+                  <widget class="QWidget" name="gameOrderBox_2" native="true">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>120</y>
+                     <width>931</width>
+                     <height>101</height>
+                    </rect>
+                   </property>
+                   <widget class="QLabel" name="nameGameOrder_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>110</x>
+                      <y>30</y>
+                      <width>191</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="avtGameOrder_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>10</y>
+                      <width>81</width>
+                      <height>81</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="deleteOrder_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>850</x>
+                      <y>20</y>
+                      <width>61</width>
+                      <height>61</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="gameOrderBox_3" native="true">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>230</y>
+                     <width>931</width>
+                     <height>101</height>
+                    </rect>
+                   </property>
+                   <widget class="QLabel" name="nameGameOrder_3">
+                    <property name="geometry">
+                     <rect>
+                      <x>110</x>
+                      <y>30</y>
+                      <width>191</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="avtGameOrder_3">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>10</y>
+                      <width>81</width>
+                      <height>81</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="deleteOrder_3">
+                    <property name="geometry">
+                     <rect>
+                      <x>850</x>
+                      <y>20</y>
+                      <width>61</width>
+                      <height>61</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="gameOrderBox_5" native="true">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>450</y>
+                     <width>931</width>
+                     <height>101</height>
+                    </rect>
+                   </property>
+                   <widget class="QLabel" name="nameGameOrder_5">
+                    <property name="geometry">
+                     <rect>
+                      <x>110</x>
+                      <y>30</y>
+                      <width>191</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="avtGameOrder_5">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>10</y>
+                      <width>81</width>
+                      <height>81</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="deleteOrder_5">
+                    <property name="geometry">
+                     <rect>
+                      <x>850</x>
+                      <y>20</y>
+                      <width>61</width>
+                      <height>61</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="gameOrderBox_4" native="true">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>340</y>
+                     <width>931</width>
+                     <height>101</height>
+                    </rect>
+                   </property>
+                   <widget class="QLabel" name="nameGameOrder_4">
+                    <property name="geometry">
+                     <rect>
+                      <x>110</x>
+                      <y>30</y>
+                      <width>191</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="avtGameOrder_4">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>10</y>
+                      <width>81</width>
+                      <height>81</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="deleteOrder_4">
+                    <property name="geometry">
+                     <rect>
+                      <x>850</x>
+                      <y>20</y>
+                      <width>61</width>
+                      <height>61</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="gameOrderBox_7" native="true">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>560</y>
+                     <width>931</width>
+                     <height>101</height>
+                    </rect>
+                   </property>
+                   <widget class="QLabel" name="nameGameOrder_7">
+                    <property name="geometry">
+                     <rect>
+                      <x>110</x>
+                      <y>30</y>
+                      <width>191</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="avtGameOrder_7">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>10</y>
+                      <width>81</width>
+                      <height>81</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="deleteOrder_7">
+                    <property name="geometry">
+                     <rect>
+                      <x>850</x>
+                      <y>20</y>
+                      <width>61</width>
+                      <height>61</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="gameOrderBox_8" native="true">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>890</y>
+                     <width>931</width>
+                     <height>101</height>
+                    </rect>
+                   </property>
+                   <widget class="QLabel" name="nameGameOrder_8">
+                    <property name="geometry">
+                     <rect>
+                      <x>110</x>
+                      <y>30</y>
+                      <width>191</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="avtGameOrder_8">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>10</y>
+                      <width>81</width>
+                      <height>81</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="deleteOrder_8">
+                    <property name="geometry">
+                     <rect>
+                      <x>850</x>
+                      <y>20</y>
+                      <width>61</width>
+                      <height>61</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="gameOrderBox_9" native="true">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>670</y>
+                     <width>931</width>
+                     <height>101</height>
+                    </rect>
+                   </property>
+                   <widget class="QLabel" name="nameGameOrder_9">
+                    <property name="geometry">
+                     <rect>
+                      <x>110</x>
+                      <y>30</y>
+                      <width>191</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="avtGameOrder_9">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>10</y>
+                      <width>81</width>
+                      <height>81</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="deleteOrder_9">
+                    <property name="geometry">
+                     <rect>
+                      <x>850</x>
+                      <y>20</y>
+                      <width>61</width>
+                      <height>61</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="gameOrderBox_6" native="true">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>780</y>
+                     <width>931</width>
+                     <height>101</height>
+                    </rect>
+                   </property>
+                   <widget class="QLabel" name="nameGameOrder_6">
+                    <property name="geometry">
+                     <rect>
+                      <x>110</x>
+                      <y>30</y>
+                      <width>191</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="avtGameOrder_6">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>10</y>
+                      <width>81</width>
+                      <height>81</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="deleteOrder_6">
+                    <property name="geometry">
+                     <rect>
+                      <x>850</x>
+                      <y>20</y>
+                      <width>61</width>
+                      <height>61</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </widget>
+                 </widget>
+                </widget>
+                <widget class="QWidget" name="titleCart" native="true">
+                 <property name="geometry">
+                  <rect>
+                   <x>11</x>
+                   <y>11</y>
+                   <width>978</width>
+                   <height>71</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border: 2px solid rgb(255,255,255);</string>
+                 </property>
+                 <widget class="QComboBox" name="payMethodBox">
+                  <property name="geometry">
+                   <rect>
+                    <x>760</x>
+                    <y>20</y>
+                    <width>201</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                 </widget>
+                </widget>
+                <widget class="QWidget" name="orderBtn" native="true">
+                 <property name="geometry">
+                  <rect>
+                   <x>11</x>
+                   <y>416</y>
+                   <width>978</width>
+                   <height>71</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border: 2px solid rgb(255,255,255);</string>
+                 </property>
+                 <widget class="QPushButton" name="cancelBtn_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>730</x>
+                    <y>20</y>
+                    <width>101</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>PushButton</string>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="payBtn">
+                  <property name="geometry">
+                   <rect>
+                    <x>850</x>
+                    <y>20</y>
+                    <width>111</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Terminal</family>
+                    <pointsize>14</pointsize>
+                    <weight>50</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: #EC8482;
+background-color: rgb(0, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="resources.qrc">
+                    <normaloff>:/icons/EC8482/chevrons-right.svg</normaloff>:/icons/EC8482/chevrons-right.svg</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="totalCost">
+                  <property name="geometry">
+                   <rect>
+                    <x>530</x>
+                    <y>20</y>
+                    <width>191</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>TextLabel</string>
+                  </property>
+                 </widget>
+                </widget>
                </widget>
                <widget class="QWidget" name="gameInfoPage">
                 <layout class="QVBoxLayout" name="verticalLayout_19">

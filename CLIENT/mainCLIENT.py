@@ -29,7 +29,7 @@ class CLIENT:
             json.dump(data, outfile,ensure_ascii=False)
         f = open('api.json', 'r',encoding='utf-8')
         self.dataJson = json.load(f)
-        print(getElementBy('id',username, self.dataJson['users']))
+        # print(getElementBy('id',username, self.dataJson['users']))
         self.user = User.fromJson(getElementBy('id',username, self.dataJson['users']))
         f.close()
 
@@ -39,9 +39,14 @@ class CLIENT:
         return requests.get(self.BASE + f'users/{id}').json()
 
     def getTransaction(self, id=-1):
-        if id==-1:
-            return requests.get(self.BASE + 'transactions').json()
-        return requests.get(self.BASE + f'transactions/{id}').json()
+        transaction_id_user = [self.dataJson['transactions'][item]['game_id'] for item in getElementsBy('user_id', self.user.id, self.dataJson['transactions'])]
+        transaction_id_status = [self.dataJson['transactions'][item]['game_id'] for item in getElementsBy('status', 'completed', self.dataJson['transactions'])]
+        # print(transaction_id_user)
+
+        return [self.dataJson['games'][item] for item in self.dataJson['games'] if self.dataJson['games'][item]['id'] in transaction_id_user and self.dataJson['games'][item]['id'] in transaction_id_status]
+        # if id==-1:
+        #     return requests.get(self.BASE + 'transactions').json()
+        # return requests.get(self.BASE + f'transactions/{id}').json()
 
     def getPayment(self, id=-1):
         if id==-1:

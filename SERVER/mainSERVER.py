@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify, send_file, send_from_directory
 from Data.mainDATABASE import *
+from Data.mainDB1 import *
 import os
+import json
 import shutil
 
 app = Flask(__name__)
@@ -240,6 +242,8 @@ def delete_payment_by_id(payment_id_delete):
 
 
 if __name__ == "__main__":
-    database = DATABASE()
-    jsonDict = database.jsonData
+    database = DATABASESERVER()
+    jsonDict = database.dataJson
+    print(jsonDict)
+    app.config['JSON_AS_ASCII'] = False
     app.run(host='0.0.0.0', port=5000, debug=True)
