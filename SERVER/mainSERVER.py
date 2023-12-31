@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, send_file, send_from_directory
 from Data.mainDATABASE import *
+from datetime import datetime
 from Data.mainDB1 import *
 import os
 import json
@@ -42,7 +43,7 @@ def get_png(game_image_path):
 # ALL ROUTE
 @app.route('/', methods=['GET'])
 def get_all():
-    return jsonify(jsonDict)
+    return jsonDict
 
 # GAMES ROUTE
 @app.route('/games', methods=['GET'])
@@ -123,15 +124,15 @@ def post_user():
 
 @app.route('/users/<int:user_id_put>', methods=['PUT'])
 def put_user_by_id(user_id_put):
-    for item in jsonDict['users']:
-        if int(jsonDict['users'][item]['id']) == int(user_id_put):
-            data = {}
-            data['email'] = request.form['email']
-            data['id'] = int(user_id_put)
-            data['name'] = request.form['name']
-            data['password'] = request.form['password']
-
-            jsonDict['users'][item] = data
+    # for item in jsonDict['users']:
+    #     if int(item['id']) == int(user_id_put):
+    #         item['email'] = request.form['email']
+    #         item['id'] = int(user_id_put)
+    #         item['name'] = request.form['name']
+    #         item['password'] = request.form['password']
+    database.execute_SQL(f"""UPDATE users SET email='{request.form["email"]}', name='{request.form["name"]}', password='{request.form["password"]}' WHERE id = {user_id_put};""")
+    database.init_data()
+            # jsonDict['users'][item] = data
     return jsonify(jsonDict)
 
 @app.route('/users/<int:user_id_delete>', methods=['DELETE'])
@@ -147,7 +148,7 @@ def delete_user_by_id(user_id_delete):
 # TRANSACTIONS ROUTE
 @app.route('/transactions', methods=['GET'])
 def get_all_transactions():
-    return jsonDict['transactions']
+    return jsonify(jsonDict['transactions'])
 
 @app.route('/transactions/<int:transaction_id>', methods=['GET'])
 def get_transaction_id(transaction_id):
@@ -155,18 +156,22 @@ def get_transaction_id(transaction_id):
 
 @app.route('/transactions', methods=['POST'])
 def post_transaction():
-    if int(request.form['id']) not in list(map(lambda data: data["id"], jsonDict['transactions'].values())):
-        data = {}
-        data['created_at'] = request.form['created_at']
-        data['game_id'] = int(request.form['game_id'])
-        data['id'] = int(request.form['id'])
-        data['price'] = float(request.form['price'])
-        data['status'] = request.form['status']
-        data['updated_at'] = request.form['updated_at']
-        data['user_id'] = int(request.form['user_id'])
+    # if int(request.form['id']) not in list(map(lambda data: data["id"], jsonDict['transactions'])):
+    #     data = {}
+    #     data['created_at'] = request.form['created_at']
+    #     data['game_id'] = int(request.form['game_id'])
+    #     data['id'] = int(request.form['id'])
+    #     data['price'] = float(request.form['price'])
+    #     data['status'] = request.form['status']
+    #     data['updated_at'] = request.form['updated_at']
+    #     data['user_id'] = int(request.form['user_id'])
 
-        jsonDict['transactions'][f'transaction{len(jsonDict["transactions"])}'] = data
-
+    #     jsonDict['transactions'][f'transaction{len(jsonDict["transactions"])}'] = data
+    print(request.form['created_at'])
+    database.execute_SQL(f"""INSERT INTO transactions (user_id, game_id, price, status, created_at, updated_at)
+                                VALUES
+                                ({request.form['user_id']}, {request.form['game_id']}, {request.form['price']}, '{request.form['status']}', '{request.form['created_at']}', '{request.form['updated_at']}');""")
+    database.init_data()
     return jsonify(jsonDict), 201
 
 @app.route('/transactions/<int:transaction_id_put>', methods=['PUT'])
@@ -187,17 +192,20 @@ def put_transaction_by_id(transaction_id_put):
 
 @app.route('/transactions/<int:transaction_id_delete>', methods=['DELETE'])
 def delete_transaction_by_id(transaction_id_delete):
-    itemDelete = ''
-    for item in jsonDict['transactions']:
-        if int(jsonDict['transactions'][item]['id']) == int(transaction_id_delete):
-            itemDelete = item
-    jsonDict['transactions'].pop(itemDelete)
+    # itemDelete = ''
+    # for item in jsonDict['transactions']:
+    #     if int(item['id']) == int(transaction_id_delete):
+    #         itemDelete = item
+    # print(itemDelete)
+    database.execute_SQL(f"""DELETE FROM transactions WHERE id = {transaction_id_delete}""")
+    database.init_data()
+    # jsonDict['transactions'].pop(itemDelete)
     return jsonify(jsonDict)
 
 # PAYMENTS ROUTE
 @app.route('/payments', methods=['GET'])
 def get_all_payments():
-    return jsonDict['payments']
+    return jsonify(jsonDict['payments'])
 
 @app.route('/payments/<int:payment_id>', methods=['GET'])
 def get_payment_id(payment_id):
@@ -205,16 +213,26 @@ def get_payment_id(payment_id):
 
 @app.route('/payments', methods=['POST'])
 def post_payment():
-    if int(request.form['id']) not in list(map(lambda data: data["id"], jsonDict['payments'].values())):
-        data = {}
-        data['amount'] = float(request.form['amount'])
-        data['id'] = int(request.form['id'])
-        data['payment_method'] = str(request.form['payment_method'])
-        data['transaction_id'] = float(request.form['transaction_id'])
-        data['transaction_id_number'] = request.form['transaction_id_number']
+    database.execute_SQL(f"""INSERT INTO payments (transaction_id, payment_method, amount, transaction_id_number)
+                                VALUES
+                                ({request.form['transaction_id']}, '{str(request.form['payment_method'])}', {float(request.form['amount'])}, '{request.form['transaction_id_number']}')""")
+    database.execute_SQL(f"""UPDATE transactions SET status='completed', updated_at='{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}' WHERE id = {request.form['transaction_id']};""")
+    
+    database.init_data()
+    # if int(request.form['id']) not in list(map(lambda data: data["id"], jsonDict['payments'])):
+    #     data = {}
+    #     data['amount'] = float(request.form['amount'])
+    #     data['id'] = int(request.form['id'])
+    #     data['payment_method'] = str(request.form['payment_method'])
+    #     data['transaction_id'] = int(request.form['transaction_id'])
+    #     data['transaction_id_number'] = request.form['transaction_id_number']
 
-        jsonDict['payments'][f'payment{len(jsonDict["payments"])}'] = data
-        database.insertPayment(data)
+    #     database.execute_SQL(f"""INSERT INTO payments (transaction_id, payment_method, amount, transaction_id_number)
+    #                             VALUES
+    #                             ({request.form['transaction_id']}, '{str(request.form['payment_method'])}', {float(request.form['amount'])}, '{request.form['transaction_id_number']}')""")
+    #     database.init_data()
+        # jsonDict['payments'][f'payment{len(jsonDict["payments"])}'] = data
+        # database.insertPayment(data)
     return jsonify(jsonDict), 201
 
 @app.route('/payments/<int:payment_id_put>', methods=['PUT'])
@@ -244,6 +262,6 @@ def delete_payment_by_id(payment_id_delete):
 if __name__ == "__main__":
     database = DATABASESERVER()
     jsonDict = database.dataJson
-    print(jsonDict)
+    # print(jsonDict)
     app.config['JSON_AS_ASCII'] = False
     app.run(host='0.0.0.0', port=5000, debug=True)

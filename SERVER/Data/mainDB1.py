@@ -28,7 +28,15 @@ class DATABASESERVER():
         cur.execute(f"""
             {query}
         """)
-        result = cur.fetchall()
+        
+        print(query)
+        try:
+            result = cur.fetchall()
+        except:
+            result = ()
+        conn.commit()
+        cur.close()
+        conn.close()
         return result
     
     def get_api(self, query: str, columns:list):

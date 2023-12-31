@@ -135,24 +135,24 @@ class Transaction():
 
     def toJson(self):
         return {
-            'create_at' : self.create_at,
+            'created_at' : self.create_at,
             'game_id' : self.game_id,
             'id' : self.id,
             'price' : self.price,
             'status' : self.status,
-            'update_at' : self.update_at,
+            'updated_at' : self.update_at,
             'user_id' : self.user_id
         }
     
     @staticmethod
     def fromJson(jsonTransaction):
         newTransaction = Transaction(
-            jsonTransaction['create_at'],
+            jsonTransaction['created_at'],
             int(jsonTransaction['game_id']),
             int(jsonTransaction['id']),
             float(jsonTransaction['price']),
             jsonTransaction['status'],
-            jsonTransaction['update_at'],
+            jsonTransaction['updated_at'],
             int(jsonTransaction['user_id'])
         )
         return newTransaction

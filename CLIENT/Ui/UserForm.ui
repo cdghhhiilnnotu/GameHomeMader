@@ -235,7 +235,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="gamesBtn">
+              <widget class="QPushButton" name="libraryBtn">
                <property name="font">
                 <font>
                  <pointsize>10</pointsize>
@@ -907,7 +907,7 @@
                <widget class="QWidget" name="homePage">
                 <layout class="QVBoxLayout" name="verticalLayout_14">
                  <item>
-                  <widget class="QWidget" name="headerHome" native="true">
+                  <widget class="QWidget" name="home_header" native="true">
                    <property name="styleSheet">
                     <string notr="true">QLineEdit
 {
@@ -929,7 +929,7 @@ QPushButton:hover
 	background-color: rgb(244, 244, 244);
 }</string>
                    </property>
-                   <widget class="QLineEdit" name="searchLine">
+                   <widget class="QLineEdit" name="home_search_line">
                     <property name="enabled">
                      <bool>true</bool>
                     </property>
@@ -957,7 +957,7 @@ QPushButton:hover
                      <string/>
                     </property>
                    </widget>
-                   <widget class="QLabel" name="searchLabel">
+                   <widget class="QLabel" name="home_search_label">
                     <property name="geometry">
                      <rect>
                       <x>320</x>
@@ -980,7 +980,7 @@ QPushButton:hover
                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="searchBtn">
+                   <widget class="QPushButton" name="home_search_btn">
                     <property name="geometry">
                      <rect>
                       <x>800</x>
@@ -1010,7 +1010,7 @@ background-color: rgb(0, 0, 0);</string>
                       <normaloff>:/icons/EC8482/search.svg</normaloff>:/icons/EC8482/search.svg</iconset>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game1">
+                   <widget class="QPushButton" name="home_game_btn1">
                     <property name="geometry">
                      <rect>
                       <x>10</x>
@@ -1049,7 +1049,7 @@ background-color: rgb(0, 0, 0);</string>
                      <bool>false</bool>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game2">
+                   <widget class="QPushButton" name="home_game_btn2">
                     <property name="geometry">
                      <rect>
                       <x>160</x>
@@ -1085,7 +1085,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game3">
+                   <widget class="QPushButton" name="home_game_btn3">
                     <property name="geometry">
                      <rect>
                       <x>310</x>
@@ -1121,7 +1121,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game6">
+                   <widget class="QPushButton" name="home_game_btn6">
                     <property name="geometry">
                      <rect>
                       <x>760</x>
@@ -1157,7 +1157,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game5">
+                   <widget class="QPushButton" name="home_game_btn5">
                     <property name="geometry">
                      <rect>
                       <x>610</x>
@@ -1193,7 +1193,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game4">
+                   <widget class="QPushButton" name="home_game_btn4">
                     <property name="geometry">
                      <rect>
                       <x>460</x>
@@ -1229,7 +1229,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game12">
+                   <widget class="QPushButton" name="home_game_btn12">
                     <property name="geometry">
                      <rect>
                       <x>760</x>
@@ -1265,7 +1265,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game9">
+                   <widget class="QPushButton" name="home_game_btn9">
                     <property name="geometry">
                      <rect>
                       <x>310</x>
@@ -1301,7 +1301,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game10">
+                   <widget class="QPushButton" name="home_game_btn10">
                     <property name="geometry">
                      <rect>
                       <x>460</x>
@@ -1337,7 +1337,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game8">
+                   <widget class="QPushButton" name="home_game_btn8">
                     <property name="geometry">
                      <rect>
                       <x>160</x>
@@ -1373,7 +1373,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game7">
+                   <widget class="QPushButton" name="home_game_btn7">
                     <property name="geometry">
                      <rect>
                       <x>10</x>
@@ -1409,7 +1409,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game11">
+                   <widget class="QPushButton" name="home_game_btn11">
                     <property name="geometry">
                      <rect>
                       <x>610</x>
@@ -1445,7 +1445,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="moreGameBtn">
+                   <widget class="QPushButton" name="home_more_game_btn">
                     <property name="geometry">
                      <rect>
                       <x>890</x>
@@ -1488,7 +1488,7 @@ background-color: rgb(0, 255, 255);</string>
                <widget class="QWidget" name="libraryPage">
                 <layout class="QVBoxLayout" name="verticalLayout_15">
                  <item>
-                  <widget class="QWidget" name="headerLibrary" native="true">
+                  <widget class="QWidget" name="library_header" native="true">
                    <property name="styleSheet">
                     <string notr="true">QLineEdit
 {
@@ -1510,7 +1510,7 @@ QPushButton:hover
 	background-color: rgb(244, 244, 244);
 }</string>
                    </property>
-                   <widget class="QLineEdit" name="searchLibraryLine">
+                   <widget class="QLineEdit" name="library_search_line">
                     <property name="enabled">
                      <bool>true</bool>
                     </property>
@@ -1538,7 +1538,7 @@ QPushButton:hover
                      <string/>
                     </property>
                    </widget>
-                   <widget class="QLabel" name="searchLibraryLabel">
+                   <widget class="QLabel" name="library_search_label">
                     <property name="geometry">
                      <rect>
                       <x>320</x>
@@ -1561,7 +1561,7 @@ QPushButton:hover
                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="searchLibraryBtn">
+                   <widget class="QPushButton" name="library_search_btn">
                     <property name="geometry">
                      <rect>
                       <x>800</x>
@@ -1591,7 +1591,7 @@ background-color: rgb(0, 0, 0);</string>
                       <normaloff>:/icons/EC8482/search.svg</normaloff>:/icons/EC8482/search.svg</iconset>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game1_2">
+                   <widget class="QPushButton" name="library_game_btn1">
                     <property name="geometry">
                      <rect>
                       <x>10</x>
@@ -1630,7 +1630,7 @@ background-color: rgb(0, 0, 0);</string>
                      <bool>false</bool>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game2_2">
+                   <widget class="QPushButton" name="library_game_btn2">
                     <property name="geometry">
                      <rect>
                       <x>160</x>
@@ -1666,7 +1666,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game3_2">
+                   <widget class="QPushButton" name="library_game_btn3">
                     <property name="geometry">
                      <rect>
                       <x>310</x>
@@ -1702,7 +1702,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game6_2">
+                   <widget class="QPushButton" name="library_game_btn6">
                     <property name="geometry">
                      <rect>
                       <x>760</x>
@@ -1738,7 +1738,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game5_2">
+                   <widget class="QPushButton" name="library_game_btn5">
                     <property name="geometry">
                      <rect>
                       <x>610</x>
@@ -1774,7 +1774,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game4_2">
+                   <widget class="QPushButton" name="library_game_btn4">
                     <property name="geometry">
                      <rect>
                       <x>460</x>
@@ -1810,7 +1810,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game12_2">
+                   <widget class="QPushButton" name="library_game_btn12">
                     <property name="geometry">
                      <rect>
                       <x>760</x>
@@ -1846,7 +1846,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game9_2">
+                   <widget class="QPushButton" name="library_game_btn9">
                     <property name="geometry">
                      <rect>
                       <x>310</x>
@@ -1882,7 +1882,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game10_2">
+                   <widget class="QPushButton" name="library_game_btn10">
                     <property name="geometry">
                      <rect>
                       <x>460</x>
@@ -1918,7 +1918,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game8_2">
+                   <widget class="QPushButton" name="library_game_btn8">
                     <property name="geometry">
                      <rect>
                       <x>160</x>
@@ -1954,7 +1954,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game7_2">
+                   <widget class="QPushButton" name="library_game_btn7">
                     <property name="geometry">
                      <rect>
                       <x>10</x>
@@ -1990,7 +1990,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="game11_2">
+                   <widget class="QPushButton" name="library_game_btn11">
                     <property name="geometry">
                      <rect>
                       <x>610</x>
@@ -2026,7 +2026,7 @@ background-color: rgb(0, 0, 0);</string>
                      </size>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="moreGameLibraryBtn">
+                   <widget class="QPushButton" name="library_more_game_btn">
                     <property name="geometry">
                      <rect>
                       <x>890</x>
@@ -2117,7 +2117,7 @@ background-color: rgb(0, 255, 255);</string>
                      <rect>
                       <x>110</x>
                       <y>30</y>
-                      <width>191</width>
+                      <width>551</width>
                       <height>41</height>
                      </rect>
                     </property>
@@ -2148,7 +2148,17 @@ background-color: rgb(0, 255, 255);</string>
                      </rect>
                     </property>
                     <property name="text">
-                     <string>PushButton</string>
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
                     </property>
                    </widget>
                   </widget>
@@ -2166,7 +2176,7 @@ background-color: rgb(0, 255, 255);</string>
                      <rect>
                       <x>110</x>
                       <y>30</y>
-                      <width>191</width>
+                      <width>551</width>
                       <height>41</height>
                      </rect>
                     </property>
@@ -2197,7 +2207,17 @@ background-color: rgb(0, 255, 255);</string>
                      </rect>
                     </property>
                     <property name="text">
-                     <string>PushButton</string>
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
                     </property>
                    </widget>
                   </widget>
@@ -2215,7 +2235,7 @@ background-color: rgb(0, 255, 255);</string>
                      <rect>
                       <x>110</x>
                       <y>30</y>
-                      <width>191</width>
+                      <width>551</width>
                       <height>41</height>
                      </rect>
                     </property>
@@ -2246,7 +2266,17 @@ background-color: rgb(0, 255, 255);</string>
                      </rect>
                     </property>
                     <property name="text">
-                     <string>PushButton</string>
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
                     </property>
                    </widget>
                   </widget>
@@ -2264,7 +2294,7 @@ background-color: rgb(0, 255, 255);</string>
                      <rect>
                       <x>110</x>
                       <y>30</y>
-                      <width>191</width>
+                      <width>551</width>
                       <height>41</height>
                      </rect>
                     </property>
@@ -2295,7 +2325,17 @@ background-color: rgb(0, 255, 255);</string>
                      </rect>
                     </property>
                     <property name="text">
-                     <string>PushButton</string>
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
                     </property>
                    </widget>
                   </widget>
@@ -2313,7 +2353,7 @@ background-color: rgb(0, 255, 255);</string>
                      <rect>
                       <x>110</x>
                       <y>30</y>
-                      <width>191</width>
+                      <width>551</width>
                       <height>41</height>
                      </rect>
                     </property>
@@ -2344,7 +2384,17 @@ background-color: rgb(0, 255, 255);</string>
                      </rect>
                     </property>
                     <property name="text">
-                     <string>PushButton</string>
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
                     </property>
                    </widget>
                   </widget>
@@ -2362,7 +2412,7 @@ background-color: rgb(0, 255, 255);</string>
                      <rect>
                       <x>110</x>
                       <y>30</y>
-                      <width>191</width>
+                      <width>551</width>
                       <height>41</height>
                      </rect>
                     </property>
@@ -2393,7 +2443,17 @@ background-color: rgb(0, 255, 255);</string>
                      </rect>
                     </property>
                     <property name="text">
-                     <string>PushButton</string>
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
                     </property>
                    </widget>
                   </widget>
@@ -2411,7 +2471,7 @@ background-color: rgb(0, 255, 255);</string>
                      <rect>
                       <x>110</x>
                       <y>30</y>
-                      <width>191</width>
+                      <width>551</width>
                       <height>41</height>
                      </rect>
                     </property>
@@ -2442,7 +2502,17 @@ background-color: rgb(0, 255, 255);</string>
                      </rect>
                     </property>
                     <property name="text">
-                     <string>PushButton</string>
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
                     </property>
                    </widget>
                   </widget>
@@ -2460,7 +2530,7 @@ background-color: rgb(0, 255, 255);</string>
                      <rect>
                       <x>110</x>
                       <y>30</y>
-                      <width>191</width>
+                      <width>551</width>
                       <height>41</height>
                      </rect>
                     </property>
@@ -2491,7 +2561,17 @@ background-color: rgb(0, 255, 255);</string>
                      </rect>
                     </property>
                     <property name="text">
-                     <string>PushButton</string>
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
                     </property>
                    </widget>
                   </widget>
@@ -2509,7 +2589,7 @@ background-color: rgb(0, 255, 255);</string>
                      <rect>
                       <x>110</x>
                       <y>30</y>
-                      <width>191</width>
+                      <width>551</width>
                       <height>41</height>
                      </rect>
                     </property>
@@ -2540,7 +2620,17 @@ background-color: rgb(0, 255, 255);</string>
                      </rect>
                     </property>
                     <property name="text">
-                     <string>PushButton</string>
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
                     </property>
                    </widget>
                   </widget>
@@ -2567,6 +2657,26 @@ background-color: rgb(0, 255, 255);</string>
                     <height>31</height>
                    </rect>
                   </property>
+                  <item>
+                   <property name="text">
+                    <string>Cash</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Credit card</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Visa</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Paypal</string>
+                   </property>
+                  </item>
                  </widget>
                 </widget>
                 <widget class="QWidget" name="orderBtn" native="true">
@@ -2581,19 +2691,6 @@ background-color: rgb(0, 255, 255);</string>
                  <property name="styleSheet">
                   <string notr="true">border: 2px solid rgb(255,255,255);</string>
                  </property>
-                 <widget class="QPushButton" name="cancelBtn_2">
-                  <property name="geometry">
-                   <rect>
-                    <x>730</x>
-                    <y>20</y>
-                    <width>101</width>
-                    <height>41</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string>PushButton</string>
-                  </property>
-                 </widget>
                  <widget class="QPushButton" name="payBtn">
                   <property name="geometry">
                    <rect>
@@ -2621,7 +2718,7 @@ background-color: rgb(0, 255, 255);</string>
                   </property>
                   <property name="icon">
                    <iconset resource="resources.qrc">
-                    <normaloff>:/icons/EC8482/chevrons-right.svg</normaloff>:/icons/EC8482/chevrons-right.svg</iconset>
+                    <normaloff>:/icons/EC8482/send.svg</normaloff>:/icons/EC8482/send.svg</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -2631,16 +2728,25 @@ background-color: rgb(0, 255, 255);</string>
                   </property>
                  </widget>
                  <widget class="QLabel" name="totalCost">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
                   <property name="geometry">
                    <rect>
-                    <x>530</x>
+                    <x>650</x>
                     <y>20</y>
                     <width>191</width>
                     <height>41</height>
                    </rect>
                   </property>
+                  <property name="font">
+                   <font>
+                    <family>Arial</family>
+                    <pointsize>11</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
-                   <string>TextLabel</string>
+                   <string>0</string>
                   </property>
                  </widget>
                 </widget>

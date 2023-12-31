@@ -161,7 +161,7 @@
 					"navigationButtons":[
 						{
 							"homeBtn": "homePage",
-                            "gamesBtn": "libraryPage",
+                            "libraryBtn": "libraryPage",
 							"cartsBtn": "cartsPage"
 						}
 					]
@@ -200,7 +200,7 @@
         {
             "Buttons": [
                 "homeBtn",
-                "gamesBtn",
+                "libraryBtn",
                 "cartsBtn"
             ],
             "Style":[{
