@@ -23,6 +23,7 @@ class CLIENT:
         self.get_api_json()
         
         self.user_id = self.get_user_id(user_email)
+        self.user_password = self.get_user(user_email)['password']
 
         self.user = getElementBy('id', self.user_id, self.dataJson['users'])
         self.transactions_list = getElementsBy('user_id', self.user_id, self.dataJson['transactions'])  
@@ -81,6 +82,9 @@ class CLIENT:
 
     def get_user_id(self, user_email):
         return getElementBy('email', user_email, self.dataJson['users'])['id']
+
+    def get_user(self, user_email):
+        return getElementBy('email', user_email, self.dataJson['users'])
 
     # def getUser(self, id=-1):
     #     if id==-1:

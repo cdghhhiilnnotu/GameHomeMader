@@ -14,7 +14,7 @@ CREATE TABLE games (
   demo_file VARCHAR(255) NOT NULL,
   images VARCHAR(255) NOT NULL,
   videos VARCHAR(255) NOT NULL
-);
+);    
 
 CREATE TABLE transactions (
   id SERIAL PRIMARY KEY,

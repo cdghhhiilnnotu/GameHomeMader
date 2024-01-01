@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'UserFormuBkLLM.ui'
+## Form generated from reading UI file 'UserFormLsSODs.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -1459,7 +1459,7 @@ class Ui_UserWindow(object):
         self.retranslateUi(UserWindow)
 
         self.centerMenuPages.setCurrentIndex(0)
-        self.mainPages.setCurrentIndex(0)
+        self.mainPages.setCurrentIndex(2)
         self.rightMenuPages.setCurrentIndex(0)
 
 

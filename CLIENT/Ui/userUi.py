@@ -3,27 +3,21 @@ import sys
 from datetime import datetime
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from mainCLIENT import *
-from ui_UserForm7 import *
 from PySide2.QtWidgets import QMainWindow, QApplication
 from PySide2 import QtGui
+from ui_UserForm import *
 from Custom_Widgets.Widgets import *
+import urllib
+
 
 class MainUserApp(QMainWindow):
-    def __init__(self, user_email, parent=None):
+    def __init__(self, parent=None):
         QMainWindow.__init__(self)
-        self.ui = Ui_MainWindow()
-        self.client = CLIENT(user_email)
+        self.ui = Ui_UserWindow()
         self.ui.setupUi(self)
 
         loadJsonStyle(self, self.ui)
-        self.show()
-
-        self.init_default_btns()
-
-        self.initHomeGames()
-        self.initLibraryGames()
-        self.initCartsGames()
-        self.initUserProfile()
+        # self.show()
 
         # self.initHomePage()
         # self.initHomeGames()
@@ -32,6 +26,24 @@ class MainUserApp(QMainWindow):
 
         # self.ui.searchLibraryBtn.clicked.connect(lambda: self.initLibrary(str(self.ui.searchLibraryLine.text())))
         # self.initCartPage()
+        self.ui.LoginButton.clicked.connect(lambda: self.loginUser(self.ui.UsernameInput.text(), self.ui.PasswordInput.text()))
+        
+    def loginUser(self, user_email, password):
+        try:
+            self.client = CLIENT(user_email)
+            if self.client.user_password == password:
+                self.init_default_btns()
+                self.initHomeGames()
+                self.initLibraryGames()
+                self.initCartsGames()
+                self.initUserProfile()
+                self.ui.headerLogin.hide()
+                self.ui.mainLogin.hide()
+                self.ui.hidExpand.hide()
+
+        except:
+            print(Exception())
+        # self.client = CLIENT(user_email)
 
     def init_default_btns(self):
         self.ui.settingsBtn.clicked.connect(lambda: self.ui.centerMenuSubContainer.expandMenu())
@@ -49,6 +61,8 @@ class MainUserApp(QMainWindow):
         self.ui.libraryBtn.clicked.connect(self.initLibraryGames())
         self.ui.homeBtn.clicked.connect(self.initHomeGames())
         self.ui.cartsBtn.clicked.connect(self.initCartsGames())
+
+        
 
 
     def initHomeGames(self, searchStr=''):
@@ -82,8 +96,13 @@ class MainUserApp(QMainWindow):
             self.listHomeGamesBtn[thisIndex].hide()
         else:
             self.listHomeGamesBtn[thisIndex].show()
+            url = 'https://ggmeo.com/images/linh-thu-dtcl/yasuo-long-kiem-ti-ni.jpg'
+            data = urllib.urlopen(url).read()
+            pixmap = QPixmap()
+            pixmap.loadFromData(data)
+            icon = QIcon(pixmap)
             # iconBtn = QtGui.QPixmap(self.client.get_game_image_path(self.listHomeGames[thisIndex]["images"]))
-            # self.listHomeGamesBtn[thisIndex].setIcon(QtGui.QIcon(iconBtn))
+            self.listHomeGamesBtn[thisIndex].setIcon(icon)
         self.listHomeGamesBtn[thisIndex].clicked.connect(lambda: self.show_Game_Info(self.listHomeGames[thisIndex], mode='Buy'))
 
 
@@ -228,9 +247,9 @@ class MainUserApp(QMainWindow):
 
     def buyPlayEvent(self, game, mode):
         if mode == 'Buy':
-            print(mode)
+            # print(mode)
             new_transaction = Transaction(datetime.now().strftime("%Y-%m-%d %H:%M:%S"), game['id'], Transaction.transaction_number+1,game['price'],'pending', datetime.now().strftime("%Y-%m-%d %H:%M:%S"),self.client.user_id)
-            print(new_transaction.toJson())
+            # print(new_transaction.toJson())
             self.client.post_transaction(new_transaction.toJson())
         self.ui.mainPages.setCurrentWidget(self.ui.homePage)
         
@@ -301,9 +320,20 @@ class MainUserApp(QMainWindow):
         # pixmap = QtGui.QPixmap(self.client.get_game_image_path(thisGame["images"]))
         # self.ui.avtGame.setPixmap(pixmap)
 
+# def openWindow():
+#     if not QApplication.instance():
+#         app1 = QApplication(sys.argv)
+#     else:
+#         app1 = QApplication.instance()
+#     # app1 = QApplication(sys.argv)
+#     window1 = MainUserApp('tranthibb@exmaple.com')
+#     window1.show()
+#     sys.exit(app1.exec_())
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = MainUserApp('tranthibb@exmaple.com')
+    window = MainUserApp()
     window.show()
     sys.exit(app.exec_())
+    # openWindow()
 

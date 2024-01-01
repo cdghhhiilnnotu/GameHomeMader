@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'UserFormuBkLLM.ui'
+## Form generated from reading UI file 'UserFormfcrfuI.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -21,7 +21,7 @@ class Ui_UserWindow(object):
     def setupUi(self, UserWindow):
         if not UserWindow.objectName():
             UserWindow.setObjectName(u"UserWindow")
-        UserWindow.resize(1262, 748)
+        UserWindow.resize(1232, 738)
         UserWindow.setStyleSheet(u"* {\n"
 "	border:none;\n"
 "	background-color: transparent;\n"
@@ -59,12 +59,11 @@ class Ui_UserWindow(object):
         self.centralwidget = QWidget(UserWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setStyleSheet(u"")
-        self.UserWidget = QWidget(self.centralwidget)
-        self.UserWidget.setObjectName(u"UserWidget")
-        self.UserWidget.setGeometry(QRect(0, 0, 1265, 743))
-        self.horizontalLayout = QHBoxLayout(self.UserWidget)
+        self.horizontalLayout = QHBoxLayout(self.centralwidget)
+        self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.leftMenuContainer = QCustomSlideMenu(self.UserWidget)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.leftMenuContainer = QCustomSlideMenu(self.centralwidget)
         self.leftMenuContainer.setObjectName(u"leftMenuContainer")
         self.leftMenuContainer.setMinimumSize(QSize(200, 0))
         self.leftMenuContainer.setMaximumSize(QSize(55, 16777215))
@@ -202,7 +201,7 @@ class Ui_UserWindow(object):
 
         self.horizontalLayout.addWidget(self.leftMenuContainer)
 
-        self.centerMenuContainer = QWidget(self.UserWidget)
+        self.centerMenuContainer = QWidget(self.centralwidget)
         self.centerMenuContainer.setObjectName(u"centerMenuContainer")
         self.centerMenuContainer.setMinimumSize(QSize(0, 0))
         self.centerMenuContainer.setMaximumSize(QSize(0, 16777215))
@@ -299,7 +298,7 @@ class Ui_UserWindow(object):
 
         self.horizontalLayout.addWidget(self.centerMenuContainer)
 
-        self.mainBodyContainer = QWidget(self.UserWidget)
+        self.mainBodyContainer = QWidget(self.centralwidget)
         self.mainBodyContainer.setObjectName(u"mainBodyContainer")
         sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -1360,106 +1359,12 @@ class Ui_UserWindow(object):
 
         self.horizontalLayout.addWidget(self.mainBodyContainer)
 
-        self.mainLogin = QWidget(self.centralwidget)
-        self.mainLogin.setObjectName(u"mainLogin")
-        self.mainLogin.setGeometry(QRect(11, 60, 1243, 681))
-        self.mainLogin.setStyleSheet(u"background-color: rgb(255, 152, 152);")
-        self.LoginButton = QPushButton(self.mainLogin)
-        self.LoginButton.setObjectName(u"LoginButton")
-        self.LoginButton.setGeometry(QRect(200, 180, 241, 41))
-        self.LoginButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.LoginButton.setStyleSheet(u"QPushButton#LoginButton\n"
-"{\n"
-"	border-radius: 20px;\n"
-"	border: 1px solid rgba(0, 0, 0, 100);\n"
-"	background-color: rgb(255, 255, 255);\n"
-"	font: 14pt \"Terminal\";\n"
-"	color: rgba(0,0,0)\n"
-"}\n"
-"QPushButton#LoginButton:hover\n"
-"{\n"
-"	background-color: rgb(244, 244, 244);\n"
-"}")
-        self.UsernameLabel = QLabel(self.mainLogin)
-        self.UsernameLabel.setObjectName(u"UsernameLabel")
-        self.UsernameLabel.setGeometry(QRect(40, 36, 91, 41))
-        self.UsernameLabel.setStyleSheet(u"font: 14pt \"Terminal\";")
-        self.UsernameLabel.setWordWrap(True)
-        self.PasswordLabel = QLabel(self.mainLogin)
-        self.PasswordLabel.setObjectName(u"PasswordLabel")
-        self.PasswordLabel.setGeometry(QRect(40, 106, 91, 41))
-        self.PasswordLabel.setStyleSheet(u"font: 14pt \"Terminal\";")
-        self.PasswordLabel.setWordWrap(True)
-        self.RegisterButton = QPushButton(self.mainLogin)
-        self.RegisterButton.setObjectName(u"RegisterButton")
-        self.RegisterButton.setGeometry(QRect(40, 180, 141, 41))
-        self.RegisterButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.RegisterButton.setStyleSheet(u"QPushButton#RegisterButton\n"
-"{\n"
-"	border-radius: 20px;\n"
-"	border: 1px solid rgba(0, 0, 0, 100);\n"
-"	background-color: rgb(255, 255, 255);\n"
-"	font: 14pt \"Terminal\";\n"
-"	color: rgba(0,0,0)\n"
-"}\n"
-"QPushButton#RegisterButton:hover\n"
-"{\n"
-"	background-color: rgb(244, 244, 244);\n"
-"}")
-        self.PasswordInput = QLineEdit(self.mainLogin)
-        self.PasswordInput.setObjectName(u"PasswordInput")
-        self.PasswordInput.setGeometry(QRect(160, 105, 281, 42))
-        self.PasswordInput.setStyleSheet(u"QLineEdit#PasswordInput\n"
-"{\n"
-"	border-radius: 20px;\n"
-"	border: 1px solid rgba(0, 0, 0, 100);\n"
-"	padding: 10px;\n"
-"	padding-left: 17px;\n"
-"	font: 14pt \"Terminal\";\n"
-"}\n"
-"QLineEdit#PasswordInput:hover\n"
-"{\n"
-"\n"
-"}")
-        self.PasswordInput.setEchoMode(QLineEdit.Password)
-        self.UsernameInput = QLineEdit(self.mainLogin)
-        self.UsernameInput.setObjectName(u"UsernameInput")
-        self.UsernameInput.setGeometry(QRect(160, 36, 281, 41))
-        self.UsernameInput.setStyleSheet(u"QLineEdit#UsernameInput\n"
-"{\n"
-"	border-radius: 20px;\n"
-"	border: 1px solid rgba(0, 0, 0, 100);\n"
-"	padding: 10px;\n"
-"	padding-left: 17px;\n"
-"	font: 14pt \"Terminal\";\n"
-"}\n"
-"QLineEdit#UsernameInput:hover\n"
-"{\n"
-"\n"
-"}")
-        self.headerLogin = QWidget(self.centralwidget)
-        self.headerLogin.setObjectName(u"headerLogin")
-        self.headerLogin.setGeometry(QRect(11, 11, 1101, 47))
-        self.headerLogin.setStyleSheet(u"background-color: rgb(255, 152, 152);")
-        self.headerLoginLabel = QLabel(self.headerLogin)
-        self.headerLoginLabel.setObjectName(u"headerLoginLabel")
-        self.headerLoginLabel.setGeometry(QRect(44, 15, 121, 21))
-        font13 = QFont()
-        font13.setFamily(u"Arial")
-        font13.setPointSize(11)
-        font13.setBold(True)
-        font13.setWeight(75)
-        self.headerLoginLabel.setFont(font13)
-        self.hidExpand = QWidget(self.centralwidget)
-        self.hidExpand.setObjectName(u"hidExpand")
-        self.hidExpand.setGeometry(QRect(1168, 11, 41, 47))
-        self.hidExpand.setStyleSheet(u"background-color: rgba(0,0,0, 50);")
         UserWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(UserWindow)
 
         self.centerMenuPages.setCurrentIndex(0)
-        self.mainPages.setCurrentIndex(0)
+        self.mainPages.setCurrentIndex(2)
         self.rightMenuPages.setCurrentIndex(0)
 
 
@@ -1627,11 +1532,5 @@ class Ui_UserWindow(object):
 #endif // QT_CONFIG(tooltip)
         self.closeNotificationBtn.setText("")
         self.copyRightTitle.setText(QCoreApplication.translate("UserWindow", u"Copyright By DuongKLinh", None))
-        self.LoginButton.setText(QCoreApplication.translate("UserWindow", u"Login", None))
-        self.UsernameLabel.setText(QCoreApplication.translate("UserWindow", u"Username:", None))
-        self.PasswordLabel.setText(QCoreApplication.translate("UserWindow", u"Password:", None))
-        self.RegisterButton.setText(QCoreApplication.translate("UserWindow", u"Register", None))
-        self.PasswordInput.setText("")
-        self.headerLoginLabel.setText(QCoreApplication.translate("UserWindow", u"Log In", None))
     # retranslateUi
 
