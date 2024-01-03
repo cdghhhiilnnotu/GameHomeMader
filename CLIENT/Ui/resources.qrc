@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>Assets/images/icons/icon.png</file>
     <file>EC8482/activity.svg</file>
     <file>EC8482/airplay.svg</file>
     <file>EC8482/alert-circle.svg</file>
@@ -287,9 +288,5 @@
     <file>EC8482/zap-off.svg</file>
     <file>EC8482/zoom-in.svg</file>
     <file>EC8482/zoom-out.svg</file>
-  </qresource>
-  <qresource prefix="images">
-    <file>z4721841278414_41db3f1c2d44195237d25ddf1ebfad34.jpg</file>
-    <file>icon-app-user.png</file>
   </qresource>
 </RCC>

@@ -99,17 +99,11 @@ class MainUserApp(QMainWindow):
             self.ui.home_game_btn3,
             self.ui.home_game_btn4,
             self.ui.home_game_btn5,
-            self.ui.home_game_btn6,
-            self.ui.home_game_btn7,
-            self.ui.home_game_btn8,
-            self.ui.home_game_btn9,
-            self.ui.home_game_btn10,
-            self.ui.home_game_btn11,
-            self.ui.home_game_btn12
+            self.ui.home_game_btn6
         ]
         for i in range(len(self.listHomeGamesBtn)):
             self.initHomeGameBtns(i)
-        if len(self.listHomeGames) <= 12:
+        if len(self.listHomeGames) <= 6:
             self.ui.home_more_game_btn.hide()
         self.ui.home_search_btn.clicked.connect(lambda: self.initHomeGames(str(self.ui.home_search_line.text())))
 
@@ -123,8 +117,11 @@ class MainUserApp(QMainWindow):
             # pixmap = QPixmap()
             # pixmap.loadFromData(data)
             # icon = QIcon(pixmap)
-            iconBtn = QtGui.QPixmap(self.client.get_game_image_path(self.listHomeGames[thisIndex]["images"],self.listHomeGames[thisIndex]["name"]))
-            self.listHomeGamesBtn[thisIndex].setIcon(iconBtn)
+            pixmapBtn = QtGui.QPixmap(self.client.get_game_image_path(self.listHomeGames[thisIndex]["images"],self.listHomeGames[thisIndex]["name"]))
+            # pixmapBtn = pixmapBtn.scaled(self.listHomeGamesBtn[thisIndex].size(), aspectMode=0)
+            # iconBtn = QtGui.QIcon(pixmapBtn)
+            self.listHomeGamesBtn[thisIndex].setIcon(pixmapBtn)
+            self.listHomeGamesBtn[thisIndex].setIconSize(self.listHomeGamesBtn[thisIndex].size())
             # print(self.listHomeGames[thisIndex]['images'])
             # self.listHomeGamesBtn[thisIndex].setStyleSheet(f"background-image : url({self.listHomeGames[thisIndex]['images']});") 
         self.listHomeGamesBtn[thisIndex].clicked.connect(lambda: self.show_Game_Info(self.listHomeGames[thisIndex], mode='Buy'))
@@ -142,17 +139,11 @@ class MainUserApp(QMainWindow):
             self.ui.library_game_btn3,
             self.ui.library_game_btn4,
             self.ui.library_game_btn5,
-            self.ui.library_game_btn6,
-            self.ui.library_game_btn7,
-            self.ui.library_game_btn8,
-            self.ui.library_game_btn9,
-            self.ui.library_game_btn10,
-            self.ui.library_game_btn11,
-            self.ui.library_game_btn12
+            self.ui.library_game_btn6
         ]
         for i in range(len(self.listLibraryGamesBtn)):
             self.initLibraryGameBtns(i)
-        if len(self.listLibraryGames) <= 12:
+        if len(self.listLibraryGames) <= 6:
             self.ui.library_more_game_btn.hide()
         self.ui.library_search_btn.clicked.connect(lambda: self.initLibraryGames(str(self.ui.library_search_line.text())))
 
@@ -161,14 +152,13 @@ class MainUserApp(QMainWindow):
             self.listLibraryGamesBtn[thisIndex].hide()
         else:
             self.listLibraryGamesBtn[thisIndex].show()
-            iconBtn = QtGui.QPixmap(self.client.get_game_image_path(self.listLibraryGames[thisIndex]["images"],self.listLibraryGames[thisIndex]["name"]))
-            self.listLibraryGamesBtn[thisIndex].setIcon(iconBtn)
+            pixmapBtn = QtGui.QPixmap(self.client.get_game_image_path(self.listLibraryGames[thisIndex]["images"],self.listLibraryGames[thisIndex]["name"]))
+            self.listLibraryGamesBtn[thisIndex].setIcon(pixmapBtn)
+            self.listLibraryGamesBtn[thisIndex].setIconSize(self.listLibraryGamesBtn[thisIndex].size())
         self.listLibraryGamesBtn[thisIndex].clicked.connect(lambda: self.show_Game_Info(self.listLibraryGames[thisIndex], mode='Play'))
 
 
     def initCartsGames(self):
-        # self.client.resetApi()
-
         self.listCartsGames = self.client.get_cart_games()
         self.listCartsGameBoxes = [
             self.ui.gameOrderBox_1,
@@ -235,8 +225,6 @@ class MainUserApp(QMainWindow):
     def removeCartsGameBox(self, index):
         self.client.deleteTransaction(self.listCartsGames[index]['id'])
         self.initCartsGames()
-        # self.listCartsGameBoxes[index].hide()
-        # pass
 
     def payingGame(self):
         id_transacs = self.client.get_pending_id()
@@ -244,8 +232,7 @@ class MainUserApp(QMainWindow):
         for idx in range(len(id_transacs)):
             new_payment = Payment(amount_transacs[idx], Payment.payment_number+1, self.ui.payMethodBox.currentText(),id_transacs[idx], Payment.payment_number+1)
             self.client.postPayment(new_payment.toJson())
-        self.initCartsGames()
-        # pass  
+        self.initCartsGames() 
 
     def initUserProfile(self):
         userJson = self.client.user
@@ -275,69 +262,11 @@ class MainUserApp(QMainWindow):
 
     def buyPlayEvent(self, game, mode):
         if mode == 'Buy':
-            # print(mode)
             new_transaction = Transaction(datetime.now().strftime("%Y-%m-%d %H:%M:%S"), game['id'], Transaction.transaction_number+1,game['price'],'pending', datetime.now().strftime("%Y-%m-%d %H:%M:%S"),self.client.user_id)
-            # print(new_transaction.toJson())
             self.client.post_transaction(new_transaction.toJson())
             self.initCartsGames()
         self.ui.mainPages.setCurrentWidget(self.ui.homePage)
-        
-
-
-    # def initDeleteBtn(self):
-    #     pass
-
-    # def initCartPage(self):
-    #     self.listCart = []
-    #     trasctionsJson = self.client.getTransaction()
-    #     print(trasctionsJson)
-
-
-
-
-    # def initLibrary(self, searchStr=''):
-    #     self.listLibrary = []
-    #     if searchStr == '':
-    #         gamesJson = self.client.getLibrary()
-    #         for item in gamesJson:
-    #             self.listLibrary.append(item)
-    #     else:
-    #         gamesJson = self.client.getLibraryByStr(searchStr)
-    #         for item in gamesJson:
-    #             self.listLibrary.append(item)
-    #     self.initLibraryPage()
-
-
-
-    # def initLibraryPage(self):
-    #     self.listLibraryBtn = [
-    #         self.ui.game1_2,
-    #         self.ui.game2_2,
-    #         self.ui.game3_2,
-    #         self.ui.game4_2,
-    #         self.ui.game5_2,
-    #         self.ui.game6_2,
-    #         self.ui.game7_2,
-    #         self.ui.game8_2,
-    #         self.ui.game9_2,
-    #         self.ui.game10_2,
-    #         self.ui.game11_2,
-    #         self.ui.game12_2
-    #     ]
-    #     for i in range(len(self.listGamesBtn)):
-    #         self.initLibraryBtn(i)
-    #     if len(self.listGames) <= 12:
-    #         self.ui.moreGameLibraryBtn.hide()
-
-    # def initLibraryBtn(self, idxBtn):
-        # if idxBtn >= len(self.listLibrary):
-        #     self.listLibraryBtn[idxBtn].hide()
-        # else:
-        #     self.listLibraryBtn[idxBtn].show()
-        #     iconBtn = QtGui.QPixmap(self.client.get_game_image_path(self.listLibrary[idxBtn]["images"]))
-        #     self.listLibraryBtn[idxBtn].setIcon(QtGui.QIcon(iconBtn))
-        # self.listLibraryBtn[idxBtn].clicked.connect(lambda: self.show_Game_Info(self.listLibrary[idxBtn]))
-        
+ 
     def show_Game_Info(self, thisGame, mode):
         self.ui.mainPages.setCurrentWidget(self.ui.gameInfoPage)
         self.ui.descriptionGame.setText(thisGame["description"])
@@ -346,25 +275,12 @@ class MainUserApp(QMainWindow):
         self.ui.priceGame.setText(str(thisGame["price"]))
         self.ui.PlayBuyBtn.setText(mode)
         self.ui.PlayBuyBtn.clicked.connect(lambda: self.buyPlayEvent(thisGame, mode))
-        # icon = QtGui.QPixmap()
-        # self.listCartsAvtGameBoxes[index].setPixmap(QtGui.QPixmap(icon))
         pixmap = QtGui.QPixmap(self.client.get_game_image_path(thisGame["images"],thisGame["name"]))
         self.ui.avtGame.setPixmap(pixmap)
-
-# def openWindow():
-#     if not QApplication.instance():
-#         app1 = QApplication(sys.argv)
-#     else:
-#         app1 = QApplication.instance()
-#     # app1 = QApplication(sys.argv)
-#     window1 = MainUserApp('tranthibb@exmaple.com')
-#     window1.show()
-#     sys.exit(app1.exec_())
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainUserApp()
     window.show()
     sys.exit(app.exec_())
-    # openWindow()
 
