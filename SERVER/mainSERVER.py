@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify, send_file, send_from_directory
-from Data.mainDATABASE import *
 from datetime import datetime
 from Data.mainDB1 import *
 import os
@@ -7,38 +6,6 @@ import json
 import shutil
 
 app = Flask(__name__)
-
-@app.route('/get_video')
-def get_video():
-    video_path = 'Assets\\videos\\video1.mp4'
-    return send_file(video_path, mimetype='video/mp4')
-
-video_path = 'video1.mp4'
-VIDEO_DIR = 'Assets\\videos\\'
-@app.route('/download')
-def download_video():
-    # Validate file path
-    if not video_path or video_path.startswith('/') or video_path.endswith('/'):
-        return "Invalid video path", 400
-
-    try:
-        # Try opening the video file
-        video_file = open(f"{VIDEO_DIR}/{video_path}", 'rb')
-    except FileNotFoundError:
-        return "Video not found", 404
-
-    # Get file extension and set content type
-    file_extension = video_path.split(".")[-1]
-    content_type = f"video/{file_extension}"
-
-    # Send the video file to the client
-    return send_from_directory(VIDEO_DIR, video_path, as_attachment=True, content_type=content_type)
-
-
-@app.route('/images/games/<game_image_path>')
-def get_png(game_image_path):
-    png_path = 'Assets/images/games/' + game_image_path
-    return send_file(png_path, mimetype='image/png')
 
 # ALL ROUTE
 @app.route('/', methods=['GET'])
@@ -111,28 +78,18 @@ def get_user_id(user_id_get):
 
 @app.route('/users', methods=['POST'])
 def post_user():
-    if int(request.form['id']) not in list(map(lambda data: data["id"], jsonDict['users'].values())):
-        data = {}
-        data['email'] = request.form['email']
-        data['id'] = int(request.form['id'])
-        data['name'] = request.form['name']
-        data['password'] = request.form['password']
-
-        jsonDict['users'][f'user{len(jsonDict["users"])}'] = data
+    database.execute_SQL(f"""INSERT INTO users (name, email, password)
+                                VALUES
+                                ('{request.form["name"]}', '{request.form["email"]}', '{request.form["password"]}');""")
+    database.init_data()
 
     return jsonify(jsonDict), 201
 
 @app.route('/users/<int:user_id_put>', methods=['PUT'])
 def put_user_by_id(user_id_put):
-    # for item in jsonDict['users']:
-    #     if int(item['id']) == int(user_id_put):
-    #         item['email'] = request.form['email']
-    #         item['id'] = int(user_id_put)
-    #         item['name'] = request.form['name']
-    #         item['password'] = request.form['password']
     database.execute_SQL(f"""UPDATE users SET email='{request.form["email"]}', name='{request.form["name"]}', password='{request.form["password"]}' WHERE id = {user_id_put};""")
     database.init_data()
-            # jsonDict['users'][item] = data
+    
     return jsonify(jsonDict)
 
 @app.route('/users/<int:user_id_delete>', methods=['DELETE'])
@@ -156,18 +113,6 @@ def get_transaction_id(transaction_id):
 
 @app.route('/transactions', methods=['POST'])
 def post_transaction():
-    # if int(request.form['id']) not in list(map(lambda data: data["id"], jsonDict['transactions'])):
-    #     data = {}
-    #     data['created_at'] = request.form['created_at']
-    #     data['game_id'] = int(request.form['game_id'])
-    #     data['id'] = int(request.form['id'])
-    #     data['price'] = float(request.form['price'])
-    #     data['status'] = request.form['status']
-    #     data['updated_at'] = request.form['updated_at']
-    #     data['user_id'] = int(request.form['user_id'])
-
-    #     jsonDict['transactions'][f'transaction{len(jsonDict["transactions"])}'] = data
-    print(request.form['created_at'])
     database.execute_SQL(f"""INSERT INTO transactions (user_id, game_id, price, status, created_at, updated_at)
                                 VALUES
                                 ({request.form['user_id']}, {request.form['game_id']}, {request.form['price']}, '{request.form['status']}', '{request.form['created_at']}', '{request.form['updated_at']}');""")
@@ -192,14 +137,9 @@ def put_transaction_by_id(transaction_id_put):
 
 @app.route('/transactions/<int:transaction_id_delete>', methods=['DELETE'])
 def delete_transaction_by_id(transaction_id_delete):
-    # itemDelete = ''
-    # for item in jsonDict['transactions']:
-    #     if int(item['id']) == int(transaction_id_delete):
-    #         itemDelete = item
-    # print(itemDelete)
     database.execute_SQL(f"""DELETE FROM transactions WHERE id = {transaction_id_delete}""")
     database.init_data()
-    # jsonDict['transactions'].pop(itemDelete)
+
     return jsonify(jsonDict)
 
 # PAYMENTS ROUTE
@@ -219,20 +159,7 @@ def post_payment():
     database.execute_SQL(f"""UPDATE transactions SET status='completed', updated_at='{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}' WHERE id = {request.form['transaction_id']};""")
     
     database.init_data()
-    # if int(request.form['id']) not in list(map(lambda data: data["id"], jsonDict['payments'])):
-    #     data = {}
-    #     data['amount'] = float(request.form['amount'])
-    #     data['id'] = int(request.form['id'])
-    #     data['payment_method'] = str(request.form['payment_method'])
-    #     data['transaction_id'] = int(request.form['transaction_id'])
-    #     data['transaction_id_number'] = request.form['transaction_id_number']
-
-    #     database.execute_SQL(f"""INSERT INTO payments (transaction_id, payment_method, amount, transaction_id_number)
-    #                             VALUES
-    #                             ({request.form['transaction_id']}, '{str(request.form['payment_method'])}', {float(request.form['amount'])}, '{request.form['transaction_id_number']}')""")
-    #     database.init_data()
-        # jsonDict['payments'][f'payment{len(jsonDict["payments"])}'] = data
-        # database.insertPayment(data)
+    
     return jsonify(jsonDict), 201
 
 @app.route('/payments/<int:payment_id_put>', methods=['PUT'])
@@ -262,6 +189,6 @@ def delete_payment_by_id(payment_id_delete):
 if __name__ == "__main__":
     database = DATABASESERVER()
     jsonDict = database.dataJson
-    # print(jsonDict)
+    
     app.config['JSON_AS_ASCII'] = False
     app.run(host='0.0.0.0', port=5000, debug=True)

@@ -1,0 +1,493 @@
+{
+    "games": {
+      "game0":{ 
+        "description": "Một trong những tựa game hành động bom tấn.", 
+        "genre": "Action", 
+        "id": 1, 
+        "images": "https://wallpaperfx.com/view_image/new-grand-theft-auto-v-1920x1080-wallpaper-13675.jpg", 
+        "name": "GTA 5", 
+        "price": 129.0, 
+        "videos": "https://www.youtube.com/watch?v=QkkoHAzjnUs"
+      }, 
+      "game1":{
+          "description": "Trò chơi hành động nhập vai nổi bật với bối cảnh Cyberpunk, mang đến trải nghiệm độc đáo trong thế giới công nghệ cao và tương lai đen tối.",
+          "genre": "Action RPG",
+          "id": 2,
+          "images": "https://gamingnerd.net/wp-content/uploads/2023/09/th-99200-36698.jpg",
+          "name": "Cyberpunk 2077",
+          "price": 59.99,
+          "videos": "https://www.youtube.com/watch?v=Ugb80d5lxEM"
+      },
+      "game2":{
+        "description": "Kết thúc câu chuyện của Kratos và Atreus.", 
+        "genre": "Action", 
+        "id": 3, 
+        "images": "https://wallpapers.com/images/featured/god-of-war-83rush6v76r4v0ul.jpg", 
+        "name": "God of War: Ragnarok", 
+        "price": 99.99, 
+        "videos": "https://youtu.be/hfJ4Km46A-0?si=n3FBtOsd-0dmA3r9"
+      }, 
+      "game3":{
+        "description": "Tựa game nhập vai hành động bom tấn của FromSoftware.", 
+        "genre": "Action RPG", 
+        "id": 4, 
+        "images": "https://wallpapercave.com/wp/wp4674107.jpg", 
+        "name": "Elden Ring", 
+        "price": 119.0, 
+        "videos": "https://youtu.be/E3Huy2cdih0?si=PVxq268m7qVMZq-K"
+      }, 
+      "game4":{
+        "description": "Black Myth: Wukong là một trò chơi nhập vai hành động chìm đắm trong thần thoại Trung Quốc.", 
+        "genre": "Action-Adventure,RPG", 
+        "id": 5, 
+        "images": "https://example.com/starfield_images", 
+        "name": "Black Myth: Wukong", 
+        "price": 13.99, 
+        "videos": "https://example.com/starfield_videos"
+      },
+      "game5":{
+        "description": "Red Dead Redemption là một trò chơi hành động phiêu lưu đặt trong thế giới Hoang Dã Tây của Hoa Kỳ. Câu chuyện xoay quanh cuộc sống và phiêu lưu của John Marston, một tay súng cựu tội phạm.",
+        "genre": "Action Adventure",
+        "id": 6,
+        "images": "https://example.com/reddeadredemption_images",
+        "name": "Red Dead Redemption",
+        "price": 49.99,
+        "videos": "https://www.youtube.com/watch?v=eaW0tYpxyp0"
+      },
+      "game6":{
+      "description": "Fortnite là một trò chơi sinh tồn và xây dựng thế giới, nổi tiếng với chế độ Battle Royale độc đáo. Người chơi tham gia cuộc chiến sinh tồn, xây dựng cấu trúc và chiến đấu để trở thành người sống sót cuối cùng.",
+      "genre": "Battle Royale",
+      "id": 7,
+      "images": "https://wallpapers.com/images/hd/fortnite-1920x1080-hd-cvavgntkwzkn72rg.jpg",
+      "name": "Fortnite",
+      "price": "free",
+      "videos": "https://youtu.be/6Mtfo8asqjM?si=80iufHIkWYd7SsQI"
+      },
+      "game7":{
+      "description": "Among Us là một trò chơi nhiệm vụ đa người chơi nổi tiếng, nơi người chơi phải tìm ra kẻ giết người hoặc hoàn thành nhiệm vụ trước khi bị loại khỏi game.",
+      "genre": "Social Deduction",
+      "id": 8,
+      "images": "https://wallpapers.com/images/hd/among-us-space-background-l9i6kd6ax4uj7o0v.jpg",
+      "name": "Among Us",
+      "price": 4.99,
+      "videos": "https://youtu.be/9pyYq9lpjls?si=4fdfLjvnpu3IvEvW"
+      },
+      "game8":{
+      "description": "Hogwarts Legacy là một trò chơi nhập vai hành động đặt trong thế giới phù thủy của Harry Potter. Người chơi sẽ khám phá thế giới phép thuật, học tại trường phù thủy Hogwarts, và trải qua cuộc phiêu lưu độc đáo.",
+      "genre": "Action RPG",
+      "id": 9,
+      "images": "https://wallpapercave.com/wp/wp11988553.jpg",
+      "name": "Hogwarts Legacy",
+      "price": 59.99,
+      "videos": "https://youtu.be/1O6Qstncpnc?si=c29rA-6NkQ1pbGII"
+      },
+      "game9":{
+      "description": "EA eSports là một trải nghiệm thể thao điện tử tuyệt vời, với nhiều trò chơi hấp dẫn và cạnh tranh. Tham gia vào thế giới eSports với các giải đấu đỉnh cao và đối đầu với các game thủ xuất sắc.",
+      "genre": "eSports",
+      "id": 10,
+      "images": "https://cdn.wallpapersafari.com/75/27/gMRXKZ.jpeg",
+      "name": "EA eSports",
+      "price": 79.99,
+      "videos": "https://youtu.be/XhP3Xh4LMA8?si=_Zaa3E1DM_a8j1tL"
+      },
+      "game10":{
+      "description": "STAR WARS Jedi: Survivor™ là một trò chơi hành động phiêu lưu trong vũ trụ của Star Wars. Người chơi sẽ đóng vai một Jedi sống sót, đối mặt với thách thức của Sith và thám hiểm những hành tinh đặc biệt trong thế giới Star Wars.",
+      "genre": "Action Adventure",
+      "id": 11,
+      "images": "https://www.ggrecon.com/media/asfncoma/star-wars-jedi-survivor-nintendo-switch-1.jpg?&format=webp&quality=50",
+      "name": "STAR WARS Jedi: Survivor™",
+      "price": 69.99,
+      "videos": "https://youtu.be/4HLDaBGdnLc?si=r6r-LkDUVUTxQZOl"
+      },
+      "game11":{
+      "description": "The Last of Us là một trò chơi hành động phiêu lưu đậm chất điện ảnh, với cốt truyện đầy cảm xúc, pha trộn giữa hành động, kỹ năng sinh tồn, và mối quan hệ động lòng giữa những nhân vật chính.",
+      "genre": "Action Adventure",
+      "id": 12,
+      "images": "https://genk.mediacdn.vn/2016/photo-0-1481000905792.png",
+      "name": "The Last of Us Part I",
+      "price": 29.99,
+      "videos": "https://youtu.be/W01L70IGBgE?si=Vn3B8qB881NY-3bG"
+      },
+     "game12":{
+      "description": "Assassin's Creed® Mirage là một trò chơi hành động phiêu lưu đặt trong các bối cảnh lịch sử và thế giới mở, nơi người chơi sẽ trải qua những cuộc phiêu lưu đầy hành động và bí ẩn.",
+      "genre": "Action Adventure",
+      "id": 13,
+      "images": "https://cdn2.unrealengine.com/breaker-image-1920x1080-1920x1080-9b4788ed14ab.png",
+      "name": "Assassin's Creed® Mirage",
+      "price": 49.99,
+      "videos": "https://youtu.be/IRNOoOYVn80?si=GmrSgNBLS-hzZrys"
+      },
+     "game13":{
+      "description": "Sifu là một trò chơi hành động và võ thuật độc đáo, nơi người chơi sẽ nhập vai là một võ sư truyền thống và trải qua hành trình học hỏi và chiến đấu trong thế giới đương đại.",
+      "genre": "Action",
+      "id": 14,
+      "images": "https://gstatic.gvn360.com/2022/02/thumb-1920-1202122.jpg",
+      "name": "Sifu",
+      "price": 39.99,
+      "videos": "https://youtu.be/Kx3R2CNhLWA?si=RJiBaZFO_HIRcwct"
+      },
+     "game14":{
+      "description": "Fall Guys: Ultimate Knockout là một trò chơi nhiều người chơi trực tuyến, nơi người chơi cạnh tranh trong các vòng đấu hài hước và thách thức để trở thành người chơi cuối cùng đứng vững.",
+      "genre": "Battle Royale",
+      "id": 15,
+      "images": "https://wallpapercave.com/wp/wp7048889.jpg",
+      "name": "Fall Guys: Ultimate Knockout",
+      "price": 19.99,
+      "videos": "https://youtu.be/Wj3dUvGLjNQ?si=CMCjmsF9fHYUwvJi"
+      },
+     "game15":{
+      "description": "ARK: Survival Evolved là một trò chơi sinh tồn đa người chơi, nơi người chơi phải sống sót và chinh phục thế giới có sinh vật khổng lồ và đầy thách thức.",
+      "genre": "Survival",
+      "id": 16,
+      "images": "https://i.pinimg.com/originals/96/44/41/96444117271c9ed7a0ad188aff850963.jpg",
+      "name": "ARK: Survival Evolved",
+      "price": 29.99,
+      "videos": "https://youtu.be/aQM8yWoiy5s?si=6D-tnfqorsiChhP8"
+      },
+     "game16":{
+      "description": "PUBG (PlayerUnknown's Battlegrounds) là một trò chơi battle royale nơi người chơi chiến đấu để trở thành người sống sót cuối cùng trong một đảo hoang vu đầy thách thức.",
+      "genre": "Battle Royale",
+      "id": 17,
+      "images": "https://1.bp.blogspot.com/-O6KeTu-lER0/YTXgER7H54I/AAAAAAAAHEs/hBdNPSxNOXketQc7a97t7D5lATFxdDgeACLcBGAsYHQ/s16000-rw/hinh-nen-pubg-full-hd-cho-may-tinh-37.jpg",
+      "name": "PUBG (PlayerUnknown's Battlegrounds)",
+      "price": 29.99,
+      "videos": "https://youtu.be/6TOSV3-7hzU?si=3ZYJK0FDx8HND6Bh"
+      },
+     "game17":{
+      "description": "Naraka: Bladepoint là một trò chơi hành động battle royale với lối chơi nhanh nhẹn và hệ thống chiến đấu đa dạng, nơi các võ sĩ cạnh tranh để trở thành người chiến thắng trên đảo đấu phẳng.",
+      "genre": "Battle Royale",
+      "id": 18,
+      "images": " https://d1lss44hh2trtw.cloudfront.net/assets/article/2021/03/25/naraka_feature.jpg",
+      "name": "Naraka: Bladepoint",
+      "price": 39.99,
+      "videos": "https://youtu.be/kp4WrQp6pUg?si=3PEtSE_X3ZKHU730"
+      }
+    }, 
+    "payments": {
+      "payment0":{
+          "amount": 129.0,
+          "id": 1,
+          "payment_method": "cash",
+          "transaction_id": 1,
+          "transaction_id_number": "1234567890123456",
+          "games_purchased": ["GTA 5"]
+      },
+      "payment1":{
+        "amount": 59.99, 
+        "id": 2, 
+        "payment_method": "credit card", 
+        "transaction_id": 2, 
+        "transaction_id_number": "9876543210987654"
+      }, 
+      "payment2":{
+        "amount": 99.99, 
+        "id": 3, 
+        "payment_method": "paypal", 
+        "transaction_id": 3, 
+        "transaction_id_number": "12345678901234567890"
+      }, 
+      "payment3":{
+        "amount": 119.0, 
+        "id": 4, 
+        "payment_method": "visa", 
+        "transaction_id": 4, 
+        "transaction_id_number": "98765432109876543210"
+      }, 
+      "payment4":{
+        "amount": 13.99, 
+        "id": 5, 
+        "payment_method": "paypal", 
+        "transaction_id": 5, 
+        "transaction_id_number": "12345678901234567890"
+      },
+      "payment5":{
+        "amount": 49.99,
+        "id": 6,
+        "payment_method": "cash",
+        "transaction_id": 6,
+        "transaction_id_number": "1234567890123456",
+        "games_purchased": ["GTA 5"]
+      },
+      "payment6":{
+        "amount": 0.0, 
+        "id": 7, 
+        "payment_method": "credit card", 
+        "transaction_id": 7, 
+        "transaction_id_number": "9876543210987654"
+      }, 
+      "payment7":{
+        "amount": 4.99, 
+        "id": 8, 
+        "payment_method": "paypal", 
+        "transaction_id": 8, 
+        "transaction_id_number": "12345678901234567890"
+      }, 
+      "payment8":{
+        "amount": 59.99, 
+        "id": 9, 
+        "payment_method": "visa", 
+        "transaction_id": 9, 
+        "transaction_id_number": "98765432109876543210"
+      }, 
+      "payment9":{
+        "amount": 79.99, 
+        "id": 10, 
+        "payment_method": "paypal", 
+        "transaction_id": 10, 
+        "transaction_id_number": "12345678901234567890"
+      },
+      "payment10":{
+        "amount": 69.99,
+        "id": 11,
+        "payment_method": "cash",
+        "transaction_id": 11,
+        "transaction_id_number": "1234567890123456",
+        "games_purchased": ["GTA 5"]
+      },
+      "payment11":{
+        "amount": 29.99, 
+        "id": 12, 
+        "payment_method": "credit card", 
+        "transaction_id": 12, 
+        "transaction_id_number": "9876543210987654"
+      }, 
+      "payment12":{
+        "amount": 49.99, 
+        "id": 13, 
+        "payment_method": "paypal", 
+        "transaction_id": 13, 
+        "transaction_id_number": "12345678901234567890"
+      }, 
+      "payment13":{
+        "amount": 39.99, 
+        "id": 14, 
+        "payment_method": "visa", 
+        "transaction_id": 14, 
+        "transaction_id_number": "98765432109876543210"
+      }, 
+      "payment14":{
+        "amount": 19.99, 
+        "id": 15, 
+        "payment_method": "paypal", 
+        "transaction_id": 15, 
+        "transaction_id_number": "12345678901234567890"
+      },
+      "payment15":{
+        "amount": 29.99, 
+        "id": 16, 
+        "payment_method": "paypal", 
+        "transaction_id": 16, 
+        "transaction_id_number": "12345678901234567890"
+      }, 
+      "payment16":{
+        "amount": 29.99, 
+        "id": 17, 
+        "payment_method": "paypal", 
+        "transaction_id": 17, 
+        "transaction_id_number": "12345678901234567890"
+      },
+      "payment17":{
+        "amount": 39.99, 
+        "id": 18, 
+        "payment_method": "paypal", 
+        "transaction_id": 18, 
+        "transaction_id_number": "12345678901234567890"
+      }
+    },
+    "transactions": {
+      "transaction0": {
+        "created_at": "2023-08-02", 
+        "game_id": 1, 
+        "id": 1, 
+        "price": 129.0, 
+        "status": "completed", 
+        "updated_at": "2023-08-02", 
+        "user_id": 1
+      }, 
+      "transaction1": {
+        "created_at": "2023-08-26", 
+        "game_id": 2, 
+        "id": 2, 
+        "price": 59.9, 
+        "status": "completed", 
+        "updated_at": "2023-08-26", 
+        "user_id": 2
+      }, 
+      "transaction2": {
+        "created_at": "2023-08-10", 
+        "game_id": 3, 
+        "id": 3, 
+        "price": 99.99, 
+        "status": "completed", 
+        "updated_at": "2023-08-10", 
+        "user_id": 3
+      }, 
+      "transaction3": {
+        "created_at": "2023-08-05", 
+        "game_id": 4, 
+        "id": 4, 
+        "price": 119.0, 
+        "status": "completed", 
+        "updated_at": "2023-08-05", 
+        "user_id": 4
+      }, 
+      "transaction4": {
+        "created_at": "2023-07-29", 
+        "game_id": 5, 
+        "id": 5, 
+        "price": 13.99, 
+        "status": "completed", 
+        "updated_at": "2023-07-29", 
+        "user_id": 5
+      },
+      "transaction5": {
+        "created_at": "2023-08-02", 
+        "game_id": 6, 
+        "id": 6, 
+        "price": 49.99, 
+        "status": "completed", 
+        "updated_at": "2023-08-02", 
+        "user_id": 1
+      }, 
+      "transaction6": {
+        "created_at": "2023-08-03", 
+        "game_id": 7, 
+        "id": 7, 
+        "price": 0.0, 
+        "status": "completed", 
+        "updated_at": "2023-08-03", 
+        "user_id": 2
+      }, 
+      "transaction7": {
+        "created_at": "2023-01-04", 
+        "game_id": 8, 
+        "id": 8, 
+        "price": 4.99, 
+        "status": "completed", 
+        "updated_at": "2023-01-04", 
+        "user_id": 3
+      }, 
+      "transaction8": {
+        "created_at": "2023-03-05", 
+        "game_id": 9, 
+        "id": 9, 
+        "price": 59.99, 
+        "status": "completed", 
+        "updated_at": "2023-03-05", 
+        "user_id": 4
+      }, 
+      "transaction9": {
+        "created_at": "2023-06-23", 
+        "game_id": 10, 
+        "id": 10, 
+        "price": 79.99, 
+        "status": "completed", 
+        "updated_at": "2023-06-23", 
+        "user_id": 5
+      },
+      "transaction10": {
+        "created_at": "2023-01-02", 
+        "game_id": 11, 
+        "id": 11, 
+        "price": 69.99, 
+        "status": "completed", 
+        "updated_at": "2023-01-02", 
+        "user_id": 1
+      }, 
+      "transaction11": {
+        "created_at": "2023-08-03", 
+        "game_id": 12, 
+        "id": 12, 
+        "price": 29.99, 
+        "status": "completed", 
+        "updated_at": "2023-08-03", 
+        "user_id": 2
+      }, 
+      "transaction12": {
+        "created_at": "2023-08-04", 
+        "game_id": 13, 
+        "id": 13, 
+        "price": 49.99, 
+        "status": "completed", 
+        "updated_at": "2023-08-04", 
+        "user_id": 3
+      }, 
+      "transaction13": {
+        "created_at": "2023-08-05", 
+        "game_id": 14, 
+        "id": 14, 
+        "price": 39.99, 
+        "status": "completed", 
+        "updated_at": "2023-08-05", 
+        "user_id": 4
+      }, 
+      "transaction14": {
+        "created_at": "2023-08-06", 
+        "game_id":15, 
+        "id": 15, 
+        "price": 19.99, 
+        "status": "completed", 
+        "updated_at": "2023-08-06", 
+        "user_id": 5
+      },
+      "transaction15": {
+        "created_at": "2023-08-05", 
+        "game_id": 16, 
+        "id": 16, 
+        "price": 29.99, 
+        "status": "completed", 
+        "updated_at": "2023-08-05", 
+        "user_id": 4
+      }, 
+      "transaction16": {
+        "created_at": "2023-08-06", 
+        "game_id": 17, 
+        "id": 17, 
+        "price": 29.99, 
+        "status": "completed", 
+        "updated_at": "2023-08-06", 
+        "user_id": 5
+      },
+      "transaction17": {
+        "created_at": "2023-08-06", 
+        "game_id": 18, 
+        "id": 18, 
+        "price": 39.99, 
+        "status": "completed", 
+        "updated_at": "2023-08-06", 
+        "user_id": 5
+      }
+    }, 
+    "users": {
+      "user0": {
+        "email": "nguyenvanan@example.com", 
+        "id": 1, 
+        "name": "Nguy\u1ec5n V\u0103n A", 
+        "password": "123456"
+      }, 
+      "user1": {
+        "email": "tranthibb@example.com", 
+        "id": 2, 
+        "name": "Tr\u1ea7n Th\u1ecb B", 
+        "password": "789012"
+      }, 
+      "user2": {
+        "email": "lequangc@example.com", 
+        "id": 3, 
+        "name": "L\u00ea Quang C", 
+        "password": "345678"
+      }, 
+      "user3": {
+        "email": "dothdd@example.com", 
+        "id": 4, 
+        "name": "\u0110\u1ed7 Th\u1ecb D", 
+        "password": "901234"
+      }, 
+      "user4": {
+        "email": "hoangvanee@example.com", 
+        "id": 5, 
+        "name": "Ho\u00e0ng V\u0103n E", 
+        "password": "567890"
+      }
+    }
+  }

@@ -86,6 +86,11 @@ class CLIENT:
     def get_user(self, user_email):
         return getElementBy('email', user_email, self.dataJson['users'])
 
+    @staticmethod
+    def postUser(new_user):
+        return requests.post('http://127.0.0.1:5000/users', data=new_user)
+
+
     # def getUser(self, id=-1):
     #     if id==-1:
     #         return requests.get(self.BASE + 'users').json()
@@ -190,15 +195,23 @@ class CLIENT:
     #         return requests.delete(self.BASE + f'users/{id}')
     #     return 'CANNOT DO'
     
-    # def get_game_image_path(self, filename):
-    #     img_data = requests.get(self.BASE + f'/images/games/{filename}').content
-    #     if not os.path.exists(f'Assets/images/games/{filename}'):
-    #         open(filename, 'w').close()
-    #     if not os.path.exists(f'Assets/images/games/{filename}'):
-    #         os.rename(filename, f'Assets/images/games/{filename}')
-    #     with open(f'Assets/images/games/{filename}', 'wb') as handler:
-    #         handler.write(img_data)
-    #     return f'Assets/images/games/{filename}'
+    def get_game_image_path(self, urlImg, game_name):
+        print(game_name)
+        filename = game_name + '.png'
+        img_data = requests.get(urlImg).content
+        if not os.path.exists(f'Assets/images/games/{filename}'):
+            print('open')
+            open(filename, 'w').close()
+        if os.path.exists(filename):
+            print('created ' + filename)
+        if not os.path.exists(f'Assets/images/games/{filename}'):
+            print('rename ' + filename)
+            os.rename(filename, f'Assets/images/games/{filename}')
+        with open(f'Assets/images/games/{filename}', 'wb') as handler:
+            print('write')
+            handler.write(img_data)
+        print(f'Assets/images/games/{filename}')
+        return f'Assets/images/games/{filename}'
     
     # def get_user_image_path(self, filename):
     #     img_data = requests.get(self.BASE + f'/images/users/{filename}').content
