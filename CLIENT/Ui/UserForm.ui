@@ -925,7 +925,7 @@
                  </size>
                 </property>
                 <property name="currentIndex">
-                 <number>2</number>
+                 <number>0</number>
                 </property>
                 <widget class="QWidget" name="homePage">
                  <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -3641,7 +3641,7 @@ background-color: rgb(206, 103, 114);</string>
    <widget class="QWidget" name="mainLogin" native="true">
     <property name="geometry">
      <rect>
-      <x>11</x>
+      <x>2011</x>
       <y>60</y>
       <width>1243</width>
       <height>681</height>
