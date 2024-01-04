@@ -210,8 +210,7 @@
                  <string>Home</string>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">backgound-color: #1f232a;
-</string>
+                 <string notr="true"/>
                 </property>
                 <property name="text">
                  <string>  Home</string>
@@ -236,7 +235,7 @@
                  </font>
                 </property>
                 <property name="toolTip">
-                 <string>Data Analysis</string>
+                 <string>Library</string>
                 </property>
                 <property name="text">
                  <string>  Library</string>
@@ -261,7 +260,7 @@
                  </font>
                 </property>
                 <property name="toolTip">
-                 <string>View Reports</string>
+                 <string>Carts</string>
                 </property>
                 <property name="text">
                  <string>  Carts</string>
@@ -514,7 +513,7 @@
               <string notr="true"/>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>1</number>
              </property>
              <widget class="QWidget" name="settingsPage">
               <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -896,7 +895,7 @@
                  </size>
                 </property>
                 <property name="currentIndex">
-                 <number>3</number>
+                 <number>2</number>
                 </property>
                 <widget class="QWidget" name="homePage">
                  <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -911,153 +910,351 @@
 	padding: 10px;
 	padding-left: 17px;
 	color: #rgb(0,255,255);
-}
-QPushButton
-{
-	border: 1px solid rgba(0, 0, 0, 100);
-	font: 14pt &quot;Terminal&quot;;
-}
-QPushButton:hover
-{
-	background-color: rgb(244, 244, 244);
 }</string>
                     </property>
-                    <widget class="QWidget" name="top_home" native="true">
-                     <property name="geometry">
-                      <rect>
-                       <x>0</x>
-                       <y>0</y>
-                       <width>978</width>
-                       <height>49</height>
-                      </rect>
+                    <layout class="QVBoxLayout" name="verticalLayout_21" stretch="1,7,1">
+                     <property name="leftMargin">
+                      <number>0</number>
                      </property>
-                     <widget class="QPushButton" name="home_search_btn">
-                      <property name="geometry">
-                       <rect>
-                        <x>810</x>
-                        <y>0</y>
-                        <width>161</width>
-                        <height>41</height>
-                       </rect>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Terminal</family>
-                        <pointsize>14</pointsize>
-                        <weight>50</weight>
-                        <italic>false</italic>
-                        <bold>false</bold>
-                       </font>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border-radius: 20px;
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QWidget" name="top_home" native="true">
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <widget class="QPushButton" name="home_search_btn">
+                        <property name="geometry">
+                         <rect>
+                          <x>810</x>
+                          <y>0</y>
+                          <width>161</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Terminal</family>
+                          <pointsize>14</pointsize>
+                          <weight>50</weight>
+                          <italic>false</italic>
+                          <bold>false</bold>
+                         </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">border-radius: 20px;
 color: #EC8482;
 background-color: rgb(0, 0, 0);</string>
-                      </property>
-                      <property name="text">
-                       <string> Search</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="resources.qrc">
-                        <normaloff>:/icons/EC8482/search.svg</normaloff>:/icons/EC8482/search.svg</iconset>
-                      </property>
-                     </widget>
-                     <widget class="QLineEdit" name="home_search_line">
-                      <property name="enabled">
-                       <bool>true</bool>
-                      </property>
-                      <property name="geometry">
-                       <rect>
-                        <x>450</x>
-                        <y>0</y>
-                        <width>351</width>
-                        <height>42</height>
-                       </rect>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Terminal</family>
-                        <pointsize>15</pointsize>
-                        <weight>50</weight>
-                        <italic>false</italic>
-                        <bold>false</bold>
-                       </font>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">color: rgb(0, 0, 0);</string>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                     </widget>
-                     <widget class="QLabel" name="home_search_label">
-                      <property name="geometry">
-                       <rect>
-                        <x>330</x>
-                        <y>10</y>
-                        <width>111</width>
-                        <height>30</height>
-                       </rect>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>15</pointsize>
-                        <weight>50</weight>
-                        <bold>false</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Tìm kiếm:</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                      </property>
-                     </widget>
-                    </widget>
-                    <widget class="QWidget" name="middle_home" native="true">
-                     <property name="geometry">
-                      <rect>
-                       <x>0</x>
-                       <y>56</y>
-                       <width>978</width>
-                       <height>340</height>
-                      </rect>
-                     </property>
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true"/>
-                     </property>
-                     <layout class="QGridLayout" name="gridLayout_2" columnstretch="0,0,0">
-                      <property name="sizeConstraint">
-                       <enum>QLayout::SetDefaultConstraint</enum>
-                      </property>
-                      <property name="leftMargin">
-                       <number>0</number>
-                      </property>
-                      <property name="topMargin">
-                       <number>0</number>
-                      </property>
-                      <property name="rightMargin">
-                       <number>0</number>
-                      </property>
-                      <property name="bottomMargin">
-                       <number>0</number>
-                      </property>
-                      <property name="spacing">
-                       <number>10</number>
-                      </property>
-                      <item row="1" column="0">
-                       <widget class="QPushButton" name="home_game_btn4">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string> Search</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="resources.qrc">
+                          <normaloff>:/icons/EC8482/search.svg</normaloff>:/icons/EC8482/search.svg</iconset>
+                        </property>
+                       </widget>
+                       <widget class="QLineEdit" name="home_search_line">
+                        <property name="enabled">
+                         <bool>true</bool>
+                        </property>
+                        <property name="geometry">
+                         <rect>
+                          <x>450</x>
+                          <y>0</y>
+                          <width>351</width>
+                          <height>42</height>
+                         </rect>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Terminal</family>
+                          <pointsize>15</pointsize>
+                          <weight>50</weight>
+                          <italic>false</italic>
+                          <bold>false</bold>
+                         </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">color: rgb(0, 0, 0);</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="home_search_label">
+                        <property name="geometry">
+                         <rect>
+                          <x>330</x>
+                          <y>10</y>
+                          <width>111</width>
+                          <height>30</height>
+                         </rect>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>15</pointsize>
+                          <weight>50</weight>
+                          <bold>false</bold>
+                         </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true"/>
+                        </property>
+                        <property name="text">
+                         <string>Tìm kiếm:</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QWidget" name="middle_home" native="true">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <layout class="QGridLayout" name="gridLayout_2" columnstretch="0,0,0">
+                        <property name="sizeConstraint">
+                         <enum>QLayout::SetDefaultConstraint</enum>
+                        </property>
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="spacing">
+                         <number>10</number>
+                        </property>
+                        <item row="1" column="0">
+                         <widget class="QPushButton" name="home_game_btn4">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Terminal</family>
+                            <pointsize>14</pointsize>
+                            <weight>50</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">border: 0px;
+background-color: rgba(0, 0, 0, 0);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="iconSize">
+                           <size>
+                            <width>319</width>
+                            <height>165</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="0">
+                         <widget class="QPushButton" name="home_game_btn1">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Terminal</family>
+                            <pointsize>14</pointsize>
+                            <weight>50</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">border: 0px;
+background-color: rgba(0, 0, 0, 0);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="iconSize">
+                           <size>
+                            <width>319</width>
+                            <height>165</height>
+                           </size>
+                          </property>
+                          <property name="autoRepeat">
+                           <bool>false</bool>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="2">
+                         <widget class="QPushButton" name="home_game_btn3">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Terminal</family>
+                            <pointsize>14</pointsize>
+                            <weight>50</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">border: 0px;
+background-color: rgba(0, 0, 0, 0);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="iconSize">
+                           <size>
+                            <width>319</width>
+                            <height>165</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1">
+                         <widget class="QPushButton" name="home_game_btn5">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Terminal</family>
+                            <pointsize>14</pointsize>
+                            <weight>50</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">border: 0px;
+background-color: rgba(0, 0, 0, 0);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="iconSize">
+                           <size>
+                            <width>319</width>
+                            <height>165</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="2">
+                         <widget class="QPushButton" name="home_game_btn6">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Terminal</family>
+                            <pointsize>14</pointsize>
+                            <weight>50</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">border: 0px;
+background-color: rgba(0, 0, 0, 0);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="iconSize">
+                           <size>
+                            <width>319</width>
+                            <height>165</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="1">
+                         <widget class="QPushButton" name="home_game_btn2">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Terminal</family>
+                            <pointsize>14</pointsize>
+                            <weight>50</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">border: 0px;
+background-color: rgba(0, 0, 0, 0);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="iconSize">
+                           <size>
+                            <width>319</width>
+                            <height>165</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QWidget" name="bottom_home" native="true">
+                       <widget class="QPushButton" name="home_more_game_btn">
+                        <property name="geometry">
+                         <rect>
+                          <x>880</x>
+                          <y>0</y>
+                          <width>71</width>
+                          <height>41</height>
+                         </rect>
                         </property>
                         <property name="font">
                          <font>
@@ -1069,255 +1266,27 @@ background-color: rgb(0, 0, 0);</string>
                          </font>
                         </property>
                         <property name="styleSheet">
-                         <string notr="true">border: 0px;
-	background-color: rgba(0, 0, 0, 0);</string>
+                         <string notr="true">color: #EC8482;
+background-color: rgb(0, 255, 255);
+border-radius: 20px;</string>
                         </property>
                         <property name="text">
                          <string/>
                         </property>
                         <property name="icon">
-                         <iconset>
-                          <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
+                         <iconset resource="resources.qrc">
+                          <normaloff>:/icons/EC8482/chevrons-right.svg</normaloff>:/icons/EC8482/chevrons-right.svg</iconset>
                         </property>
                         <property name="iconSize">
                          <size>
-                          <width>20</width>
-                          <height>20</height>
+                          <width>30</width>
+                          <height>30</height>
                          </size>
                         </property>
                        </widget>
-                      </item>
-                      <item row="0" column="0">
-                       <widget class="QPushButton" name="home_game_btn1">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>Terminal</family>
-                          <pointsize>14</pointsize>
-                          <weight>50</weight>
-                          <italic>false</italic>
-                          <bold>false</bold>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">border: 0px;
-	background-color: rgba(0, 0, 0, 0);</string>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="icon">
-                         <iconset>
-                          <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
-                        </property>
-                        <property name="iconSize">
-                         <size>
-                          <width>310</width>
-                          <height>166</height>
-                         </size>
-                        </property>
-                        <property name="autoRepeat">
-                         <bool>false</bool>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="0" column="2">
-                       <widget class="QPushButton" name="home_game_btn3">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>Terminal</family>
-                          <pointsize>14</pointsize>
-                          <weight>50</weight>
-                          <italic>false</italic>
-                          <bold>false</bold>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">border: 0px;
-	background-color: rgba(0, 0, 0, 0);</string>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="icon">
-                         <iconset>
-                          <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
-                        </property>
-                        <property name="iconSize">
-                         <size>
-                          <width>20</width>
-                          <height>20</height>
-                         </size>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="1" column="1">
-                       <widget class="QPushButton" name="home_game_btn5">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>Terminal</family>
-                          <pointsize>14</pointsize>
-                          <weight>50</weight>
-                          <italic>false</italic>
-                          <bold>false</bold>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">border: 0px;
-	background-color: rgba(0, 0, 0, 0);</string>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="icon">
-                         <iconset>
-                          <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
-                        </property>
-                        <property name="iconSize">
-                         <size>
-                          <width>20</width>
-                          <height>20</height>
-                         </size>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="1" column="2">
-                       <widget class="QPushButton" name="home_game_btn6">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>Terminal</family>
-                          <pointsize>14</pointsize>
-                          <weight>50</weight>
-                          <italic>false</italic>
-                          <bold>false</bold>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">border: 0px;
-	background-color: rgba(0, 0, 0, 0);</string>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="icon">
-                         <iconset>
-                          <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
-                        </property>
-                        <property name="iconSize">
-                         <size>
-                          <width>20</width>
-                          <height>20</height>
-                         </size>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="0" column="1">
-                       <widget class="QPushButton" name="home_game_btn2">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>Terminal</family>
-                          <pointsize>14</pointsize>
-                          <weight>50</weight>
-                          <italic>false</italic>
-                          <bold>false</bold>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">border: 0px;
-	background-color: rgba(0, 0, 0, 0);</string>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="icon">
-                         <iconset>
-                          <normaloff>Assets/images/games/GTA 5.png</normaloff>Assets/images/games/GTA 5.png</iconset>
-                        </property>
-                        <property name="iconSize">
-                         <size>
-                          <width>310</width>
-                          <height>166</height>
-                         </size>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                    <widget class="QWidget" name="bottom_home" native="true">
-                     <property name="geometry">
-                      <rect>
-                       <x>0</x>
-                       <y>403</y>
-                       <width>978</width>
-                       <height>49</height>
-                      </rect>
-                     </property>
-                     <widget class="QPushButton" name="home_more_game_btn">
-                      <property name="geometry">
-                       <rect>
-                        <x>880</x>
-                        <y>0</y>
-                        <width>71</width>
-                        <height>41</height>
-                       </rect>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Terminal</family>
-                        <pointsize>14</pointsize>
-                        <weight>50</weight>
-                        <italic>false</italic>
-                        <bold>false</bold>
-                       </font>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">color: #EC8482;
-background-color: rgb(0, 255, 255);</string>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="resources.qrc">
-                        <normaloff>:/icons/EC8482/chevrons-right.svg</normaloff>:/icons/EC8482/chevrons-right.svg</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>30</width>
-                        <height>30</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </widget>
+                      </widget>
+                     </item>
+                    </layout>
                    </widget>
                   </item>
                  </layout>
@@ -1335,15 +1304,6 @@ background-color: rgb(0, 255, 255);</string>
 	padding: 10px;
 	padding-left: 17px;
 	color: #rgb(0,255,255);
-}
-QPushButton
-{
-	border: 1px solid rgba(0, 0, 0, 100);
-	font: 14pt &quot;Terminal&quot;;
-}
-QPushButton:hover
-{
-	background-color: rgb(244, 244, 244);
 }</string>
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_16" stretch="1,7,1">
@@ -1448,7 +1408,7 @@ background-color: rgb(0, 0, 0);</string>
                      <item>
                       <widget class="QWidget" name="middle_library" native="true">
                        <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
                          <horstretch>0</horstretch>
                          <verstretch>0</verstretch>
                         </sizepolicy>
@@ -1493,20 +1453,16 @@ background-color: rgb(0, 0, 0);</string>
                            </font>
                           </property>
                           <property name="styleSheet">
-                           <string notr="true">color: #EC8482;
-background-color: rgb(0, 0, 0);</string>
+                           <string notr="true">border: 0px;
+background-color: rgba(0, 0, 0, 0);</string>
                           </property>
                           <property name="text">
                            <string/>
                           </property>
-                          <property name="icon">
-                           <iconset>
-                            <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
-                          </property>
                           <property name="iconSize">
                            <size>
-                            <width>115</width>
-                            <height>115</height>
+                            <width>320</width>
+                            <height>165</height>
                            </size>
                           </property>
                          </widget>
@@ -1529,20 +1485,16 @@ background-color: rgb(0, 0, 0);</string>
                            </font>
                           </property>
                           <property name="styleSheet">
-                           <string notr="true">color: #EC8482;
-background-color: rgb(0, 0, 0);</string>
+                           <string notr="true">border: 0px;
+background-color: rgba(0, 0, 0, 0);</string>
                           </property>
                           <property name="text">
                            <string/>
                           </property>
-                          <property name="icon">
-                           <iconset>
-                            <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
-                          </property>
                           <property name="iconSize">
                            <size>
-                            <width>115</width>
-                            <height>115</height>
+                            <width>320</width>
+                            <height>165</height>
                            </size>
                           </property>
                           <property name="autoRepeat">
@@ -1568,20 +1520,16 @@ background-color: rgb(0, 0, 0);</string>
                            </font>
                           </property>
                           <property name="styleSheet">
-                           <string notr="true">color: #EC8482;
-background-color: rgb(0, 0, 0);</string>
+                           <string notr="true">border: 0px;
+background-color: rgba(0, 0, 0, 0);</string>
                           </property>
                           <property name="text">
                            <string/>
                           </property>
-                          <property name="icon">
-                           <iconset>
-                            <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
-                          </property>
                           <property name="iconSize">
                            <size>
-                            <width>115</width>
-                            <height>115</height>
+                            <width>320</width>
+                            <height>165</height>
                            </size>
                           </property>
                          </widget>
@@ -1604,20 +1552,16 @@ background-color: rgb(0, 0, 0);</string>
                            </font>
                           </property>
                           <property name="styleSheet">
-                           <string notr="true">color: #EC8482;
-background-color: rgb(0, 0, 0);</string>
+                           <string notr="true">border: 0px;
+background-color: rgba(0, 0, 0, 0);</string>
                           </property>
                           <property name="text">
                            <string/>
                           </property>
-                          <property name="icon">
-                           <iconset>
-                            <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
-                          </property>
                           <property name="iconSize">
                            <size>
-                            <width>115</width>
-                            <height>115</height>
+                            <width>320</width>
+                            <height>165</height>
                            </size>
                           </property>
                          </widget>
@@ -1640,20 +1584,16 @@ background-color: rgb(0, 0, 0);</string>
                            </font>
                           </property>
                           <property name="styleSheet">
-                           <string notr="true">color: #EC8482;
-background-color: rgb(0, 0, 0);</string>
+                           <string notr="true">border: 0px;
+background-color: rgba(0, 0, 0, 0);</string>
                           </property>
                           <property name="text">
                            <string/>
                           </property>
-                          <property name="icon">
-                           <iconset>
-                            <normaloff>../../../../../../DLcghhhiinnotu/image.png</normaloff>../../../../../../DLcghhhiinnotu/image.png</iconset>
-                          </property>
                           <property name="iconSize">
                            <size>
-                            <width>115</width>
-                            <height>115</height>
+                            <width>320</width>
+                            <height>165</height>
                            </size>
                           </property>
                          </widget>
@@ -1676,15 +1616,17 @@ background-color: rgb(0, 0, 0);</string>
                            </font>
                           </property>
                           <property name="styleSheet">
-                           <string notr="true">color: #EC8482;
-background-color: rgb(0, 0, 0);</string>
+                           <string notr="true">border: 0px;
+background-color: rgba(0, 0, 0, 0);</string>
                           </property>
                           <property name="text">
                            <string/>
                           </property>
-                          <property name="icon">
-                           <iconset>
-                            <normaloff>Assets/images/games/GTA 5.png</normaloff>Assets/images/games/GTA 5.png</iconset>
+                          <property name="iconSize">
+                           <size>
+                            <width>320</width>
+                            <height>165</height>
+                           </size>
                           </property>
                          </widget>
                         </item>
@@ -1713,7 +1655,8 @@ background-color: rgb(0, 0, 0);</string>
                         </property>
                         <property name="styleSheet">
                          <string notr="true">color: #EC8482;
-background-color: rgb(0, 255, 255);</string>
+background-color: rgb(0, 255, 255);
+border-radius: 20px;</string>
                         </property>
                         <property name="text">
                          <string/>
@@ -1740,713 +1683,921 @@ background-color: rgb(0, 255, 255);</string>
                  <property name="layoutDirection">
                   <enum>Qt::LeftToRight</enum>
                  </property>
-                 <widget class="QScrollArea" name="listOrder">
-                  <property name="geometry">
-                   <rect>
-                    <x>11</x>
-                    <y>88</y>
-                    <width>981</width>
-                    <height>321</height>
-                   </rect>
+                 <layout class="QVBoxLayout" name="verticalLayout_20" stretch="1,6,1">
+                  <property name="spacing">
+                   <number>10</number>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true">border: 2px solid rgb(255,255,255);</string>
+                  <property name="leftMargin">
+                   <number>10</number>
                   </property>
-                  <property name="verticalScrollBarPolicy">
-                   <enum>Qt::ScrollBarAlwaysOn</enum>
+                  <property name="topMargin">
+                   <number>10</number>
                   </property>
-                  <property name="widgetResizable">
-                   <bool>true</bool>
+                  <property name="rightMargin">
+                   <number>10</number>
                   </property>
-                  <widget class="QWidget" name="scrollAreaWidgetContents">
-                   <property name="geometry">
-                    <rect>
-                     <x>0</x>
-                     <y>0</y>
-                     <width>956</width>
-                     <height>1000</height>
-                    </rect>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>1000</height>
-                    </size>
-                   </property>
-                   <widget class="QWidget" name="gameOrderBox_1" native="true">
-                    <property name="geometry">
-                     <rect>
-                      <x>10</x>
-                      <y>10</y>
-                      <width>931</width>
-                      <height>101</height>
-                     </rect>
-                    </property>
-                    <widget class="QLabel" name="nameGameOrder_1">
-                     <property name="geometry">
-                      <rect>
-                       <x>110</x>
-                       <y>30</y>
-                       <width>551</width>
-                       <height>41</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="avtGameOrder_1">
-                     <property name="geometry">
-                      <rect>
-                       <x>10</x>
-                       <y>10</y>
-                       <width>81</width>
-                       <height>81</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                     <property name="scaledContents">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                    <widget class="QPushButton" name="deleteOrder_1">
-                     <property name="geometry">
-                      <rect>
-                       <x>850</x>
-                       <y>20</y>
-                       <width>61</width>
-                       <height>61</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resources.qrc">
-                       <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
-                     </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>50</width>
-                       <height>50</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </widget>
-                   <widget class="QWidget" name="gameOrderBox_2" native="true">
-                    <property name="geometry">
-                     <rect>
-                      <x>10</x>
-                      <y>120</y>
-                      <width>931</width>
-                      <height>101</height>
-                     </rect>
-                    </property>
-                    <widget class="QLabel" name="nameGameOrder_2">
-                     <property name="geometry">
-                      <rect>
-                       <x>110</x>
-                       <y>30</y>
-                       <width>551</width>
-                       <height>41</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="avtGameOrder_2">
-                     <property name="geometry">
-                      <rect>
-                       <x>10</x>
-                       <y>10</y>
-                       <width>81</width>
-                       <height>81</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                     <property name="scaledContents">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                    <widget class="QPushButton" name="deleteOrder_2">
-                     <property name="geometry">
-                      <rect>
-                       <x>850</x>
-                       <y>20</y>
-                       <width>61</width>
-                       <height>61</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resources.qrc">
-                       <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
-                     </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>50</width>
-                       <height>50</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </widget>
-                   <widget class="QWidget" name="gameOrderBox_3" native="true">
-                    <property name="geometry">
-                     <rect>
-                      <x>10</x>
-                      <y>230</y>
-                      <width>931</width>
-                      <height>101</height>
-                     </rect>
-                    </property>
-                    <widget class="QLabel" name="nameGameOrder_3">
-                     <property name="geometry">
-                      <rect>
-                       <x>110</x>
-                       <y>30</y>
-                       <width>551</width>
-                       <height>41</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="avtGameOrder_3">
-                     <property name="geometry">
-                      <rect>
-                       <x>10</x>
-                       <y>10</y>
-                       <width>81</width>
-                       <height>81</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                     <property name="scaledContents">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                    <widget class="QPushButton" name="deleteOrder_3">
-                     <property name="geometry">
-                      <rect>
-                       <x>850</x>
-                       <y>20</y>
-                       <width>61</width>
-                       <height>61</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resources.qrc">
-                       <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
-                     </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>50</width>
-                       <height>50</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </widget>
-                   <widget class="QWidget" name="gameOrderBox_5" native="true">
-                    <property name="geometry">
-                     <rect>
-                      <x>10</x>
-                      <y>450</y>
-                      <width>931</width>
-                      <height>101</height>
-                     </rect>
-                    </property>
-                    <widget class="QLabel" name="nameGameOrder_5">
-                     <property name="geometry">
-                      <rect>
-                       <x>110</x>
-                       <y>30</y>
-                       <width>551</width>
-                       <height>41</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="avtGameOrder_5">
-                     <property name="geometry">
-                      <rect>
-                       <x>10</x>
-                       <y>10</y>
-                       <width>81</width>
-                       <height>81</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                     <property name="scaledContents">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                    <widget class="QPushButton" name="deleteOrder_5">
-                     <property name="geometry">
-                      <rect>
-                       <x>850</x>
-                       <y>20</y>
-                       <width>61</width>
-                       <height>61</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resources.qrc">
-                       <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
-                     </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>50</width>
-                       <height>50</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </widget>
-                   <widget class="QWidget" name="gameOrderBox_4" native="true">
-                    <property name="geometry">
-                     <rect>
-                      <x>10</x>
-                      <y>340</y>
-                      <width>931</width>
-                      <height>101</height>
-                     </rect>
-                    </property>
-                    <widget class="QLabel" name="nameGameOrder_4">
-                     <property name="geometry">
-                      <rect>
-                       <x>110</x>
-                       <y>30</y>
-                       <width>551</width>
-                       <height>41</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="avtGameOrder_4">
-                     <property name="geometry">
-                      <rect>
-                       <x>10</x>
-                       <y>10</y>
-                       <width>81</width>
-                       <height>81</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                     <property name="scaledContents">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                    <widget class="QPushButton" name="deleteOrder_4">
-                     <property name="geometry">
-                      <rect>
-                       <x>850</x>
-                       <y>20</y>
-                       <width>61</width>
-                       <height>61</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resources.qrc">
-                       <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
-                     </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>50</width>
-                       <height>50</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </widget>
-                   <widget class="QWidget" name="gameOrderBox_7" native="true">
-                    <property name="geometry">
-                     <rect>
-                      <x>10</x>
-                      <y>560</y>
-                      <width>931</width>
-                      <height>101</height>
-                     </rect>
-                    </property>
-                    <widget class="QLabel" name="nameGameOrder_7">
-                     <property name="geometry">
-                      <rect>
-                       <x>110</x>
-                       <y>30</y>
-                       <width>551</width>
-                       <height>41</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="avtGameOrder_7">
-                     <property name="geometry">
-                      <rect>
-                       <x>10</x>
-                       <y>10</y>
-                       <width>81</width>
-                       <height>81</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                     <property name="scaledContents">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                    <widget class="QPushButton" name="deleteOrder_7">
-                     <property name="geometry">
-                      <rect>
-                       <x>850</x>
-                       <y>20</y>
-                       <width>61</width>
-                       <height>61</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resources.qrc">
-                       <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
-                     </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>50</width>
-                       <height>50</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </widget>
-                   <widget class="QWidget" name="gameOrderBox_8" native="true">
-                    <property name="geometry">
-                     <rect>
-                      <x>10</x>
-                      <y>890</y>
-                      <width>931</width>
-                      <height>101</height>
-                     </rect>
-                    </property>
-                    <widget class="QLabel" name="nameGameOrder_8">
-                     <property name="geometry">
-                      <rect>
-                       <x>110</x>
-                       <y>30</y>
-                       <width>551</width>
-                       <height>41</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="avtGameOrder_8">
-                     <property name="geometry">
-                      <rect>
-                       <x>10</x>
-                       <y>10</y>
-                       <width>81</width>
-                       <height>81</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                     <property name="scaledContents">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                    <widget class="QPushButton" name="deleteOrder_8">
-                     <property name="geometry">
-                      <rect>
-                       <x>850</x>
-                       <y>20</y>
-                       <width>61</width>
-                       <height>61</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resources.qrc">
-                       <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
-                     </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>50</width>
-                       <height>50</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </widget>
-                   <widget class="QWidget" name="gameOrderBox_9" native="true">
-                    <property name="geometry">
-                     <rect>
-                      <x>10</x>
-                      <y>670</y>
-                      <width>931</width>
-                      <height>101</height>
-                     </rect>
-                    </property>
-                    <widget class="QLabel" name="nameGameOrder_9">
-                     <property name="geometry">
-                      <rect>
-                       <x>110</x>
-                       <y>30</y>
-                       <width>551</width>
-                       <height>41</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="avtGameOrder_9">
-                     <property name="geometry">
-                      <rect>
-                       <x>10</x>
-                       <y>10</y>
-                       <width>81</width>
-                       <height>81</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                     <property name="scaledContents">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                    <widget class="QPushButton" name="deleteOrder_9">
-                     <property name="geometry">
-                      <rect>
-                       <x>850</x>
-                       <y>20</y>
-                       <width>61</width>
-                       <height>61</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resources.qrc">
-                       <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
-                     </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>50</width>
-                       <height>50</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </widget>
-                   <widget class="QWidget" name="gameOrderBox_6" native="true">
-                    <property name="geometry">
-                     <rect>
-                      <x>10</x>
-                      <y>780</y>
-                      <width>931</width>
-                      <height>101</height>
-                     </rect>
-                    </property>
-                    <widget class="QLabel" name="nameGameOrder_6">
-                     <property name="geometry">
-                      <rect>
-                       <x>110</x>
-                       <y>30</y>
-                       <width>551</width>
-                       <height>41</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="avtGameOrder_6">
-                     <property name="geometry">
-                      <rect>
-                       <x>10</x>
-                       <y>10</y>
-                       <width>81</width>
-                       <height>81</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>TextLabel</string>
-                     </property>
-                     <property name="scaledContents">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                    <widget class="QPushButton" name="deleteOrder_6">
-                     <property name="geometry">
-                      <rect>
-                       <x>850</x>
-                       <y>20</y>
-                       <width>61</width>
-                       <height>61</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resources.qrc">
-                       <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
-                     </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>50</width>
-                       <height>50</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </widget>
-                  </widget>
-                 </widget>
-                 <widget class="QWidget" name="titleCart" native="true">
-                  <property name="geometry">
-                   <rect>
-                    <x>11</x>
-                    <y>11</y>
-                    <width>978</width>
-                    <height>71</height>
-                   </rect>
+                  <property name="bottomMargin">
+                   <number>10</number>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true">border: 2px solid rgb(255,255,255);</string>
-                  </property>
-                  <widget class="QComboBox" name="payMethodBox">
-                   <property name="geometry">
-                    <rect>
-                     <x>760</x>
-                     <y>20</y>
-                     <width>201</width>
-                     <height>31</height>
-                    </rect>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>Cash</string>
+                  <item>
+                   <widget class="QWidget" name="titleCart" native="true">
+                    <property name="styleSheet">
+                     <string notr="true"/>
                     </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Credit card</string>
+                    <widget class="QComboBox" name="payMethodBox">
+                     <property name="geometry">
+                      <rect>
+                       <x>760</x>
+                       <y>10</y>
+                       <width>201</width>
+                       <height>41</height>
+                      </rect>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                       <strikeout>false</strikeout>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border: 2px solid rgb(255,255,255);
+padding-left: 10px;
+padding-right: 10px;
+border-radius: 5px;</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>Cash</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Credit card</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Visa</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Paypal</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QScrollArea" name="listOrder">
+                    <property name="styleSheet">
+                     <string notr="true">border: 2px solid rgb(255,255,255);</string>
                     </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Visa</string>
+                    <property name="verticalScrollBarPolicy">
+                     <enum>Qt::ScrollBarAlwaysOn</enum>
                     </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Paypal</string>
+                    <property name="widgetResizable">
+                     <bool>true</bool>
                     </property>
-                   </item>
-                  </widget>
-                 </widget>
-                 <widget class="QWidget" name="orderBtn" native="true">
-                  <property name="geometry">
-                   <rect>
-                    <x>11</x>
-                    <y>416</y>
-                    <width>978</width>
-                    <height>71</height>
-                   </rect>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">border: 2px solid rgb(255,255,255);</string>
-                  </property>
-                  <widget class="QPushButton" name="payBtn">
-                   <property name="geometry">
-                    <rect>
-                     <x>850</x>
-                     <y>20</y>
-                     <width>111</width>
-                     <height>41</height>
-                    </rect>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Terminal</family>
-                     <pointsize>14</pointsize>
-                     <weight>50</weight>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">color: #EC8482;
-background-color: rgb(0, 255, 255);</string>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="resources.qrc">
-                     <normaloff>:/icons/EC8482/send.svg</normaloff>:/icons/EC8482/send.svg</iconset>
-                   </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>30</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                  </widget>
-                  <widget class="QLabel" name="totalCost">
-                   <property name="enabled">
-                    <bool>true</bool>
-                   </property>
-                   <property name="geometry">
-                    <rect>
-                     <x>650</x>
-                     <y>20</y>
-                     <width>191</width>
-                     <height>41</height>
-                    </rect>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Arial</family>
-                     <pointsize>11</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>0</string>
-                   </property>
-                  </widget>
-                 </widget>
+                    <widget class="QWidget" name="scrollAreaWidgetContents">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>955</width>
+                       <height>1000</height>
+                      </rect>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>1000</height>
+                      </size>
+                     </property>
+                     <widget class="QWidget" name="gameOrderBox_1" native="true">
+                      <property name="geometry">
+                       <rect>
+                        <x>10</x>
+                        <y>10</y>
+                        <width>931</width>
+                        <height>101</height>
+                       </rect>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">border-radius: 15px;
+border: 1px solid rgb(255,255,255);
+background-color: #2c313c;</string>
+                      </property>
+                      <widget class="QLabel" name="nameGameOrder_1">
+                       <property name="geometry">
+                        <rect>
+                         <x>200</x>
+                         <y>30</y>
+                         <width>551</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="avtGameOrder_1">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>154</width>
+                         <height>81</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 1px solid #000;
+border-radius: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="deleteOrder_1">
+                       <property name="geometry">
+                        <rect>
+                         <x>860</x>
+                         <y>30</y>
+                         <width>40</width>
+                         <height>40</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border:0px;
+padding: 0px</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="resources.qrc">
+                         <normaloff>:/icons/EC8482/trash-2.svg</normaloff>:/icons/EC8482/trash-2.svg</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </widget>
+                     <widget class="QWidget" name="gameOrderBox_2" native="true">
+                      <property name="geometry">
+                       <rect>
+                        <x>10</x>
+                        <y>120</y>
+                        <width>931</width>
+                        <height>101</height>
+                       </rect>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">border-radius: 15px;
+border: 1px solid rgb(255,255,255);
+background-color: #2c313c;</string>
+                      </property>
+                      <widget class="QLabel" name="nameGameOrder_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>200</x>
+                         <y>30</y>
+                         <width>551</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="avtGameOrder_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>154</width>
+                         <height>81</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 1px solid #000;
+border-radius: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="deleteOrder_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>860</x>
+                         <y>30</y>
+                         <width>40</width>
+                         <height>40</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border:0px;
+padding: 0px</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="resources.qrc">
+                         <normaloff>:/icons/EC8482/trash-2.svg</normaloff>:/icons/EC8482/trash-2.svg</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </widget>
+                     <widget class="QWidget" name="gameOrderBox_3" native="true">
+                      <property name="geometry">
+                       <rect>
+                        <x>10</x>
+                        <y>230</y>
+                        <width>931</width>
+                        <height>101</height>
+                       </rect>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">border-radius: 15px;
+border: 1px solid rgb(255,255,255);
+background-color: #2c313c;</string>
+                      </property>
+                      <widget class="QLabel" name="nameGameOrder_3">
+                       <property name="geometry">
+                        <rect>
+                         <x>200</x>
+                         <y>30</y>
+                         <width>551</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="avtGameOrder_3">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>154</width>
+                         <height>81</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 1px solid #000;
+border-radius: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="deleteOrder_3">
+                       <property name="geometry">
+                        <rect>
+                         <x>860</x>
+                         <y>30</y>
+                         <width>40</width>
+                         <height>40</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border:0px;
+padding: 0px</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="resources.qrc">
+                         <normaloff>:/icons/EC8482/trash-2.svg</normaloff>:/icons/EC8482/trash-2.svg</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </widget>
+                     <widget class="QWidget" name="gameOrderBox_5" native="true">
+                      <property name="geometry">
+                       <rect>
+                        <x>10</x>
+                        <y>450</y>
+                        <width>931</width>
+                        <height>101</height>
+                       </rect>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">border-radius: 15px;
+border: 1px solid rgb(255,255,255);
+background-color: #2c313c;</string>
+                      </property>
+                      <widget class="QLabel" name="nameGameOrder_5">
+                       <property name="geometry">
+                        <rect>
+                         <x>200</x>
+                         <y>30</y>
+                         <width>551</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="avtGameOrder_5">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>154</width>
+                         <height>81</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 1px solid #000;
+border-radius: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="deleteOrder_5">
+                       <property name="geometry">
+                        <rect>
+                         <x>860</x>
+                         <y>30</y>
+                         <width>40</width>
+                         <height>40</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border:0px;
+padding: 0px</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="resources.qrc">
+                         <normaloff>:/icons/EC8482/trash-2.svg</normaloff>:/icons/EC8482/trash-2.svg</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </widget>
+                     <widget class="QWidget" name="gameOrderBox_4" native="true">
+                      <property name="geometry">
+                       <rect>
+                        <x>10</x>
+                        <y>340</y>
+                        <width>931</width>
+                        <height>101</height>
+                       </rect>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">border-radius: 15px;
+border: 1px solid rgb(255,255,255);
+background-color: #2c313c;</string>
+                      </property>
+                      <widget class="QLabel" name="nameGameOrder_4">
+                       <property name="geometry">
+                        <rect>
+                         <x>200</x>
+                         <y>30</y>
+                         <width>551</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="avtGameOrder_4">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>154</width>
+                         <height>81</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 1px solid #000;
+border-radius: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="deleteOrder_4">
+                       <property name="geometry">
+                        <rect>
+                         <x>860</x>
+                         <y>30</y>
+                         <width>40</width>
+                         <height>40</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border:0px;
+padding: 0px</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="resources.qrc">
+                         <normaloff>:/icons/EC8482/trash-2.svg</normaloff>:/icons/EC8482/trash-2.svg</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </widget>
+                     <widget class="QWidget" name="gameOrderBox_7" native="true">
+                      <property name="geometry">
+                       <rect>
+                        <x>10</x>
+                        <y>560</y>
+                        <width>931</width>
+                        <height>101</height>
+                       </rect>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">border-radius: 15px;
+border: 1px solid rgb(255,255,255);
+background-color: #2c313c;</string>
+                      </property>
+                      <widget class="QLabel" name="nameGameOrder_7">
+                       <property name="geometry">
+                        <rect>
+                         <x>200</x>
+                         <y>30</y>
+                         <width>551</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="avtGameOrder_7">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>154</width>
+                         <height>81</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 1px solid #000;
+border-radius: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="deleteOrder_7">
+                       <property name="geometry">
+                        <rect>
+                         <x>860</x>
+                         <y>30</y>
+                         <width>40</width>
+                         <height>40</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border:0px;
+padding: 0px</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="resources.qrc">
+                         <normaloff>:/icons/EC8482/trash-2.svg</normaloff>:/icons/EC8482/trash-2.svg</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </widget>
+                     <widget class="QWidget" name="gameOrderBox_8" native="true">
+                      <property name="geometry">
+                       <rect>
+                        <x>10</x>
+                        <y>890</y>
+                        <width>931</width>
+                        <height>101</height>
+                       </rect>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">border-radius: 15px;
+border: 1px solid rgb(255,255,255);
+background-color: #2c313c;</string>
+                      </property>
+                      <widget class="QLabel" name="nameGameOrder_8">
+                       <property name="geometry">
+                        <rect>
+                         <x>200</x>
+                         <y>30</y>
+                         <width>551</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="avtGameOrder_8">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>154</width>
+                         <height>81</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 1px solid #000;
+border-radius: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="deleteOrder_8">
+                       <property name="geometry">
+                        <rect>
+                         <x>860</x>
+                         <y>30</y>
+                         <width>40</width>
+                         <height>40</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border:0px;
+padding: 0px</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="resources.qrc">
+                         <normaloff>:/icons/EC8482/trash-2.svg</normaloff>:/icons/EC8482/trash-2.svg</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </widget>
+                     <widget class="QWidget" name="gameOrderBox_9" native="true">
+                      <property name="geometry">
+                       <rect>
+                        <x>10</x>
+                        <y>670</y>
+                        <width>931</width>
+                        <height>101</height>
+                       </rect>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">border-radius: 15px;
+border: 1px solid rgb(255,255,255);
+background-color: #2c313c;</string>
+                      </property>
+                      <widget class="QLabel" name="nameGameOrder_9">
+                       <property name="geometry">
+                        <rect>
+                         <x>200</x>
+                         <y>30</y>
+                         <width>551</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="avtGameOrder_9">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>154</width>
+                         <height>81</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 1px solid #000;
+border-radius: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="deleteOrder_9">
+                       <property name="geometry">
+                        <rect>
+                         <x>860</x>
+                         <y>30</y>
+                         <width>40</width>
+                         <height>40</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border:0px;
+padding: 0px</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="resources.qrc">
+                         <normaloff>:/icons/EC8482/trash-2.svg</normaloff>:/icons/EC8482/trash-2.svg</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </widget>
+                     <widget class="QWidget" name="gameOrderBox_6" native="true">
+                      <property name="geometry">
+                       <rect>
+                        <x>10</x>
+                        <y>780</y>
+                        <width>931</width>
+                        <height>101</height>
+                       </rect>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">border-radius: 15px;
+border: 1px solid rgb(255,255,255);
+background-color: #2c313c;</string>
+                      </property>
+                      <widget class="QLabel" name="nameGameOrder_6">
+                       <property name="geometry">
+                        <rect>
+                         <x>200</x>
+                         <y>30</y>
+                         <width>551</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="avtGameOrder_6">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>154</width>
+                         <height>81</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 1px solid #000;
+border-radius: 0px;</string>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="deleteOrder_6">
+                       <property name="geometry">
+                        <rect>
+                         <x>860</x>
+                         <y>30</y>
+                         <width>40</width>
+                         <height>40</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border:0px;
+padding: 0px</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="resources.qrc">
+                         <normaloff>:/icons/EC8482/trash-2.svg</normaloff>:/icons/EC8482/trash-2.svg</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </widget>
+                    </widget>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="orderBtn" native="true">
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <widget class="QPushButton" name="payBtn">
+                     <property name="geometry">
+                      <rect>
+                       <x>850</x>
+                       <y>0</y>
+                       <width>111</width>
+                       <height>41</height>
+                      </rect>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>MS Shell Dlg 2</family>
+                       <pointsize>10</pointsize>
+                       <weight>50</weight>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="layoutDirection">
+                      <enum>Qt::LeftToRight</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: #EC8482;
+background-color: rgb(0, 255, 255);
+border-radius: 20px;</string>
+                     </property>
+                     <property name="text">
+                      <string>Pay $</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="resources.qrc">
+                       <normaloff>:/icons/EC8482/dollar-sign.svg</normaloff>:/icons/EC8482/dollar-sign.svg</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="totalCost">
+                     <property name="enabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="geometry">
+                      <rect>
+                       <x>650</x>
+                       <y>0</y>
+                       <width>191</width>
+                       <height>41</height>
+                      </rect>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>MS Shell Dlg 2</family>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border: 1px solid rgb(255,255,255);
+padding-left: 10px;</string>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                 <widget class="QWidget" name="gameInfoPage">
                  <layout class="QVBoxLayout" name="verticalLayout_19">
@@ -2474,17 +2625,6 @@ background-color: rgb(0, 255, 255);</string>
 	padding: 10px;
 	padding-left: 17px;
 	color: #rgb(0,255,255);
-}
-QPushButton
-{
-	border-radius: 20px;
-	border: 1px solid rgba(0, 0, 0, 100);
-	background-color: rgb(255, 255, 255);
-	font: 14pt &quot;Terminal&quot;;
-}
-QPushButton:hover
-{
-	background-color: rgb(244, 244, 244);
 }</string>
                     </property>
                     <widget class="QLabel" name="idGameLabel">
@@ -2630,7 +2770,7 @@ QPushButton:hover
                      </property>
                      <property name="font">
                       <font>
-                       <family>Terminal</family>
+                       <family>MS Shell Dlg 2</family>
                        <pointsize>14</pointsize>
                        <weight>50</weight>
                        <italic>false</italic>
@@ -2638,8 +2778,17 @@ QPushButton:hover
                       </font>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(0, 255, 255);</string>
+                      <string notr="true">#PlayBuyBtn{
+	color: rgb(0, 0, 0);
+	background-color: rgb(0, 255, 255);
+	border-radius: 20px;
+}
+
+#PlayBuyBtn:hover{
+	color: rgb(0, 0, 0);
+	background-color: rgb(0, 109, 109);
+	border-radius: 20px;
+}</string>
                      </property>
                      <property name="text">
                       <string> Play</string>
@@ -2660,7 +2809,9 @@ background-color: rgb(0, 255, 255);</string>
                      </property>
                      <property name="font">
                       <font>
-                       <pointsize>11</pointsize>
+                       <pointsize>10</pointsize>
+                       <weight>50</weight>
+                       <bold>false</bold>
                       </font>
                      </property>
                      <property name="styleSheet">
@@ -2672,7 +2823,7 @@ padding-top: 7px;
 padding-left: 7px;</string>
                      </property>
                      <property name="text">
-                      <string>TextLabel</string>
+                      <string>Descriptions</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -2689,7 +2840,7 @@ padding-left: 7px;</string>
                       <rect>
                        <x>470</x>
                        <y>10</y>
-                       <width>261</width>
+                       <width>471</width>
                        <height>51</height>
                       </rect>
                      </property>
@@ -2720,7 +2871,7 @@ padding-left: 7px;</string>
                       <rect>
                        <x>470</x>
                        <y>80</y>
-                       <width>261</width>
+                       <width>471</width>
                        <height>51</height>
                       </rect>
                      </property>
@@ -2751,7 +2902,7 @@ padding-left: 7px;</string>
                       <rect>
                        <x>470</x>
                        <y>150</y>
-                       <width>261</width>
+                       <width>471</width>
                        <height>51</height>
                       </rect>
                      </property>
@@ -2947,7 +3098,6 @@ QPushButton
 	border-radius: 20px;
 	border: 1px solid rgba(0, 0, 0, 100);
 	background-color: rgb(255, 255, 255);
-	font: 14pt &quot;Terminal&quot;;
 }
 QPushButton:hover
 {
@@ -3418,7 +3568,7 @@ background-color: rgb(206, 103, 114);</string>
               <item>
                <widget class="QLabel" name="copyRightTitle">
                 <property name="text">
-                 <string>Copyright By DuongKLinh</string>
+                 <string>Copyright By Nhom 3</string>
                 </property>
                </widget>
               </item>
@@ -3461,7 +3611,7 @@ background-color: rgb(206, 103, 114);</string>
    <widget class="QWidget" name="mainLogin" native="true">
     <property name="geometry">
      <rect>
-      <x>2011</x>
+      <x>11</x>
       <y>60</y>
       <width>1243</width>
       <height>681</height>
@@ -3470,20 +3620,25 @@ background-color: rgb(206, 103, 114);</string>
     <property name="styleSheet">
      <string notr="true">background-color: #2c313c;</string>
     </property>
-    <widget class="QWidget" name="Login" native="true">
+    <widget class="QWidget" name="LoginForm" native="true">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>30</y>
-       <width>411</width>
-       <height>231</height>
+       <x>60</x>
+       <y>170</y>
+       <width>501</width>
+       <height>301</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 20px;
+border: 2px #EC8482;
+background-color: #1f232a;</string>
      </property>
      <widget class="QPushButton" name="RegisterButton">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>144</y>
+        <x>50</x>
+        <y>240</y>
         <width>141</width>
         <height>41</height>
        </rect>
@@ -3497,7 +3652,6 @@ background-color: rgb(206, 103, 114);</string>
 	border-radius: 20px;
 	border: 2px solid #EC8482;
 	background-color: rgb(255, 255, 255);
-	font: 14pt &quot;Terminal&quot;;
 	color: rgba(0,0,0)
 }
 QPushButton#RegisterButton:hover
@@ -3513,8 +3667,8 @@ QPushButton#RegisterButton:hover
      <widget class="QPushButton" name="LoginButton">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>144</y>
+        <x>210</x>
+        <y>240</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -3528,7 +3682,6 @@ QPushButton#RegisterButton:hover
 	border-radius: 20px;
 	border: 2px solid #EC8482;
 	background-color: rgb(255, 255, 255);
-	font: 14pt &quot;Terminal&quot;;
 	color: rgba(0,0,0)
 }
 QPushButton#LoginButton:hover
@@ -3544,8 +3697,8 @@ QPushButton#LoginButton:hover
      <widget class="QLineEdit" name="PasswordInput">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>69</y>
+        <x>170</x>
+        <y>139</y>
         <width>281</width>
         <height>42</height>
        </rect>
@@ -3557,7 +3710,6 @@ QPushButton#LoginButton:hover
 	border: 2px solid #EC8482;
 	padding: 10px;
 	padding-left: 17px;
-	font: 14pt &quot;Terminal&quot;;
 }
 QLineEdit#PasswordInput:hover
 {
@@ -3574,8 +3726,8 @@ QLineEdit#PasswordInput:hover
      <widget class="QLineEdit" name="UsernameInput">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>0</y>
+        <x>170</x>
+        <y>70</y>
         <width>281</width>
         <height>41</height>
        </rect>
@@ -3587,7 +3739,6 @@ QLineEdit#PasswordInput:hover
 	border: 2px solid #EC8482;
 	padding: 10px;
 	padding-left: 17px;
-	font: 14pt &quot;Terminal&quot;;
 }
 QLineEdit#UsernameInput:hover
 {
@@ -3595,11 +3746,11 @@ QLineEdit#UsernameInput:hover
 }</string>
       </property>
      </widget>
-     <widget class="QLabel" name="headerLoginLabel_7">
+     <widget class="QLabel" name="emailLoginLabel">
       <property name="geometry">
        <rect>
-        <x>-50</x>
-        <y>10</y>
+        <x>0</x>
+        <y>80</y>
         <width>161</width>
         <height>31</height>
        </rect>
@@ -3619,11 +3770,11 @@ QLineEdit#UsernameInput:hover
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="headerLoginLabel_8">
+     <widget class="QLabel" name="passwordLoginLabel">
       <property name="geometry">
        <rect>
-        <x>-50</x>
-        <y>80</y>
+        <x>0</x>
+        <y>150</y>
         <width>161</width>
         <height>31</height>
        </rect>
@@ -3643,12 +3794,66 @@ QLineEdit#UsernameInput:hover
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
      </widget>
+     <widget class="QLabel" name="signUpLabel_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>10</y>
+        <width>161</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>LOG IN</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="wrongUserInputLabel">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>195</y>
+        <width>291</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>SAI THÔNG TIN ĐĂNG NHẬP!</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </widget>
-    <widget class="QWidget" name="Register" native="true">
+    <widget class="QWidget" name="RegisterForm" native="true">
      <property name="geometry">
       <rect>
-       <x>680</x>
-       <y>20</y>
+       <x>710</x>
+       <y>10</y>
        <width>501</width>
        <height>631</height>
       </rect>
@@ -3675,12 +3880,14 @@ background-color: #1f232a;
 	border: 2px solid #EC8482;
 	padding: 10px;
 	padding-left: 17px;
-	font: 14pt &quot;Terminal&quot;;
 }
 QLineEdit#passwordSignUp:hover
 {
 
 }</string>
+      </property>
+      <property name="inputMask">
+       <string/>
       </property>
       <property name="text">
        <string/>
@@ -3705,12 +3912,10 @@ QLineEdit#passwordSignUp:hover
 	border: 2px solid #EC8482;
 	padding: 10px;
 	padding-left: 17px;
-	font: 14pt &quot;Terminal&quot;;
-}
-QLineEdit#emailSignUp:hover
-{
-
 }</string>
+      </property>
+      <property name="inputMask">
+       <string/>
       </property>
       <property name="echoMode">
        <enum>QLineEdit::Normal</enum>
@@ -3732,12 +3937,14 @@ QLineEdit#emailSignUp:hover
 	border: 2px solid #EC8482;
 	padding: 10px;
 	padding-left: 17px;
-	font: 14pt &quot;Terminal&quot;;
 }
 QLineEdit#nameSignUp:hover
 {
 
 }</string>
+      </property>
+      <property name="inputMask">
+       <string/>
       </property>
       <property name="text">
        <string/>
@@ -3764,7 +3971,6 @@ QLineEdit#nameSignUp:hover
 	border-radius: 20px;
 	border: 2px solid #EC8482;
 	background-color: rgb(255, 255, 255);
-	font: 14pt &quot;Terminal&quot;;
 	color: rgba(0,0,0)
 }
 QPushButton#SignUpBtn:hover
@@ -3795,7 +4001,6 @@ QPushButton#SignUpBtn:hover
 	border-radius: 20px;
 	border: 2px solid #ff0000;
 	background-color: rgb(255, 255, 255);
-	font: 14pt &quot;Terminal&quot;;
 	color: rgba(0,0,0)
 }
 QPushButton#ResetBtn:hover
@@ -3808,7 +4013,7 @@ QPushButton#ResetBtn:hover
        <string>Cancel</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="passwordSignUp_2">
+     <widget class="QLineEdit" name="repasswordSignUp">
       <property name="geometry">
        <rect>
         <x>190</x>
@@ -3818,18 +4023,20 @@ QPushButton#ResetBtn:hover
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">QLineEdit#passwordSignUp_2
+       <string notr="true">QLineEdit#repasswordSignUp
 {
 	border-radius: 20px;
 	border: 2px solid #EC8482;
 	padding: 10px;
 	padding-left: 17px;
-	font: 14pt &quot;Terminal&quot;;
 }
-QLineEdit#passwordSignUp_2:hover
+QLineEdit#repasswordSignUp:hover
 {
 
 }</string>
+      </property>
+      <property name="inputMask">
+       <string/>
       </property>
       <property name="text">
        <string/>
@@ -3838,10 +4045,10 @@ QLineEdit#passwordSignUp_2:hover
        <enum>QLineEdit::Normal</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="headerLoginLabel_2">
+     <widget class="QLabel" name="signUpLabel">
       <property name="geometry">
        <rect>
-        <x>200</x>
+        <x>180</x>
         <y>20</y>
         <width>161</width>
         <height>51</height>
@@ -3861,8 +4068,11 @@ QLineEdit#passwordSignUp_2:hover
       <property name="text">
        <string>SIGN UP</string>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
-     <widget class="QLabel" name="headerLoginLabel_3">
+     <widget class="QLabel" name="nameSignUpLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -3873,8 +4083,8 @@ QLineEdit#passwordSignUp_2:hover
       </property>
       <property name="font">
        <font>
-        <family>Arial</family>
-        <pointsize>11</pointsize>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -3886,7 +4096,7 @@ QLineEdit#passwordSignUp_2:hover
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="headerLoginLabel_4">
+     <widget class="QLabel" name="emailSignUpLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -3897,8 +4107,8 @@ QLineEdit#passwordSignUp_2:hover
       </property>
       <property name="font">
        <font>
-        <family>Arial</family>
-        <pointsize>11</pointsize>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -3910,7 +4120,7 @@ QLineEdit#passwordSignUp_2:hover
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="headerLoginLabel_5">
+     <widget class="QLabel" name="passwordSignUpLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -3921,8 +4131,8 @@ QLineEdit#passwordSignUp_2:hover
       </property>
       <property name="font">
        <font>
-        <family>Arial</family>
-        <pointsize>11</pointsize>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -3934,19 +4144,19 @@ QLineEdit#passwordSignUp_2:hover
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="headerLoginLabel_6">
+     <widget class="QLabel" name="repasswordSignUpLabel">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>10</x>
         <y>320</y>
-        <width>161</width>
+        <width>171</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Arial</family>
-        <pointsize>11</pointsize>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -3963,7 +4173,7 @@ QLineEdit#passwordSignUp_2:hover
    <widget class="QWidget" name="headerLogin" native="true">
     <property name="geometry">
      <rect>
-      <x>2011</x>
+      <x>11</x>
       <y>11</y>
       <width>1101</width>
       <height>47</height>
@@ -3977,7 +4187,7 @@ QLineEdit#passwordSignUp_2:hover
       <rect>
        <x>44</x>
        <y>15</y>
-       <width>121</width>
+       <width>171</width>
        <height>21</height>
       </rect>
      </property>
@@ -3990,7 +4200,38 @@ QLineEdit#passwordSignUp_2:hover
       </font>
      </property>
      <property name="text">
-      <string>LOG IN</string>
+      <string>HOME MADE 2D...</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="appIconLogin">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>25</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="resources.qrc">:/icons/Assets/images/icons/icon.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>

@@ -5,7 +5,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from mainCLIENT import *
 from PySide2.QtWidgets import QMainWindow, QApplication
 from PySide2 import QtGui
-from ui_UserForm10 import *
+from ui_UserForm12 import *
 from Custom_Widgets.Widgets import *
 import urllib
 
@@ -17,55 +17,32 @@ class MainUserApp(QMainWindow):
         self.ui.setupUi(self)
 
         loadJsonStyle(self, self.ui)
-        # self.show()
         self.initLoginForm()
-        # self.initHomePage()
-        # self.initHomeGames()
-        # self.initLibrary()
-        # self.initUserProfile()
-        # self.ui.LoginButton.clicked.connect(lambda: self.loginUser(self.ui.UsernameInput.text(), self.ui.PasswordInput.text()))
-        # self.ui.searchLibraryBtn.clicked.connect(lambda: self.initLibrary(str(self.ui.searchLibraryLine.text())))
-        # self.initCartPage()
         
     def loginUser(self, user_email, password):
         try:
+            self.ui.wrongUserInputLabel.hide()
             self.client = CLIENT(user_email)
-            print(self.client.user_password)
-            if self.client.user_password == password:
+            if self.client.user['password'] == password:
                 self.init_default_btns()
-                self.initHomeGames()
-                self.initLibraryGames()
-                self.initCartsGames()
+                print("In")
+                self.initHomePage()
+                self.initLibraryPage()
+                self.initCartsPage()
                 self.initUserProfile()
                 self.ui.headerLogin.hide()
                 self.ui.mainLogin.hide()
                 self.ui.hidExpand.hide()
-
         except:
-            print(Exception())
-        # self.client = CLIENT(user_email)
-            
+            self.ui.wrongUserInputLabel.show()
+
     def initLoginForm(self):
+        self.ui.wrongUserInputLabel.hide()
         self.ui.LoginButton.clicked.connect(lambda: self.loginUser(self.ui.UsernameInput.text(), self.ui.PasswordInput.text()))
-        self.ui.RegisterButton.clicked.connect(lambda: self.ui.Register.show())
+        self.ui.RegisterButton.clicked.connect(lambda: self.ui.RegisterForm.show())
         self.ui.ResetBtn.clicked.connect(self.resetRegister)
         self.ui.SignUpBtn.clicked.connect(self.signUpSummit)
-        self.ui.Register.hide()
-
-    def resetRegister(self):
-        self.ui.nameSignUp.setText('')
-        self.ui.emailSignUp.setText('')
-        self.ui.passwordSignUp.setText('')
-        self.ui.passwordSignUp_2.setText('')
-        self.ui.Register.hide()
-    
-    def signUpSummit(self):
-        if (self.ui.passwordSignUp.text() == self.ui.passwordSignUp_2.text() 
-            and self.ui.passwordSignUp.text() != '' and self.ui.nameSignUp.text() != '' 
-            and self.ui.passwordSignUp_2.text() != '' and self.ui.emailSignUp.text() != ''):
-            new_user = User(User.usernumber+1, self.ui.nameSignUp.text(), self.ui.passwordSignUp_2.text(), self.ui.emailSignUp.text())
-            CLIENT.postUser(new_user.toJson())
-            self.ui.Register.hide()
+        self.ui.RegisterForm.hide()
 
     def init_default_btns(self):
         self.ui.settingsBtn.clicked.connect(lambda: self.ui.centerMenuSubContainer.expandMenu())
@@ -80,19 +57,32 @@ class MainUserApp(QMainWindow):
         self.ui.closeRightMenuBtn.clicked.connect(lambda: self.ui.rightMenuContainer.collapseMenu())
 
         self.ui.closeNotificationBtn.clicked.connect(lambda: self.ui.popupNotificationContainer.collapseMenu())
-        self.ui.libraryBtn.clicked.connect(self.initLibraryGames())
-        self.ui.homeBtn.clicked.connect(self.initHomeGames())
-        self.ui.cartsBtn.clicked.connect(self.initCartsGames())
+        self.ui.homeBtn.clicked.connect(self.initHomePage())
+        self.ui.libraryBtn.clicked.connect(self.initLibraryPage())
+        self.ui.cartsBtn.clicked.connect(self.initCartsPage())
 
-        
+    def resetRegister(self):
+        self.ui.nameSignUp.setText('')
+        self.ui.emailSignUp.setText('')
+        self.ui.passwordSignUp.setText('')
+        self.ui.repasswordSignUp.setText('')
+        self.ui.RegisterForm.hide()
+    
+    def signUpSummit(self):
+        if (self.ui.passwordSignUp.text() == self.ui.repasswordSignUp.text() 
+            and self.ui.passwordSignUp.text() != '' and self.ui.nameSignUp.text() != '' 
+            and self.ui.repasswordSignUp.text() != '' and self.ui.emailSignUp.text() != ''):
+            new_user = User(User.usernumber+1, self.ui.nameSignUp.text(), self.ui.repasswordSignUp.text(), self.ui.emailSignUp.text())
+            CLIENT.postUser(new_user.toJson())
+            self.ui.RegisterForm.hide() 
+            self.client.reset_api()      
 
 
-    def initHomeGames(self, searchStr=''):
-        # self.client.resetApi()
+    def initHomePage(self, searchStr=''):
         if searchStr == '':
-            self.listHomeGames = self.client.get_home_games()
+            self.listHomeGames = self.client.get_list_games_home()
         else:
-            self.listHomeGames = self.client.get_home_games_by_search(searchStr)
+            self.listHomeGames = self.client.get_list_games_home_by_search(searchStr)
         self.listHomeGamesBtn = [
             self.ui.home_game_btn1,
             self.ui.home_game_btn2,
@@ -105,34 +95,25 @@ class MainUserApp(QMainWindow):
             self.initHomeGameBtns(i)
         if len(self.listHomeGames) <= 6:
             self.ui.home_more_game_btn.hide()
-        self.ui.home_search_btn.clicked.connect(lambda: self.initHomeGames(str(self.ui.home_search_line.text())))
+        self.ui.home_search_btn.clicked.connect(lambda: self.initHomePage(str(self.ui.home_search_line.text())))
 
     def initHomeGameBtns(self, thisIndex):
         if thisIndex >= len(self.listHomeGames):
-            self.listHomeGamesBtn[thisIndex].hide()
-        else:
-            self.listHomeGamesBtn[thisIndex].show()
-            # url = 'https://ggmeo.com/images/linh-thu-dtcl/yasuo-long-kiem-ti-ni.jpg'
-            # data = urllib.urlopen(url).read()
-            # pixmap = QPixmap()
-            # pixmap.loadFromData(data)
-            # icon = QIcon(pixmap)
-            pixmapBtn = QtGui.QPixmap(self.client.get_game_image_path(self.listHomeGames[thisIndex]["images"],self.listHomeGames[thisIndex]["name"]))
-            # pixmapBtn = pixmapBtn.scaled(self.listHomeGamesBtn[thisIndex].size(), aspectMode=0)
-            # iconBtn = QtGui.QIcon(pixmapBtn)
+            pixmapBtn = QtGui.QPixmap('Assets\images\games\empty.png')
             self.listHomeGamesBtn[thisIndex].setIcon(pixmapBtn)
-            self.listHomeGamesBtn[thisIndex].setIconSize(self.listHomeGamesBtn[thisIndex].size())
-            # print(self.listHomeGames[thisIndex]['images'])
-            # self.listHomeGamesBtn[thisIndex].setStyleSheet(f"background-image : url({self.listHomeGames[thisIndex]['images']});") 
+            self.listHomeGamesBtn[thisIndex].setIconSize(QSize(320,165))
+        else:
+            pixmapBtn = QtGui.QPixmap(self.client.get_game_image_by_id(self.listHomeGames[thisIndex]['id']))
+            self.listHomeGamesBtn[thisIndex].setIcon(pixmapBtn)
+            self.listHomeGamesBtn[thisIndex].setIconSize(QSize(320,165))
         self.listHomeGamesBtn[thisIndex].clicked.connect(lambda: self.show_Game_Info(self.listHomeGames[thisIndex], mode='Buy'))
 
 
-    def initLibraryGames(self, searchStr=''):
-        # self.client.resetApi()
+    def initLibraryPage(self, searchStr=''):
         if searchStr == '':
-            self.listLibraryGames = self.client.get_library_games()
+            self.listLibraryGames = self.client.get_list_games_library()
         else:
-            self.listLibraryGames = self.client.get_library_games_by_search(searchStr)
+            self.listLibraryGames = self.client.get_list_games_library_by_search(searchStr)
         self.listLibraryGamesBtn = [
             self.ui.library_game_btn1,
             self.ui.library_game_btn2,
@@ -145,21 +126,22 @@ class MainUserApp(QMainWindow):
             self.initLibraryGameBtns(i)
         if len(self.listLibraryGames) <= 6:
             self.ui.library_more_game_btn.hide()
-        self.ui.library_search_btn.clicked.connect(lambda: self.initLibraryGames(str(self.ui.library_search_line.text())))
+        self.ui.library_search_btn.clicked.connect(lambda: self.initLibraryPage(str(self.ui.library_search_line.text())))
 
     def initLibraryGameBtns(self, thisIndex):
         if thisIndex >= len(self.listLibraryGames):
-            self.listLibraryGamesBtn[thisIndex].hide()
-        else:
-            self.listLibraryGamesBtn[thisIndex].show()
-            pixmapBtn = QtGui.QPixmap(self.client.get_game_image_path(self.listLibraryGames[thisIndex]["images"],self.listLibraryGames[thisIndex]["name"]))
+            pixmapBtn = QtGui.QPixmap('Assets\images\games\empty.png')
             self.listLibraryGamesBtn[thisIndex].setIcon(pixmapBtn)
-            self.listLibraryGamesBtn[thisIndex].setIconSize(self.listLibraryGamesBtn[thisIndex].size())
+            self.listLibraryGamesBtn[thisIndex].setIconSize(QSize(320,165))
+        else:
+            pixmapBtn = QtGui.QPixmap(self.client.get_game_image_by_id(self.listLibraryGames[thisIndex]['id']))
+            self.listLibraryGamesBtn[thisIndex].setIcon(pixmapBtn)
+            self.listLibraryGamesBtn[thisIndex].setIconSize(QSize(320,165))
         self.listLibraryGamesBtn[thisIndex].clicked.connect(lambda: self.show_Game_Info(self.listLibraryGames[thisIndex], mode='Play'))
 
 
-    def initCartsGames(self):
-        self.listCartsGames = self.client.get_cart_games()
+    def initCartsPage(self):
+        self.listCartsGames, self.totalPrice = self.client.get_list_games_carts()
         self.listCartsGameBoxes = [
             self.ui.gameOrderBox_1,
             self.ui.gameOrderBox_2,
@@ -212,19 +194,27 @@ class MainUserApp(QMainWindow):
         
 
     def initCartsGameBoxes(self, index):
-        self.ui.totalCost.setText(str(self.client.totalCost))
+        self.ui.totalCost.setText(str(self.totalPrice))
         if index >= len(self.listCartsGames):
             self.listCartsGameBoxes[index].hide()
+            self.listCartsDeleteGameBoxes[index].clicked.connect(lambda: print("Hello"))
         else:
             self.listCartsGameBoxes[index].show()
             self.listCartsNameGameBoxes[index].setText(self.listCartsGames[index]['name'])
-            icon = QtGui.QPixmap(self.client.get_game_image_path(self.listCartsGames[index]["images"],self.listCartsGames[index]["name"]))
+            icon = QtGui.QPixmap(self.client.get_game_image_by_id(self.listCartsGames[index]['id']))
             self.listCartsAvtGameBoxes[index].setPixmap(QtGui.QPixmap(icon))
-            self.listCartsDeleteGameBoxes[index].clicked.connect(lambda: self.removeCartsGameBox(index))
+            self.listCartsDeleteGameBoxes[index].clicked.connect(lambda: self.removeCartsGameBox(self.listCartsGames[index]['id']))
+
+    # def initDeleteCartBtn(self, index):
+        
             
-    def removeCartsGameBox(self, index):
-        self.client.deleteTransaction(self.listCartsGames[index]['id'])
-        self.initCartsGames()
+    def removeCartsGameBox(self, id):
+        self.client.deleteTransaction(id)
+        self.client.reset_api()
+        self.initCartsPage()
+        # for i in range(len(self.listCartsGameBoxes)):
+        #     self.initCartsGameBoxes(i)
+        # pass
 
     def payingGame(self):
         id_transacs = self.client.get_pending_id()
@@ -232,7 +222,11 @@ class MainUserApp(QMainWindow):
         for idx in range(len(id_transacs)):
             new_payment = Payment(amount_transacs[idx], Payment.payment_number+1, self.ui.payMethodBox.currentText(),id_transacs[idx], Payment.payment_number+1)
             self.client.postPayment(new_payment.toJson())
-        self.initCartsGames() 
+        self.client.reset_api()
+        self.initCartsPage()
+        self.initHomePage()
+        self.initLibraryPage()
+        
 
     def initUserProfile(self):
         userJson = self.client.user
@@ -258,25 +252,27 @@ class MainUserApp(QMainWindow):
         userJson['email'] = self.ui.emailLine.text()
         userJson['password'] = self.ui.passLine.text()
         self.client.putUser(int(userJson['id']), userJson)
-
+        self.client.reset_api()
 
     def buyPlayEvent(self, game, mode):
+        print(game)
         if mode == 'Buy':
-            new_transaction = Transaction(datetime.now().strftime("%Y-%m-%d %H:%M:%S"), game['id'], Transaction.transaction_number+1,game['price'],'pending', datetime.now().strftime("%Y-%m-%d %H:%M:%S"),self.client.user_id)
+            new_transaction = Transaction(datetime.now().strftime("%Y-%m-%d %H:%M:%S"), game['id'], Transaction.transaction_number+1,game['price'],'pending', datetime.now().strftime("%Y-%m-%d %H:%M:%S"),self.client.user['id'])
             self.client.post_transaction(new_transaction.toJson())
-            self.initCartsGames()
+            self.client.reset_api()
+            self.initCartsPage()
         self.ui.mainPages.setCurrentWidget(self.ui.homePage)
  
     def show_Game_Info(self, thisGame, mode):
         self.ui.mainPages.setCurrentWidget(self.ui.gameInfoPage)
         self.ui.descriptionGame.setText(thisGame["description"])
-        self.ui.idGame.setText(str(thisGame["id"]))
-        self.ui.nameGame.setText(thisGame["name"])
-        self.ui.priceGame.setText(str(thisGame["price"]))
+        self.ui.idGameText.setText(str(thisGame["id"]))
+        self.ui.nameGameText.setText(thisGame["name"])
+        self.ui.priceGameText.setText(str(thisGame["price"]))
         self.ui.PlayBuyBtn.setText(mode)
-        self.ui.PlayBuyBtn.clicked.connect(lambda: self.buyPlayEvent(thisGame, mode))
-        pixmap = QtGui.QPixmap(self.client.get_game_image_path(thisGame["images"],thisGame["name"]))
+        pixmap = QtGui.QPixmap(self.client.get_game_image_by_id(thisGame['id']))
         self.ui.avtGame.setPixmap(pixmap)
+        self.ui.PlayBuyBtn.clicked.connect(lambda: self.buyPlayEvent(thisGame, mode))
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
