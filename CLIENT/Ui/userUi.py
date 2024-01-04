@@ -5,7 +5,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from mainCLIENT import *
 from PySide2.QtWidgets import QMainWindow, QApplication
 from PySide2 import QtGui
-from ui_UserForm12 import *
+from ui_UserForm13 import *
 from Custom_Widgets.Widgets import *
 import urllib
 
@@ -43,6 +43,7 @@ class MainUserApp(QMainWindow):
         self.ui.ResetBtn.clicked.connect(self.resetRegister)
         self.ui.SignUpBtn.clicked.connect(self.signUpSummit)
         self.ui.RegisterForm.hide()
+        self.ui.logOutBtn.clicked.connect(self.logOut)
 
     def init_default_btns(self):
         self.ui.settingsBtn.clicked.connect(lambda: self.ui.centerMenuSubContainer.expandMenu())
@@ -57,9 +58,9 @@ class MainUserApp(QMainWindow):
         self.ui.closeRightMenuBtn.clicked.connect(lambda: self.ui.rightMenuContainer.collapseMenu())
 
         self.ui.closeNotificationBtn.clicked.connect(lambda: self.ui.popupNotificationContainer.collapseMenu())
-        self.ui.homeBtn.clicked.connect(self.initHomePage())
-        self.ui.libraryBtn.clicked.connect(self.initLibraryPage())
-        self.ui.cartsBtn.clicked.connect(self.initCartsPage())
+        # self.ui.homeBtn.clicked.connect(self.initHomePage)
+        # self.ui.libraryBtn.clicked.connect(self.initLibraryPage)
+        # self.ui.cartsBtn.clicked.connect(self.initCartsPage)
 
     def resetRegister(self):
         self.ui.nameSignUp.setText('')
@@ -76,6 +77,15 @@ class MainUserApp(QMainWindow):
             CLIENT.postUser(new_user.toJson())
             self.ui.RegisterForm.hide() 
             self.client.reset_api()      
+
+    def logOut(self):
+        self.ui.centerMenuSubContainer.collapseMenu()
+        self.ui.RegisterForm.hide() 
+        self.ui.headerLogin.show()
+        self.ui.mainLogin.show()
+        self.ui.hidExpand.show()
+        self.ui.UsernameInput.setText('')
+        self.ui.PasswordInput.setText('')
 
 
     def initHomePage(self, searchStr=''):

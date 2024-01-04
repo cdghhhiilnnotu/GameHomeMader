@@ -213,7 +213,7 @@
                  <string notr="true"/>
                 </property>
                 <property name="text">
-                 <string>  Home</string>
+                 <string>  Trang chủ</string>
                 </property>
                 <property name="icon">
                  <iconset resource="resources.qrc">
@@ -238,7 +238,7 @@
                  <string>Library</string>
                 </property>
                 <property name="text">
-                 <string>  Library</string>
+                 <string>  Kho game</string>
                 </property>
                 <property name="icon">
                  <iconset resource="resources.qrc">
@@ -263,7 +263,7 @@
                  <string>Carts</string>
                 </property>
                 <property name="text">
-                 <string>  Carts</string>
+                 <string>  Giỏ hàng</string>
                 </property>
                 <property name="icon">
                  <iconset resource="resources.qrc">
@@ -328,7 +328,7 @@
                  <string>Go to Setting</string>
                 </property>
                 <property name="text">
-                 <string>  Settings</string>
+                 <string>  Cài đặt</string>
                 </property>
                 <property name="icon">
                  <iconset resource="resources.qrc">
@@ -353,7 +353,7 @@
                  <string>Information for App</string>
                 </property>
                 <property name="text">
-                 <string>  Information</string>
+                 <string>  Thông tin</string>
                 </property>
                 <property name="icon">
                  <iconset resource="resources.qrc">
@@ -378,7 +378,7 @@
                  <string>Any Help</string>
                 </property>
                 <property name="text">
-                 <string>  Help</string>
+                 <string>  Hỗ trợ</string>
                 </property>
                 <property name="icon">
                  <iconset resource="resources.qrc">
@@ -411,7 +411,7 @@
        </property>
        <property name="maximumSize">
         <size>
-         <width>0</width>
+         <width>5000</width>
          <height>16777215</height>
         </size>
        </property>
@@ -440,6 +440,12 @@
            <size>
             <width>0</width>
             <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>0</width>
+            <height>16777215</height>
            </size>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -513,25 +519,49 @@
               <string notr="true"/>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="settingsPage">
               <layout class="QHBoxLayout" name="horizontalLayout_3">
                <item>
-                <widget class="QLabel" name="settingsLabel">
-                 <property name="font">
-                  <font>
-                   <pointsize>13</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Settings</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
+                <widget class="QWidget" name="Setting" native="true">
+                 <widget class="QPushButton" name="logOutBtn">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>590</y>
+                    <width>195</width>
+                    <height>35</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="toolTip">
+                   <string>Go to Setting</string>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">#QPushButton:hover{
+	border-radius: 20px;
+	background-color: rgb(90, 90, 90);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>   Đăng xuất</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="resources.qrc">
+                    <normaloff>:/icons/EC8482/log-out.svg</normaloff>:/icons/EC8482/log-out.svg</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>25</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                 </widget>
                 </widget>
                </item>
               </layout>
