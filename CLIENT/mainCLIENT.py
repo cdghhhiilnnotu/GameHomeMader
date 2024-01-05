@@ -163,28 +163,24 @@ class CLIENT:
         requests.delete("http://127.0.0.1:5000/" + f'users/{id}')
 
     @staticmethod
-    def postUser(id):
-        pass
-        # requests.post("http://127.0.0.1:5000/" + f'users/{id}')
+    def postUser(new_user):
+        requests.post("http://127.0.0.1:5000/" + f'users', new_user)
 
     @staticmethod
-    def putUser(id):
-        pass
-        # requests.put("http://127.0.0.1:5000/" + f'users/{id}')
+    def putUser(id, new_user):
+        requests.put("http://127.0.0.1:5000/" + f'users/{id}', new_user)
 
     @staticmethod
     def deleteGame(id):
         requests.delete("http://127.0.0.1:5000/" + f'games/{id}')
 
     @staticmethod
-    def postGame(id):
-        pass
-        # requests.post("http://127.0.0.1:5000/" + f'games/{id}')
+    def postGame(new_game):
+        requests.post("http://127.0.0.1:5000/" + f'games', new_game)
 
     @staticmethod
-    def putGame(id):
-        pass
-        # requests.put("http://127.0.0.1:5000/" + f'games/{id}')
+    def putGame(id, new_game):
+        requests.put("http://127.0.0.1:5000/" + f'games/{id}', new_game)
 
 # myCLIENT = CLIENT('nguyenee@example.com')
 # myCLIENT.deleteTransaction(5)

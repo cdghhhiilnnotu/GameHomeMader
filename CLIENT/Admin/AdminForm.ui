@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1128</width>
+    <width>1072</width>
     <height>721</height>
    </rect>
   </property>
@@ -73,7 +73,7 @@
      <widget class="QCustomSlideMenu" name="leftMenuContainer" native="true">
       <property name="minimumSize">
        <size>
-        <width>55</width>
+        <width>0</width>
         <height>0</height>
        </size>
       </property>
@@ -1014,7 +1014,7 @@ color: #000</string>
                     <item>
                      <widget class="QTableWidget" name="userView">
                       <property name="enabled">
-                       <bool>false</bool>
+                       <bool>true</bool>
                       </property>
                       <property name="font">
                        <font>
@@ -1198,7 +1198,7 @@ color: #000</string>
                     <item>
                      <widget class="QTableWidget" name="gameView">
                       <property name="enabled">
-                       <bool>false</bool>
+                       <bool>true</bool>
                       </property>
                       <property name="font">
                        <font>
@@ -1795,7 +1795,7 @@ border: 0px;</string>
                    </size>
                   </property>
                   <property name="currentIndex">
-                   <number>0</number>
+                   <number>1</number>
                   </property>
                   <widget class="QWidget" name="userProfile">
                    <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -1930,7 +1930,7 @@ QPushButton:hover
                       </widget>
                       <widget class="QLineEdit" name="idText">
                        <property name="enabled">
-                        <bool>true</bool>
+                        <bool>false</bool>
                        </property>
                        <property name="geometry">
                         <rect>
@@ -1942,8 +1942,8 @@ QPushButton:hover
                        </property>
                        <property name="font">
                         <font>
-                         <family>Terminal</family>
-                         <pointsize>15</pointsize>
+                         <family>MS Shell Dlg 2</family>
+                         <pointsize>10</pointsize>
                          <weight>50</weight>
                          <italic>false</italic>
                          <bold>false</bold>
@@ -1973,8 +1973,8 @@ QPushButton:hover
                        </property>
                        <property name="font">
                         <font>
-                         <family>Terminal</family>
-                         <pointsize>15</pointsize>
+                         <family>MS Shell Dlg 2</family>
+                         <pointsize>10</pointsize>
                          <weight>50</weight>
                          <italic>false</italic>
                          <bold>false</bold>
@@ -1998,8 +1998,8 @@ QPushButton:hover
                        </property>
                        <property name="font">
                         <font>
-                         <family>Terminal</family>
-                         <pointsize>15</pointsize>
+                         <family>MS Shell Dlg 2</family>
+                         <pointsize>10</pointsize>
                          <weight>50</weight>
                          <italic>false</italic>
                          <bold>false</bold>
@@ -2020,8 +2020,8 @@ QPushButton:hover
                        </property>
                        <property name="font">
                         <font>
-                         <family>Terminal</family>
-                         <pointsize>15</pointsize>
+                         <family>MS Shell Dlg 2</family>
+                         <pointsize>10</pointsize>
                          <weight>50</weight>
                          <italic>false</italic>
                          <bold>false</bold>
@@ -2291,7 +2291,7 @@ QPushButton:hover
                        <property name="font">
                         <font>
                          <family>MS Shell Dlg 2</family>
-                         <pointsize>13</pointsize>
+                         <pointsize>9</pointsize>
                          <weight>50</weight>
                          <italic>false</italic>
                          <bold>false</bold>
@@ -2322,7 +2322,7 @@ QPushButton:hover
                        <property name="font">
                         <font>
                          <family>MS Shell Dlg 2</family>
-                         <pointsize>13</pointsize>
+                         <pointsize>9</pointsize>
                          <weight>50</weight>
                          <italic>false</italic>
                          <bold>false</bold>
@@ -2340,14 +2340,14 @@ QPushButton:hover
                         <rect>
                          <x>200</x>
                          <y>110</y>
-                         <width>201</width>
+                         <width>301</width>
                          <height>41</height>
                         </rect>
                        </property>
                        <property name="font">
                         <font>
                          <family>MS Shell Dlg 2</family>
-                         <pointsize>13</pointsize>
+                         <pointsize>9</pointsize>
                          <weight>50</weight>
                          <italic>false</italic>
                          <bold>false</bold>
@@ -2369,7 +2369,7 @@ QPushButton:hover
                        <property name="font">
                         <font>
                          <family>MS Shell Dlg 2</family>
-                         <pointsize>13</pointsize>
+                         <pointsize>9</pointsize>
                          <weight>50</weight>
                          <italic>false</italic>
                          <bold>false</bold>
@@ -2391,7 +2391,7 @@ QPushButton:hover
                        <property name="font">
                         <font>
                          <family>MS Shell Dlg 2</family>
-                         <pointsize>11</pointsize>
+                         <pointsize>9</pointsize>
                          <weight>50</weight>
                          <italic>false</italic>
                          <bold>false</bold>
@@ -2399,6 +2399,9 @@ QPushButton:hover
                        </property>
                        <property name="styleSheet">
                         <string notr="true">color: rgb(0, 0, 0);</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                        </property>
                       </widget>
                       <widget class="QLabel" name="descriptionGameLabel">
@@ -2484,7 +2487,7 @@ background-color: rgb(206, 103, 114);</string>
                          <normaloff>:/icons/EC8482/x-square.svg</normaloff>:/icons/EC8482/x-square.svg</iconset>
                        </property>
                       </widget>
-                      <widget class="QLabel" name="idGameLabel_2">
+                      <widget class="QLabel" name="imageGameLabel">
                        <property name="geometry">
                         <rect>
                          <x>500</x>
@@ -2507,7 +2510,7 @@ background-color: rgb(206, 103, 114);</string>
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                        </property>
                       </widget>
-                      <widget class="QLineEdit" name="idGameText_2">
+                      <widget class="QLineEdit" name="imageGameText">
                        <property name="enabled">
                         <bool>true</bool>
                        </property>
@@ -2522,7 +2525,7 @@ background-color: rgb(206, 103, 114);</string>
                        <property name="font">
                         <font>
                          <family>MS Shell Dlg 2</family>
-                         <pointsize>11</pointsize>
+                         <pointsize>9</pointsize>
                          <weight>50</weight>
                          <italic>false</italic>
                          <bold>false</bold>
@@ -2538,7 +2541,7 @@ background-color: rgb(206, 103, 114);</string>
                         <string/>
                        </property>
                       </widget>
-                      <widget class="QLabel" name="idGameLabel_3">
+                      <widget class="QLabel" name="videoGameLabel">
                        <property name="geometry">
                         <rect>
                          <x>500</x>
@@ -2561,7 +2564,7 @@ background-color: rgb(206, 103, 114);</string>
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                        </property>
                       </widget>
-                      <widget class="QLineEdit" name="idGameText_3">
+                      <widget class="QLineEdit" name="videoGameText">
                        <property name="enabled">
                         <bool>true</bool>
                        </property>
@@ -2576,7 +2579,7 @@ background-color: rgb(206, 103, 114);</string>
                        <property name="font">
                         <font>
                          <family>MS Shell Dlg 2</family>
-                         <pointsize>11</pointsize>
+                         <pointsize>9</pointsize>
                          <weight>50</weight>
                          <italic>false</italic>
                          <bold>false</bold>
@@ -2590,6 +2593,60 @@ background-color: rgb(206, 103, 114);</string>
                        </property>
                        <property name="text">
                         <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLineEdit" name="demoGameText">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
+                       <property name="geometry">
+                        <rect>
+                         <x>610</x>
+                         <y>10</y>
+                         <width>371</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>MS Shell Dlg 2</family>
+                         <pointsize>9</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">color: rgb(0, 0, 0);</string>
+                       </property>
+                       <property name="inputMask">
+                        <string/>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="demoGameLabel">
+                       <property name="geometry">
+                        <rect>
+                         <x>510</x>
+                         <y>20</y>
+                         <width>91</width>
+                         <height>30</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>15</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>File:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                        </property>
                       </widget>
                      </widget>

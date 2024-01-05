@@ -27,34 +27,20 @@ def get_game_by_id(game_id_get):
 
 @app.route('/games', methods=['POST'])
 def post_game():
-    if int(request.form['id']) not in list(map(lambda data: data["id"], jsonDict['games'].values())):
-        data = {}
-        data['demo_file'] = request.form['demo_file']
-        data['description'] = request.form['description']
-        data['genre'] = request.form['genre']
-        data['id'] = int(request.form['id'])
-        data['images'] = request.form['images']
-        data['name'] = request.form['name']
-        data['price'] = float(request.form['price'])
-        data['videos'] = request.form['videos']
-        jsonDict['games'][f'game{len(jsonDict["games"])}'] = data
+    database.execute_SQL(f"""INSERT INTO games (name,genre,description,price,demo_file,images,videos)
+                                VALUES
+                                ('{request.form["name"]}','{request.form["genre"]}','{request.form["description"]}',{int(request.form["price"])},'{request.form["demo_file"]}','{request.form["images"]}','{request.form["videos"]}');""")
+    database.init_data()
 
     return jsonify(jsonDict), 201
 
 @app.route('/games/<int:game_id_put>', methods=['PUT'])
 def put_game_by_id(game_id_put):
-    for item in jsonDict['games']:
-        if int(jsonDict['games'][item]['id']) == int(game_id_put):
-            data = {}
-            data['demo_file'] = request.form['demo_file']
-            data['description'] = request.form['description']
-            data['genre'] = request.form['genre']
-            data['id'] = int(game_id_put)
-            data['images'] = request.form['images']
-            data['name'] = request.form['name']
-            data['price'] = int(request.form['price'])
-            data['videos'] = request.form['videos']
-            jsonDict['games'][item] = data
+    database.execute_SQL(f"""UPDATE games SET name='{request.form["name"]}', genre='{request.form["genre"]}', 
+                         description='{request.form["description"]}', price={int(request.form["price"])}, 
+                         demo_file='{request.form["demo_file"]}', 
+                         images='{request.form["images"]}', videos='{request.form["videos"]}' WHERE id = {game_id_put};""")
+    database.init_data()
     return jsonify(jsonDict)
 
 @app.route('/games/<int:game_id_delete>', methods=['DELETE'])

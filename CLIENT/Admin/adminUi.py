@@ -2,7 +2,7 @@ import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from mainCLIENT import *
-from ui_AdminForm import *
+from ui_AdminForm1 import *
 from PySide2.QtWidgets import QMainWindow, QApplication
 from Custom_Widgets.Widgets import *
 
@@ -33,10 +33,10 @@ class MainWindowApp(QMainWindow):
         
         self.ui.closeCenterMenuBtn.clicked.connect(lambda: self.ui.centerMenuSubContainer.collapseMenu())
 
-        self.ui.addUserBtn.clicked.connect(lambda: self.ui.rightMenuContainer.expandMenu())
-        self.ui.editUserBtn.clicked.connect(lambda: self.ui.rightMenuContainer.expandMenu())
-        self.ui.addGameBtn.clicked.connect(lambda: self.ui.rightMenuContainer.expandMenu())
-        self.ui.editGameBtn.clicked.connect(lambda: self.ui.rightMenuContainer.expandMenu())
+        self.ui.addUserBtn.clicked.connect(lambda: self.popAddUser())
+        self.ui.editUserBtn.clicked.connect(lambda: self.popAddUser(self.ui.userView.currentRow()))
+        self.ui.addGameBtn.clicked.connect(lambda: self.popAddGame())
+        self.ui.editGameBtn.clicked.connect(lambda: self.popAddGame(self.ui.gameView.currentRow()))
      
         self.ui.closeRightMenuBtn.clicked.connect(lambda: self.ui.rightMenuContainer.collapseMenu())
 
@@ -151,6 +151,63 @@ class MainWindowApp(QMainWindow):
             self.clientAdmin = CLIENT.readAPI()
             self.init_transactionTable()
 
+    def popAddGame(self, id_game=-1):
+        self.ui.rightMenuContainer.expandMenu()
+        if id_game != -1:
+            self.ui.cancelGameBtn.hide()
+            self.ui.doneGameBtn.show()
+            gameId = self.ui.gameView.currentRow()
+            game = self.clientAdmin['games'][gameId]
+            self.ui.idGameText.setText(str(game['id']))
+            self.ui.nameGameText.setText(game['name'])
+            self.ui.genreGameText.setText(game['genre'])
+            self.ui.priceGameText.setText(str(game['price']))
+            self.ui.imageGameText.setText(game['images'])
+            self.ui.videoGameText.setText(game['videos'])
+            self.ui.descriptionGameText.setText(game['description'])
+            self.ui.demoGameText.setText(game['demo_file'])
+            self.ui.doneGameBtn.clicked.connect(lambda: self.putGame())
+        else:
+            #post
+            self.ui.cancelGameBtn.show()
+            self.ui.doneGameBtn.hide()
+            self.clearGame()
+            self.ui.cancelGameBtn.clicked.connect(lambda: self.postGame())
+
+    def clearGame(self):
+        self.ui.idGameText.setText('')
+        self.ui.nameGameText.setText('')
+        self.ui.genreGameText.setText('')
+        self.ui.priceGameText.setText('')
+        self.ui.imageGameText.setText('')
+        self.ui.videoGameText.setText('')
+        self.ui.descriptionGameText.setText('')
+        self.ui.demoGameText.setText('')
+
+    def popAddUser(self, id_User=-1):
+        self.ui.rightMenuContainer.expandMenu()
+        if id_User != -1:
+            self.ui.cancelBtn.hide()
+            self.ui.doneBtn.show()
+            UserId = self.ui.userView.currentRow()
+            user = self.clientAdmin['users'][UserId]
+            self.ui.idText.setText(str(user['id']))
+            self.ui.nameText.setText(user['name'])
+            self.ui.emailText.setText(user['email'])
+            self.ui.passwordText.setText(str(user['password']))
+            self.ui.doneBtn.clicked.connect(lambda: self.putUser())
+        else:
+            self.ui.cancelBtn.show()
+            self.ui.doneBtn.hide()
+            self.clearUser()
+            self.ui.cancelBtn.clicked.connect(lambda: self.postUser())
+
+    def clearUser(self):
+        self.ui.idText.setText('')
+        self.ui.nameText.setText('')
+        self.ui.passwordText.setText('')
+        self.ui.emailText.setText('')
+
     def deleteGame(self):
         if self.ui.gameView.currentRow() >= 0:
             gameId = self.ui.gameView.currentRow()
@@ -159,6 +216,42 @@ class MainWindowApp(QMainWindow):
             CLIENT.getAPI()
             self.clientAdmin = CLIENT.readAPI()
             self.init_gameTable()
+
+    def postGame(self):
+        new_game = {}
+        new_game['name'] = self.ui.nameGameText.text()
+        new_game['genre'] = self.ui.genreGameText.text()
+        new_game['price'] = int(self.ui.priceGameText.text())
+        new_game['images'] = self.ui.imageGameText.text()
+        new_game['videos'] = self.ui.videoGameText.text()
+        new_game['description'] = self.ui.descriptionGameText.text()
+        new_game['demo_file'] = self.ui.demoGameText.text()
+        CLIENT.postGame(new_game)
+        CLIENT.getAPI()
+        self.clientAdmin = CLIENT.readAPI()
+        self.init_gameTable()
+        self.clearGame()
+        self.ui.rightMenuContainer.collapseMenu()
+
+    def putGame(self):
+        new_game = {}
+        new_game['id'] = int(self.ui.idGameText.text())
+        new_game['name'] = self.ui.nameGameText.text()
+        new_game['genre'] = self.ui.genreGameText.text()
+        new_game['price'] = int(self.ui.priceGameText.text())
+        new_game['images'] = self.ui.imageGameText.text()
+        new_game['videos'] = self.ui.videoGameText.text()
+        new_game['description'] = self.ui.descriptionGameText.text()
+        new_game['demo_file'] = self.ui.demoGameText.text()
+        print("New game--")
+        print(new_game)
+        CLIENT.putGame(new_game['id'], new_game)
+        CLIENT.getAPI()
+        self.clientAdmin = CLIENT.readAPI()
+        self.init_gameTable()
+        self.clearGame()
+        self.ui.rightMenuContainer.collapseMenu()
+
 
     def deleteUser(self):
         if self.ui.userView.currentRow() >= 0:
@@ -169,6 +262,32 @@ class MainWindowApp(QMainWindow):
             self.clientAdmin = CLIENT.readAPI()
             self.init_userTable()
         
+    def postUser(self):
+        new_user = {}
+        new_user['name'] = self.ui.nameText.text()
+        new_user['email'] = self.ui.emailText.text()
+        new_user['password'] = self.ui.passwordText.text()
+        CLIENT.postUser(new_user)
+        CLIENT.getAPI()
+        self.clientAdmin = CLIENT.readAPI()
+        self.init_userTable()
+        self.clearUser()
+        self.ui.rightMenuContainer.collapseMenu()
+
+    def putUser(self):
+        new_user = {}
+        new_user['id'] = int(self.ui.idText.text())
+        new_user['name'] = self.ui.nameText.text()
+        new_user['email'] = self.ui.emailText.text()
+        new_user['password'] = self.ui.passwordText.text()
+        print("New game--")
+        print(new_user)
+        CLIENT.putUser(new_user['id'], new_user)
+        CLIENT.getAPI()
+        self.clientAdmin = CLIENT.readAPI()
+        self.init_userTable()
+        self.clearUser()
+        self.ui.rightMenuContainer.collapseMenu()
 
 
 
