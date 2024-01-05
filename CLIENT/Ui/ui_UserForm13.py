@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'UserFormjYCOCB.ui'
+## Form generated from reading UI file 'UserFormrBXjmx.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -670,16 +670,38 @@ class Ui_UserWindow(object):
         self.gridLayout.setObjectName(u"gridLayout")
         self.gridLayout.setSizeConstraint(QLayout.SetDefaultConstraint)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
-        self.library_game_btn5 = QPushButton(self.middle_library)
-        self.library_game_btn5.setObjectName(u"library_game_btn5")
-        sizePolicy2.setHeightForWidth(self.library_game_btn5.sizePolicy().hasHeightForWidth())
-        self.library_game_btn5.setSizePolicy(sizePolicy2)
-        self.library_game_btn5.setFont(font4)
-        self.library_game_btn5.setStyleSheet(u"border: 0px;\n"
+        self.library_game_btn4 = QPushButton(self.middle_library)
+        self.library_game_btn4.setObjectName(u"library_game_btn4")
+        sizePolicy2.setHeightForWidth(self.library_game_btn4.sizePolicy().hasHeightForWidth())
+        self.library_game_btn4.setSizePolicy(sizePolicy2)
+        self.library_game_btn4.setFont(font4)
+        self.library_game_btn4.setStyleSheet(u"border: 0px;\n"
 "background-color: rgba(0, 0, 0, 0);")
-        self.library_game_btn5.setIconSize(QSize(320, 165))
+        self.library_game_btn4.setIconSize(QSize(320, 165))
 
-        self.gridLayout.addWidget(self.library_game_btn5, 1, 0, 1, 1)
+        self.gridLayout.addWidget(self.library_game_btn4, 1, 0, 1, 1)
+
+        self.library_game_btn2 = QPushButton(self.middle_library)
+        self.library_game_btn2.setObjectName(u"library_game_btn2")
+        sizePolicy2.setHeightForWidth(self.library_game_btn2.sizePolicy().hasHeightForWidth())
+        self.library_game_btn2.setSizePolicy(sizePolicy2)
+        self.library_game_btn2.setFont(font4)
+        self.library_game_btn2.setStyleSheet(u"border: 0px;\n"
+"background-color: rgba(0, 0, 0, 0);")
+        self.library_game_btn2.setIconSize(QSize(320, 165))
+
+        self.gridLayout.addWidget(self.library_game_btn2, 0, 1, 1, 1)
+
+        self.library_game_btn6 = QPushButton(self.middle_library)
+        self.library_game_btn6.setObjectName(u"library_game_btn6")
+        sizePolicy2.setHeightForWidth(self.library_game_btn6.sizePolicy().hasHeightForWidth())
+        self.library_game_btn6.setSizePolicy(sizePolicy2)
+        self.library_game_btn6.setFont(font4)
+        self.library_game_btn6.setStyleSheet(u"border: 0px;\n"
+"background-color: rgba(0, 0, 0, 0);")
+        self.library_game_btn6.setIconSize(QSize(320, 165))
+
+        self.gridLayout.addWidget(self.library_game_btn6, 1, 2, 1, 1)
 
         self.library_game_btn1 = QPushButton(self.middle_library)
         self.library_game_btn1.setObjectName(u"library_game_btn1")
@@ -704,38 +726,16 @@ class Ui_UserWindow(object):
 
         self.gridLayout.addWidget(self.library_game_btn3, 0, 2, 1, 1)
 
-        self.library_game_btn6 = QPushButton(self.middle_library)
-        self.library_game_btn6.setObjectName(u"library_game_btn6")
-        sizePolicy2.setHeightForWidth(self.library_game_btn6.sizePolicy().hasHeightForWidth())
-        self.library_game_btn6.setSizePolicy(sizePolicy2)
-        self.library_game_btn6.setFont(font4)
-        self.library_game_btn6.setStyleSheet(u"border: 0px;\n"
+        self.library_game_btn5 = QPushButton(self.middle_library)
+        self.library_game_btn5.setObjectName(u"library_game_btn5")
+        sizePolicy2.setHeightForWidth(self.library_game_btn5.sizePolicy().hasHeightForWidth())
+        self.library_game_btn5.setSizePolicy(sizePolicy2)
+        self.library_game_btn5.setFont(font4)
+        self.library_game_btn5.setStyleSheet(u"border: 0px;\n"
 "background-color: rgba(0, 0, 0, 0);")
-        self.library_game_btn6.setIconSize(QSize(320, 165))
+        self.library_game_btn5.setIconSize(QSize(320, 165))
 
-        self.gridLayout.addWidget(self.library_game_btn6, 1, 1, 1, 1)
-
-        self.library_game_btn4 = QPushButton(self.middle_library)
-        self.library_game_btn4.setObjectName(u"library_game_btn4")
-        sizePolicy2.setHeightForWidth(self.library_game_btn4.sizePolicy().hasHeightForWidth())
-        self.library_game_btn4.setSizePolicy(sizePolicy2)
-        self.library_game_btn4.setFont(font4)
-        self.library_game_btn4.setStyleSheet(u"border: 0px;\n"
-"background-color: rgba(0, 0, 0, 0);")
-        self.library_game_btn4.setIconSize(QSize(320, 165))
-
-        self.gridLayout.addWidget(self.library_game_btn4, 1, 2, 1, 1)
-
-        self.library_game_btn2 = QPushButton(self.middle_library)
-        self.library_game_btn2.setObjectName(u"library_game_btn2")
-        sizePolicy2.setHeightForWidth(self.library_game_btn2.sizePolicy().hasHeightForWidth())
-        self.library_game_btn2.setSizePolicy(sizePolicy2)
-        self.library_game_btn2.setFont(font4)
-        self.library_game_btn2.setStyleSheet(u"border: 0px;\n"
-"background-color: rgba(0, 0, 0, 0);")
-        self.library_game_btn2.setIconSize(QSize(320, 165))
-
-        self.gridLayout.addWidget(self.library_game_btn2, 0, 1, 1, 1)
+        self.gridLayout.addWidget(self.library_game_btn5, 1, 1, 1, 1)
 
 
         self.verticalLayout_16.addWidget(self.middle_library)
@@ -796,7 +796,7 @@ class Ui_UserWindow(object):
         self.listOrder.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 955, 1000))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 55, 1000))
         self.scrollAreaWidgetContents.setMinimumSize(QSize(0, 1000))
         self.gameOrderBox_1 = QWidget(self.scrollAreaWidgetContents)
         self.gameOrderBox_1.setObjectName(u"gameOrderBox_1")
@@ -1746,7 +1746,7 @@ class Ui_UserWindow(object):
         self.retranslateUi(UserWindow)
 
         self.centerMenuPages.setCurrentIndex(0)
-        self.mainPages.setCurrentIndex(2)
+        self.mainPages.setCurrentIndex(0)
         self.rightMenuPages.setCurrentIndex(0)
 
 
@@ -1830,12 +1830,12 @@ class Ui_UserWindow(object):
         self.library_search_btn.setText(QCoreApplication.translate("UserWindow", u" Search", None))
         self.library_search_line.setText("")
         self.library_search_label.setText(QCoreApplication.translate("UserWindow", u"T\u00ecm ki\u1ebfm:", None))
-        self.library_game_btn5.setText("")
-        self.library_game_btn1.setText("")
-        self.library_game_btn3.setText("")
-        self.library_game_btn6.setText("")
         self.library_game_btn4.setText("")
         self.library_game_btn2.setText("")
+        self.library_game_btn6.setText("")
+        self.library_game_btn1.setText("")
+        self.library_game_btn3.setText("")
+        self.library_game_btn5.setText("")
         self.library_more_game_btn.setText("")
         self.payMethodBox.setItemText(0, QCoreApplication.translate("UserWindow", u"Cash", None))
         self.payMethodBox.setItemText(1, QCoreApplication.translate("UserWindow", u"Credit card", None))

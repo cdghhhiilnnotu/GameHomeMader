@@ -28,8 +28,6 @@ class DATABASESERVER():
         cur.execute(f"""
             {query}
         """)
-        
-        print(query)
         try:
             result = cur.fetchall()
         except:

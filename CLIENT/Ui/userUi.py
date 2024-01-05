@@ -25,7 +25,6 @@ class MainUserApp(QMainWindow):
             self.client = CLIENT(user_email)
             if self.client.user['password'] == password:
                 self.init_default_btns()
-                print("In")
                 self.initHomePage()
                 self.initLibraryPage()
                 self.initCartsPage()
@@ -33,6 +32,8 @@ class MainUserApp(QMainWindow):
                 self.ui.headerLogin.hide()
                 self.ui.mainLogin.hide()
                 self.ui.hidExpand.hide()
+            else:
+                self.ui.wrongUserInputLabel.show()
         except:
             self.ui.wrongUserInputLabel.show()
 

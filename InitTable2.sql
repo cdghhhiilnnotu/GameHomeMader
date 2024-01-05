@@ -10,7 +10,7 @@ CREATE TABLE games (
   name VARCHAR(255) NOT NULL,
   genre VARCHAR(255) NOT NULL,
   description VARCHAR(255) NOT NULL,
-  price INT(10) NOT NULL,
+  price INT NOT NULL,
   demo_file VARCHAR(255) NOT NULL,
   images VARCHAR(255) NOT NULL,
   videos VARCHAR(255) NOT NULL
@@ -20,7 +20,7 @@ CREATE TABLE transactions (
   id SERIAL PRIMARY KEY,
   user_id INTEGER NOT NULL,
   game_id INTEGER NOT NULL,
-  price INT(10) NOT NULL,
+  price INT NOT NULL,
   status VARCHAR(255) NOT NULL,
   created_at TIMESTAMP NOT NULL,
   updated_at TIMESTAMP NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE payments (
   id SERIAL PRIMARY KEY,
   transaction_id INTEGER NOT NULL,
   payment_method VARCHAR(255) NOT NULL,
-  amount INT(10) NOT NULL,
+  amount INT NOT NULL,
   transaction_id_number VARCHAR(255) NOT NULL,
   FOREIGN KEY (transaction_id) REFERENCES transactions(id)
 );

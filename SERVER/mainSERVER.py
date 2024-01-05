@@ -111,6 +111,10 @@ def get_all_transactions():
 def get_transaction_id(transaction_id):
     return jsonDict['transactions'][f'transaction{transaction_id-1}']
 
+@app.route('/transactions/user/<int:user_id_get>', methods=['GET'])
+def get_transaction_user_id(user_id_get):
+    return jsonify([trans for trans in jsonDict['transactions'] if trans['user_id'] == user_id_get and trans['status'] == 'completed'])
+
 @app.route('/transactions', methods=['POST'])
 def post_transaction():
     database.execute_SQL(f"""INSERT INTO transactions (user_id, game_id, price, status, created_at, updated_at)

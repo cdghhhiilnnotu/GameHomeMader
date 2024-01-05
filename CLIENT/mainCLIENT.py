@@ -118,6 +118,23 @@ class CLIENT:
     def postUser(new_user):
         return requests.post('http://127.0.0.1:5000/users', data=new_user)
     
+    @staticmethod
+    def getAPI():
+        try:
+            data = requests.get("http://127.0.0.1:5000/").json()
+            with open("api.json", "w", encoding='utf-8') as outfile:
+                json.dump(data, outfile, ensure_ascii=False)
+        except:
+            print("FAIL TO GET API")
+
+    @staticmethod
+    def readAPI():
+        data = {}
+        with open('api.json', 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        return data
+
+    
     def post_transaction(self, new_transaction):
         list_game_carts, _ = self.get_list_games_carts()
         for game in list_game_carts:
@@ -183,39 +200,15 @@ class CLIENT:
         amount_pending_transac = [transac['price'] for transac in self.transactions_list if transac['status'] == 'pending']
         return amount_pending_transac
 
-    # def putUser(self, id, updated_user):
-    #     self.get_api_json()
-    #     return requests.put(self.BASE + f'users/{id}', data=updated_user)
-
-    # def putTransaction(self, id, updated_transaction):
-    #     return requests.put(self.BASE + f'transactions/{id}', data=updated_transaction)
-    
-    
-
     def deleteTransaction(self, id_deleted):
-        list_transactions = getElementsBy('user_id', self.user['id'], self.dataJson['transactions']) 
+        list_transactions = getElementsBy('user_id', self.user['id'], self.dataJson['transactions'])
+        print(list_transactions)
         id_trans = [transac['id'] for transac in list_transactions if transac['status'] == 'pending'
                                                                                 and transac['game_id'] == id_deleted]
+        print(id_trans)
 
         return requests.delete(self.BASE + f'transactions/{id_trans[0]}')
 
-    # def get_game_image_path(self, urlImg, game_name):
-    #     filename = game_name + '.png'
-    #     img_data = requests.get(urlImg).content
-    #     if not os.path.exists(f'Assets/images/games/{filename}'):
-    #         print('open')
-    #         open(filename, 'w').close()
-    #     if os.path.exists(filename):
-    #         print('created ' + filename)
-    #     if not os.path.exists(f'Assets/images/games/{filename}'):
-    #         print('rename ' + filename)
-    #         os.rename(filename, f'Assets/images/games/{filename}')
-    #     with open(f'Assets/images/games/{filename}', 'wb') as handler:
-    #         print('write')
-    #         handler.write(img_data)
-    #     print(f'Assets/images/games/{filename}')
-    #     return f'Assets/images/games/{filename}'
-
-# myCLIENT = CLIENT('')
-# myCLIENT.get_list_games_home_by_search('')
+# myCLIENT = CLIENT('nguyenee@example.com')
+# myCLIENT.deleteTransaction(5)
 
