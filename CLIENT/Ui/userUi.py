@@ -59,9 +59,6 @@ class MainUserApp(QMainWindow):
         self.ui.closeRightMenuBtn.clicked.connect(lambda: self.ui.rightMenuContainer.collapseMenu())
 
         self.ui.closeNotificationBtn.clicked.connect(lambda: self.ui.popupNotificationContainer.collapseMenu())
-        # self.ui.homeBtn.clicked.connect(self.initHomePage)
-        # self.ui.libraryBtn.clicked.connect(self.initLibraryPage)
-        # self.ui.cartsBtn.clicked.connect(self.initCartsPage)
 
     def resetRegister(self):
         self.ui.nameSignUp.setText('')

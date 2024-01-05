@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'AdminFormLoCRPX.ui'
+## Form generated from reading UI file 'AdminFormRyXhrY.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -21,7 +21,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1072, 721)
+        MainWindow.resize(1072, 603)
         MainWindow.setStyleSheet(u"* {\n"
 "	border:none;\n"
 "	background-color: transparent;\n"
@@ -121,7 +121,7 @@ class Ui_MainWindow(object):
         self.usersBtn.setAutoFillBackground(False)
         self.usersBtn.setStyleSheet(u"")
         icon1 = QIcon()
-        icon1.addFile(u":/icons/EC8482/home.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u":/icons/EC8482/users.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.usersBtn.setIcon(icon1)
         self.usersBtn.setIconSize(QSize(25, 25))
 
@@ -133,7 +133,7 @@ class Ui_MainWindow(object):
         self.gamesBtn.setAutoFillBackground(False)
         self.gamesBtn.setStyleSheet(u"backgound-color: #1f232a;")
         icon2 = QIcon()
-        icon2.addFile(u":/icons/EC8482/github.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(u":/icons/EC8482/zap.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.gamesBtn.setIcon(icon2)
         self.gamesBtn.setIconSize(QSize(25, 25))
 
@@ -144,7 +144,9 @@ class Ui_MainWindow(object):
         self.transactionsBtn.setFont(font1)
         self.transactionsBtn.setAutoFillBackground(False)
         self.transactionsBtn.setStyleSheet(u"backgound-color: #1f232a;")
-        self.transactionsBtn.setIcon(icon1)
+        icon3 = QIcon()
+        icon3.addFile(u":/icons/EC8482/layers.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.transactionsBtn.setIcon(icon3)
         self.transactionsBtn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_4.addWidget(self.transactionsBtn)
@@ -154,9 +156,9 @@ class Ui_MainWindow(object):
         self.paymentsBtn.setFont(font1)
         self.paymentsBtn.setAutoFillBackground(False)
         self.paymentsBtn.setStyleSheet(u"backgound-color: #1f232a;")
-        icon3 = QIcon()
-        icon3.addFile(u":/icons/EC8482/shopping-cart.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.paymentsBtn.setIcon(icon3)
+        icon4 = QIcon()
+        icon4.addFile(u":/icons/EC8482/file-text.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.paymentsBtn.setIcon(icon4)
         self.paymentsBtn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_4.addWidget(self.paymentsBtn)
@@ -176,36 +178,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.setSpacing(0)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.verticalLayout_5.setContentsMargins(0, 10, 0, 10)
-        self.settingsBtn = QPushButton(self.optionsBar)
-        self.settingsBtn.setObjectName(u"settingsBtn")
-        self.settingsBtn.setFont(font1)
-        icon4 = QIcon()
-        icon4.addFile(u":/icons/EC8482/settings.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.settingsBtn.setIcon(icon4)
-        self.settingsBtn.setIconSize(QSize(25, 25))
-
-        self.verticalLayout_5.addWidget(self.settingsBtn)
-
-        self.infoBtn = QPushButton(self.optionsBar)
-        self.infoBtn.setObjectName(u"infoBtn")
-        self.infoBtn.setFont(font1)
-        icon5 = QIcon()
-        icon5.addFile(u":/icons/EC8482/info.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.infoBtn.setIcon(icon5)
-        self.infoBtn.setIconSize(QSize(25, 25))
-
-        self.verticalLayout_5.addWidget(self.infoBtn)
-
-        self.helpBtn = QPushButton(self.optionsBar)
-        self.helpBtn.setObjectName(u"helpBtn")
-        self.helpBtn.setFont(font1)
-        icon6 = QIcon()
-        icon6.addFile(u":/icons/EC8482/help-circle.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.helpBtn.setIcon(icon6)
-        self.helpBtn.setIconSize(QSize(25, 25))
-
-        self.verticalLayout_5.addWidget(self.helpBtn)
-
 
         self.verticalLayout_2.addWidget(self.optionsBar, 0, Qt.AlignBottom)
 
@@ -250,9 +222,9 @@ class Ui_MainWindow(object):
 
         self.closeCenterMenuBtn = QPushButton(self.headerCenterMenu)
         self.closeCenterMenuBtn.setObjectName(u"closeCenterMenuBtn")
-        icon7 = QIcon()
-        icon7.addFile(u":/icons/EC8482/x-circle.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.closeCenterMenuBtn.setIcon(icon7)
+        icon5 = QIcon()
+        icon5.addFile(u":/icons/EC8482/x-circle.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.closeCenterMenuBtn.setIcon(icon5)
         self.closeCenterMenuBtn.setIconSize(QSize(24, 24))
 
         self.horizontalLayout_2.addWidget(self.closeCenterMenuBtn, 0, Qt.AlignRight)
@@ -321,7 +293,7 @@ class Ui_MainWindow(object):
         self.mainBodyContainer.setSizePolicy(sizePolicy)
         self.mainBodyContainer.setStyleSheet(u"")
         self.verticalLayout_8 = QVBoxLayout(self.mainBodyContainer)
-        self.verticalLayout_8.setSpacing(55)
+        self.verticalLayout_8.setSpacing(0)
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
         self.verticalLayout_8.setContentsMargins(0, 0, 0, 0)
         self.headerContainer = QWidget(self.mainBodyContainer)
@@ -371,27 +343,27 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
         self.minimizeBtn = QPushButton(self.windowOptions)
         self.minimizeBtn.setObjectName(u"minimizeBtn")
-        icon8 = QIcon()
-        icon8.addFile(u":/icons/EC8482/minus.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.minimizeBtn.setIcon(icon8)
+        icon6 = QIcon()
+        icon6.addFile(u":/icons/EC8482/minus.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.minimizeBtn.setIcon(icon6)
         self.minimizeBtn.setIconSize(QSize(25, 25))
 
         self.horizontalLayout_6.addWidget(self.minimizeBtn)
 
         self.restoreBtn = QPushButton(self.windowOptions)
         self.restoreBtn.setObjectName(u"restoreBtn")
-        icon9 = QIcon()
-        icon9.addFile(u":/icons/EC8482/square.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.restoreBtn.setIcon(icon9)
+        icon7 = QIcon()
+        icon7.addFile(u":/icons/EC8482/square.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.restoreBtn.setIcon(icon7)
         self.restoreBtn.setIconSize(QSize(25, 25))
 
         self.horizontalLayout_6.addWidget(self.restoreBtn)
 
         self.closeBtn = QPushButton(self.windowOptions)
         self.closeBtn.setObjectName(u"closeBtn")
-        icon10 = QIcon()
-        icon10.addFile(u":/icons/EC8482/x.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.closeBtn.setIcon(icon10)
+        icon8 = QIcon()
+        icon8.addFile(u":/icons/EC8482/x.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.closeBtn.setIcon(icon8)
         self.closeBtn.setIconSize(QSize(25, 25))
 
         self.horizontalLayout_6.addWidget(self.closeBtn)
@@ -410,7 +382,7 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.mainBodyContent.sizePolicy().hasHeightForWidth())
         self.mainBodyContent.setSizePolicy(sizePolicy1)
         self.mainBodyContent.setMinimumSize(QSize(931, 518))
-        self.mainBodyContent.setStyleSheet(u"border: 1px solid rgb(255,255,255)")
+        self.mainBodyContent.setStyleSheet(u"")
         self.horizontalLayout_10 = QHBoxLayout(self.mainBodyContent)
         self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
         self.horizontalLayout_10.setContentsMargins(5, 5, 5, 5)
@@ -418,46 +390,29 @@ class Ui_MainWindow(object):
         self.mainContentsContainer.setObjectName(u"mainContentsContainer")
         self.mainContentsContainer.setMinimumSize(QSize(0, 0))
         self.mainContentsContainer.setMaximumSize(QSize(1000, 16777215))
-        self.mainContentsContainer.setStyleSheet(u"border: 1px solid rgb(255,255,255)")
+        self.mainContentsContainer.setStyleSheet(u"")
         self.verticalLayout_19 = QVBoxLayout(self.mainContentsContainer)
         self.verticalLayout_19.setObjectName(u"verticalLayout_19")
         self.mainPages = QCustomQStackedWidget(self.mainContentsContainer)
         self.mainPages.setObjectName(u"mainPages")
         self.mainPages.setEnabled(True)
         self.mainPages.setMinimumSize(QSize(0, 0))
-        self.mainPages.setStyleSheet(u"border: 1px solid rgb(255,255,255)")
+        self.mainPages.setStyleSheet(u"")
         self.usersPage = QWidget()
         self.usersPage.setObjectName(u"usersPage")
-        self.usersPage.setStyleSheet(u"border: 1px solid rgb(255,255,255)")
+        self.usersPage.setStyleSheet(u"")
         self.verticalLayout_14 = QVBoxLayout(self.usersPage)
         self.verticalLayout_14.setObjectName(u"verticalLayout_14")
         self.userContent = QWidget(self.usersPage)
         self.userContent.setObjectName(u"userContent")
-        self.userContent.setStyleSheet(u"QLineEdit\n"
-"{\n"
-"	background-color: #fff;\n"
-"	border-radius: 20px;\n"
-"	border: 1px solid rgba(0, 0, 0, 100);\n"
-"	padding: 10px;\n"
-"	padding-left: 17px;\n"
-"	color: #rgb(0,255,255);\n"
-"}\n"
-"QPushButton\n"
-"{\n"
-"	border-radius: 20px;\n"
-"	border: 1px solid rgba(0, 0, 0, 100);\n"
-"}\n"
-"QPushButton:hover\n"
-"{\n"
-"	background-color: rgb(244, 244, 244);\n"
-"}")
+        self.userContent.setStyleSheet(u"")
         self.verticalLayout_13 = QVBoxLayout(self.userContent)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
         self.userBtns = QWidget(self.userContent)
         self.userBtns.setObjectName(u"userBtns")
         self.delUserBtn = QPushButton(self.userBtns)
         self.delUserBtn.setObjectName(u"delUserBtn")
-        self.delUserBtn.setGeometry(QRect(680, 20, 151, 41))
+        self.delUserBtn.setGeometry(QRect(760, 20, 151, 41))
         font4 = QFont()
         font4.setPointSize(11)
         self.delUserBtn.setFont(font4)
@@ -466,7 +421,7 @@ class Ui_MainWindow(object):
 "background-color: rgb(255, 0, 0);")
         self.editUserBtn = QPushButton(self.userBtns)
         self.editUserBtn.setObjectName(u"editUserBtn")
-        self.editUserBtn.setGeometry(QRect(520, 20, 151, 41))
+        self.editUserBtn.setGeometry(QRect(600, 20, 151, 41))
         self.editUserBtn.setFont(font4)
         self.editUserBtn.setStyleSheet(u"border-radius: 20px;\n"
 "border: 1px solid rgb(255,255,255);\n"
@@ -475,12 +430,20 @@ class Ui_MainWindow(object):
 "")
         self.addUserBtn = QPushButton(self.userBtns)
         self.addUserBtn.setObjectName(u"addUserBtn")
-        self.addUserBtn.setGeometry(QRect(360, 20, 151, 41))
+        self.addUserBtn.setGeometry(QRect(440, 20, 151, 41))
         self.addUserBtn.setFont(font4)
         self.addUserBtn.setStyleSheet(u"border-radius: 20px;\n"
 "border: 1px solid rgb(255,255,255);\n"
 "background-color: rgb(0, 255, 0);\n"
 "color: #000")
+        self.userLabel = QLabel(self.userBtns)
+        self.userLabel.setObjectName(u"userLabel")
+        self.userLabel.setGeometry(QRect(10, 10, 161, 51))
+        font5 = QFont()
+        font5.setPointSize(15)
+        font5.setBold(True)
+        font5.setWeight(75)
+        self.userLabel.setFont(font5)
 
         self.verticalLayout_13.addWidget(self.userBtns)
 
@@ -505,10 +468,10 @@ class Ui_MainWindow(object):
         self.userView.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         self.userView.setObjectName(u"userView")
         self.userView.setEnabled(True)
-        font5 = QFont()
-        font5.setFamily(u"MS Shell Dlg 2")
-        font5.setPointSize(11)
-        self.userView.setFont(font5)
+        font6 = QFont()
+        font6.setFamily(u"MS Shell Dlg 2")
+        font6.setPointSize(11)
+        self.userView.setFont(font6)
         self.userView.setStyleSheet(u"color: rgb(0, 0, 0);\n"
 "background-color: rgb(0, 191, 64);")
 
@@ -526,39 +489,21 @@ class Ui_MainWindow(object):
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
         self.gameContent = QWidget(self.gamesPage)
         self.gameContent.setObjectName(u"gameContent")
-        self.gameContent.setStyleSheet(u"border: 1px solid rgba(255, 0, 0, 100);\n"
-"QLineEdit\n"
-"{\n"
-"	background-color: #fff;\n"
-"	border-radius: 20px;\n"
-"	border: 1px solid rgba(0, 0, 0, 100);\n"
-"	padding: 10px;\n"
-"	padding-left: 17px;\n"
-"	color: #rgb(0,255,255);\n"
-"}\n"
-"QPushButton\n"
-"{\n"
-"	border-radius: 20px;\n"
-"	border: 1px solid rgba(0, 0, 0, 100);\n"
-"}\n"
-"QPushButton:hover\n"
-"{\n"
-"	background-color: rgb(244, 244, 244);\n"
-"}")
+        self.gameContent.setStyleSheet(u"")
         self.verticalLayout_15 = QVBoxLayout(self.gameContent)
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
         self.gameBtns = QWidget(self.gameContent)
         self.gameBtns.setObjectName(u"gameBtns")
         self.delGameBtn = QPushButton(self.gameBtns)
         self.delGameBtn.setObjectName(u"delGameBtn")
-        self.delGameBtn.setGeometry(QRect(680, 20, 151, 41))
+        self.delGameBtn.setGeometry(QRect(760, 20, 151, 41))
         self.delGameBtn.setFont(font4)
         self.delGameBtn.setStyleSheet(u"border-radius: 20px;\n"
 "border: 1px solid rgb(255,255,255);\n"
 "background-color: rgb(255, 0, 0);")
         self.editGameBtn = QPushButton(self.gameBtns)
         self.editGameBtn.setObjectName(u"editGameBtn")
-        self.editGameBtn.setGeometry(QRect(520, 20, 151, 41))
+        self.editGameBtn.setGeometry(QRect(600, 20, 151, 41))
         self.editGameBtn.setFont(font4)
         self.editGameBtn.setStyleSheet(u"border-radius: 20px;\n"
 "border: 1px solid rgb(255,255,255);\n"
@@ -567,12 +512,16 @@ class Ui_MainWindow(object):
 "")
         self.addGameBtn = QPushButton(self.gameBtns)
         self.addGameBtn.setObjectName(u"addGameBtn")
-        self.addGameBtn.setGeometry(QRect(360, 20, 151, 41))
+        self.addGameBtn.setGeometry(QRect(440, 20, 151, 41))
         self.addGameBtn.setFont(font4)
         self.addGameBtn.setStyleSheet(u"border-radius: 20px;\n"
 "border: 1px solid rgb(255,255,255);\n"
 "background-color: rgb(0, 255, 0);\n"
 "color: #000")
+        self.userLabel_2 = QLabel(self.gameBtns)
+        self.userLabel_2.setObjectName(u"userLabel_2")
+        self.userLabel_2.setGeometry(QRect(10, 10, 161, 51))
+        self.userLabel_2.setFont(font5)
 
         self.verticalLayout_15.addWidget(self.gameBtns)
 
@@ -609,7 +558,7 @@ class Ui_MainWindow(object):
         self.gameView.setHorizontalHeaderItem(6, __qtablewidgetitem10)
         self.gameView.setObjectName(u"gameView")
         self.gameView.setEnabled(True)
-        self.gameView.setFont(font5)
+        self.gameView.setFont(font6)
         self.gameView.setStyleSheet(u"color: #000;\n"
 "background-color: rgb(255, 133, 133);")
 
@@ -627,37 +576,22 @@ class Ui_MainWindow(object):
         self.verticalLayout_20.setObjectName(u"verticalLayout_20")
         self.transactionContent = QWidget(self.transactionsPage)
         self.transactionContent.setObjectName(u"transactionContent")
-        self.transactionContent.setStyleSheet(u"border: 1px solid rgba(0, 255, 0, 100);\n"
-"QLineEdit\n"
-"{\n"
-"	background-color: #fff;\n"
-"	border-radius: 20px;\n"
-"	border: 1px solid rgba(0, 0, 0, 100);\n"
-"	padding: 10px;\n"
-"	padding-left: 17px;\n"
-"	color: #rgb(0,255,255);\n"
-"}\n"
-"QPushButton\n"
-"{\n"
-"	border-radius: 20px;\n"
-"	border: 1px solid rgba(0, 0, 0, 100);\n"
-"	font: 14pt \"Terminal\";\n"
-"}\n"
-"QPushButton:hover\n"
-"{\n"
-"	background-color: rgb(244, 244, 244);\n"
-"}")
+        self.transactionContent.setStyleSheet(u"")
         self.verticalLayout_16 = QVBoxLayout(self.transactionContent)
         self.verticalLayout_16.setObjectName(u"verticalLayout_16")
         self.transactionBtns = QWidget(self.transactionContent)
         self.transactionBtns.setObjectName(u"transactionBtns")
         self.delTransactionBtn = QPushButton(self.transactionBtns)
         self.delTransactionBtn.setObjectName(u"delTransactionBtn")
-        self.delTransactionBtn.setGeometry(QRect(660, 20, 151, 41))
+        self.delTransactionBtn.setGeometry(QRect(760, 20, 151, 41))
         self.delTransactionBtn.setFont(font4)
         self.delTransactionBtn.setStyleSheet(u"border-radius: 20px;\n"
 "border: 1px solid rgb(255,255,255);\n"
 "background-color: rgb(255, 0, 0);")
+        self.userLabel_3 = QLabel(self.transactionBtns)
+        self.userLabel_3.setObjectName(u"userLabel_3")
+        self.userLabel_3.setGeometry(QRect(10, 10, 231, 51))
+        self.userLabel_3.setFont(font5)
 
         self.verticalLayout_16.addWidget(self.transactionBtns)
 
@@ -694,7 +628,7 @@ class Ui_MainWindow(object):
         self.transactionView.setHorizontalHeaderItem(6, __qtablewidgetitem17)
         self.transactionView.setObjectName(u"transactionView")
         self.transactionView.setEnabled(False)
-        self.transactionView.setFont(font5)
+        self.transactionView.setFont(font6)
         self.transactionView.setStyleSheet(u"color: rgb(0, 0, 0);\n"
 "background-color: rgb(0, 102, 255);")
 
@@ -712,26 +646,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_21.setObjectName(u"verticalLayout_21")
         self.paymentContent = QWidget(self.paymentsPage)
         self.paymentContent.setObjectName(u"paymentContent")
-        self.paymentContent.setStyleSheet(u"border: 1px solid rgba(0, 0, 255, 100);\n"
-"QLineEdit\n"
-"{\n"
-"	background-color: #fff;\n"
-"	border-radius: 20px;\n"
-"	border: 1px solid rgba(0, 0, 0, 100);\n"
-"	padding: 10px;\n"
-"	padding-left: 17px;\n"
-"	color: #rgb(0,255,255);\n"
-"}\n"
-"QPushButton\n"
-"{\n"
-"	border-radius: 20px;\n"
-"	border: 1px solid rgba(0, 0, 0, 100);\n"
-"	font: 14pt \"Terminal\";\n"
-"}\n"
-"QPushButton:hover\n"
-"{\n"
-"	background-color: rgb(244, 244, 244);\n"
-"}")
+        self.paymentContent.setStyleSheet(u"")
         self.verticalLayout_17 = QVBoxLayout(self.paymentContent)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
         self.paymentBtns = QWidget(self.paymentContent)
@@ -740,11 +655,15 @@ class Ui_MainWindow(object):
         self.paymentBtns.setStyleSheet(u"")
         self.delPaymentBtn = QPushButton(self.paymentBtns)
         self.delPaymentBtn.setObjectName(u"delPaymentBtn")
-        self.delPaymentBtn.setGeometry(QRect(660, 20, 151, 41))
+        self.delPaymentBtn.setGeometry(QRect(760, 20, 151, 41))
         self.delPaymentBtn.setFont(font4)
         self.delPaymentBtn.setStyleSheet(u"border-radius: 20px;\n"
 "border: 1px solid rgb(255,255,255);\n"
 "background-color: rgb(255, 0, 0);")
+        self.userLabel_4 = QLabel(self.paymentBtns)
+        self.userLabel_4.setObjectName(u"userLabel_4")
+        self.userLabel_4.setGeometry(QRect(10, 10, 161, 51))
+        self.userLabel_4.setFont(font5)
 
         self.verticalLayout_17.addWidget(self.paymentBtns)
 
@@ -773,7 +692,7 @@ class Ui_MainWindow(object):
         self.paymentView.setHorizontalHeaderItem(4, __qtablewidgetitem22)
         self.paymentView.setObjectName(u"paymentView")
         self.paymentView.setEnabled(False)
-        self.paymentView.setFont(font5)
+        self.paymentView.setFont(font6)
         self.paymentView.setStyleSheet(u"color: rgb(0, 0, 0);\n"
 "background-color: rgb(255, 217, 0);")
 
@@ -790,319 +709,6 @@ class Ui_MainWindow(object):
 
 
         self.horizontalLayout_10.addWidget(self.mainContentsContainer)
-
-        self.rightMenuContainer = QCustomSlideMenu(self.mainBodyContent)
-        self.rightMenuContainer.setObjectName(u"rightMenuContainer")
-        self.rightMenuContainer.setMinimumSize(QSize(0, 0))
-        self.rightMenuContainer.setMaximumSize(QSize(0, 496))
-        self.rightMenuContainer.setStyleSheet(u"border-radius: 20px;\n"
-"border: 0px;")
-        self.verticalLayout_9 = QVBoxLayout(self.rightMenuContainer)
-        self.verticalLayout_9.setSpacing(0)
-        self.verticalLayout_9.setObjectName(u"verticalLayout_9")
-        self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
-        self.rightMenuSubContainer = QWidget(self.rightMenuContainer)
-        self.rightMenuSubContainer.setObjectName(u"rightMenuSubContainer")
-        self.rightMenuSubContainer.setMinimumSize(QSize(1000, 0))
-        self.rightMenuSubContainer.setMaximumSize(QSize(16777215, 500))
-        self.verticalLayout_10 = QVBoxLayout(self.rightMenuSubContainer)
-        self.verticalLayout_10.setSpacing(5)
-        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
-        self.verticalLayout_10.setContentsMargins(5, 5, 5, 5)
-        self.rightMenuBar = QFrame(self.rightMenuSubContainer)
-        self.rightMenuBar.setObjectName(u"rightMenuBar")
-        self.rightMenuBar.setMinimumSize(QSize(0, 0))
-        self.rightMenuBar.setFrameShape(QFrame.StyledPanel)
-        self.rightMenuBar.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_11 = QHBoxLayout(self.rightMenuBar)
-        self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
-        self.rightMenuTile = QLabel(self.rightMenuBar)
-        self.rightMenuTile.setObjectName(u"rightMenuTile")
-        self.rightMenuTile.setFont(font2)
-        self.rightMenuTile.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.horizontalLayout_11.addWidget(self.rightMenuTile)
-
-        self.closeRightMenuBtn = QPushButton(self.rightMenuBar)
-        self.closeRightMenuBtn.setObjectName(u"closeRightMenuBtn")
-        self.closeRightMenuBtn.setIcon(icon7)
-        self.closeRightMenuBtn.setIconSize(QSize(24, 24))
-
-        self.horizontalLayout_11.addWidget(self.closeRightMenuBtn, 0, Qt.AlignRight)
-
-
-        self.verticalLayout_10.addWidget(self.rightMenuBar)
-
-        self.rightMenuPages = QCustomQStackedWidget(self.rightMenuSubContainer)
-        self.rightMenuPages.setObjectName(u"rightMenuPages")
-        self.rightMenuPages.setMinimumSize(QSize(0, 0))
-        self.userProfile = QWidget()
-        self.userProfile.setObjectName(u"userProfile")
-        self.verticalLayout_11 = QVBoxLayout(self.userProfile)
-        self.verticalLayout_11.setObjectName(u"verticalLayout_11")
-        self.userInfor = QWidget(self.userProfile)
-        self.userInfor.setObjectName(u"userInfor")
-        self.userInfor.setMinimumSize(QSize(0, 350))
-        font6 = QFont()
-        font6.setPointSize(15)
-        font6.setBold(False)
-        font6.setWeight(50)
-        self.userInfor.setFont(font6)
-        self.userInfor.setStyleSheet(u"QLineEdit\n"
-"{\n"
-"	background-color: #fff;\n"
-"	border-radius: 20px;\n"
-"	border: 1px solid rgba(0, 0, 0, 100);\n"
-"	padding: 10px;\n"
-"	padding-left: 17px;\n"
-"	color: #rgb(0,255,255);\n"
-"}\n"
-"QPushButton\n"
-"{\n"
-"	border-radius: 20px;\n"
-"	border: 1px solid rgba(0, 0, 0, 100);\n"
-"	background-color: rgb(255, 255, 255);\n"
-"	font: 14pt \"Terminal\";\n"
-"}\n"
-"QPushButton:hover\n"
-"{\n"
-"	background-color: rgb(244, 244, 244);\n"
-"}")
-        self.idLabel = QLabel(self.userInfor)
-        self.idLabel.setObjectName(u"idLabel")
-        self.idLabel.setGeometry(QRect(30, 120, 150, 30))
-        self.idLabel.setFont(font6)
-        self.idLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.nameLabel = QLabel(self.userInfor)
-        self.nameLabel.setObjectName(u"nameLabel")
-        self.nameLabel.setGeometry(QRect(30, 190, 150, 30))
-        self.nameLabel.setFont(font6)
-        self.nameLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.emailLabel = QLabel(self.userInfor)
-        self.emailLabel.setObjectName(u"emailLabel")
-        self.emailLabel.setGeometry(QRect(30, 260, 150, 30))
-        self.emailLabel.setFont(font6)
-        self.emailLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.passwordLabel = QLabel(self.userInfor)
-        self.passwordLabel.setObjectName(u"passwordLabel")
-        self.passwordLabel.setGeometry(QRect(30, 330, 150, 30))
-        self.passwordLabel.setFont(font6)
-        self.passwordLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.idText = QLineEdit(self.userInfor)
-        self.idText.setObjectName(u"idText")
-        self.idText.setEnabled(False)
-        self.idText.setGeometry(QRect(210, 120, 381, 41))
-        font7 = QFont()
-        font7.setFamily(u"MS Shell Dlg 2")
-        font7.setPointSize(10)
-        font7.setBold(False)
-        font7.setItalic(False)
-        font7.setWeight(50)
-        self.idText.setFont(font7)
-        self.idText.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.nameText = QLineEdit(self.userInfor)
-        self.nameText.setObjectName(u"nameText")
-        self.nameText.setEnabled(True)
-        self.nameText.setGeometry(QRect(210, 190, 381, 41))
-        self.nameText.setFont(font7)
-        self.nameText.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.emailText = QLineEdit(self.userInfor)
-        self.emailText.setObjectName(u"emailText")
-        self.emailText.setGeometry(QRect(210, 260, 381, 41))
-        self.emailText.setFont(font7)
-        self.emailText.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.passwordText = QLineEdit(self.userInfor)
-        self.passwordText.setObjectName(u"passwordText")
-        self.passwordText.setGeometry(QRect(210, 330, 381, 41))
-        self.passwordText.setFont(font7)
-        self.passwordText.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.AvatarLabel = QLabel(self.userInfor)
-        self.AvatarLabel.setObjectName(u"AvatarLabel")
-        self.AvatarLabel.setGeometry(QRect(670, 40, 200, 200))
-        self.AvatarLabel.setStyleSheet(u"border: 2px solid rgba(0,0,0,100);\n"
-"border-radius: 0px;")
-        self.AvatarLabel.setLineWidth(0)
-        self.AvatarLabel.setTextFormat(Qt.MarkdownText)
-        self.AvatarLabel.setPixmap(QPixmap(u":/images/z4721841278414_41db3f1c2d44195237d25ddf1ebfad34.jpg"))
-        self.AvatarLabel.setScaledContents(True)
-        self.AvatarLabel.setAlignment(Qt.AlignRight|Qt.AlignTop|Qt.AlignTrailing)
-        self.AvatarLabel.setMargin(0)
-        self.doneBtn = QPushButton(self.userInfor)
-        self.doneBtn.setObjectName(u"doneBtn")
-        self.doneBtn.setGeometry(QRect(680, 270, 181, 41))
-        font8 = QFont()
-        font8.setFamily(u"Terminal")
-        font8.setPointSize(14)
-        font8.setBold(False)
-        font8.setItalic(False)
-        font8.setWeight(50)
-        self.doneBtn.setFont(font8)
-        self.doneBtn.setStyleSheet(u"color: rgb(0, 0, 0);\n"
-"background-color: rgb(0, 255, 255);")
-        icon11 = QIcon()
-        icon11.addFile(u":/icons/EC8482/check-circle.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.doneBtn.setIcon(icon11)
-        self.cancelBtn = QPushButton(self.userInfor)
-        self.cancelBtn.setObjectName(u"cancelBtn")
-        self.cancelBtn.setGeometry(QRect(680, 330, 181, 41))
-        self.cancelBtn.setFont(font8)
-        self.cancelBtn.setStyleSheet(u"color: rgb(0, 0, 0);\n"
-"background-color: rgb(206, 103, 114);")
-        icon12 = QIcon()
-        icon12.addFile(u":/icons/EC8482/x-square.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.cancelBtn.setIcon(icon12)
-
-        self.verticalLayout_11.addWidget(self.userInfor)
-
-        self.rightMenuPages.addWidget(self.userProfile)
-        self.gameProfile = QWidget()
-        self.gameProfile.setObjectName(u"gameProfile")
-        self.verticalLayout_12 = QVBoxLayout(self.gameProfile)
-        self.verticalLayout_12.setSpacing(10)
-        self.verticalLayout_12.setObjectName(u"verticalLayout_12")
-        self.verticalLayout_12.setContentsMargins(0, 0, 0, 0)
-        self.gameInfor = QWidget(self.gameProfile)
-        self.gameInfor.setObjectName(u"gameInfor")
-        self.gameInfor.setMinimumSize(QSize(0, 350))
-        self.gameInfor.setFont(font6)
-        self.gameInfor.setStyleSheet(u"QLineEdit\n"
-"{\n"
-"	background-color: #fff;\n"
-"	border-radius: 20px;\n"
-"	border: 1px solid rgba(0, 0, 0, 100);\n"
-"	padding: 10px;\n"
-"	padding-left: 17px;\n"
-"	color: #rgb(0,255,255);\n"
-"}\n"
-"QPushButton\n"
-"{\n"
-"	border-radius: 20px;\n"
-"	border: 1px solid rgba(0, 0, 0, 100);\n"
-"	background-color: rgb(255, 255, 255);\n"
-"	font: 14pt \"Terminal\";\n"
-"}\n"
-"QPushButton:hover\n"
-"{\n"
-"	background-color: rgb(244, 244, 244);\n"
-"}")
-        self.idGameLabel = QLabel(self.gameInfor)
-        self.idGameLabel.setObjectName(u"idGameLabel")
-        self.idGameLabel.setGeometry(QRect(30, 20, 150, 30))
-        self.idGameLabel.setFont(font6)
-        self.idGameLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.nameGameLabel = QLabel(self.gameInfor)
-        self.nameGameLabel.setObjectName(u"nameGameLabel")
-        self.nameGameLabel.setGeometry(QRect(30, 70, 150, 30))
-        self.nameGameLabel.setFont(font6)
-        self.nameGameLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.genreGameLabel = QLabel(self.gameInfor)
-        self.genreGameLabel.setObjectName(u"genreGameLabel")
-        self.genreGameLabel.setGeometry(QRect(30, 120, 150, 30))
-        self.genreGameLabel.setFont(font6)
-        self.genreGameLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.priceGameLabel = QLabel(self.gameInfor)
-        self.priceGameLabel.setObjectName(u"priceGameLabel")
-        self.priceGameLabel.setGeometry(QRect(30, 170, 150, 30))
-        self.priceGameLabel.setFont(font6)
-        self.priceGameLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.idGameText = QLineEdit(self.gameInfor)
-        self.idGameText.setObjectName(u"idGameText")
-        self.idGameText.setEnabled(True)
-        self.idGameText.setGeometry(QRect(200, 10, 261, 41))
-        font9 = QFont()
-        font9.setFamily(u"MS Shell Dlg 2")
-        font9.setPointSize(9)
-        font9.setBold(False)
-        font9.setItalic(False)
-        font9.setWeight(50)
-        self.idGameText.setFont(font9)
-        self.idGameText.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.nameGameText = QLineEdit(self.gameInfor)
-        self.nameGameText.setObjectName(u"nameGameText")
-        self.nameGameText.setEnabled(True)
-        self.nameGameText.setGeometry(QRect(200, 60, 411, 41))
-        self.nameGameText.setFont(font9)
-        self.nameGameText.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.genreGameText = QLineEdit(self.gameInfor)
-        self.genreGameText.setObjectName(u"genreGameText")
-        self.genreGameText.setGeometry(QRect(200, 110, 301, 41))
-        self.genreGameText.setFont(font9)
-        self.genreGameText.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.priceGameText = QLineEdit(self.gameInfor)
-        self.priceGameText.setObjectName(u"priceGameText")
-        self.priceGameText.setGeometry(QRect(200, 160, 201, 41))
-        self.priceGameText.setFont(font9)
-        self.priceGameText.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.descriptionGameText = QLineEdit(self.gameInfor)
-        self.descriptionGameText.setObjectName(u"descriptionGameText")
-        self.descriptionGameText.setGeometry(QRect(200, 210, 401, 221))
-        self.descriptionGameText.setFont(font9)
-        self.descriptionGameText.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.descriptionGameText.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
-        self.descriptionGameLabel = QLabel(self.gameInfor)
-        self.descriptionGameLabel.setObjectName(u"descriptionGameLabel")
-        self.descriptionGameLabel.setGeometry(QRect(30, 210, 150, 30))
-        self.descriptionGameLabel.setFont(font6)
-        self.descriptionGameLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.doneGameBtn = QPushButton(self.gameInfor)
-        self.doneGameBtn.setObjectName(u"doneGameBtn")
-        self.doneGameBtn.setGeometry(QRect(800, 380, 181, 41))
-        self.doneGameBtn.setFont(font8)
-        self.doneGameBtn.setStyleSheet(u"color: rgb(0, 0, 0);\n"
-"background-color: rgb(0, 255, 255);")
-        self.doneGameBtn.setIcon(icon11)
-        self.cancelGameBtn = QPushButton(self.gameInfor)
-        self.cancelGameBtn.setObjectName(u"cancelGameBtn")
-        self.cancelGameBtn.setGeometry(QRect(610, 380, 181, 41))
-        self.cancelGameBtn.setFont(font8)
-        self.cancelGameBtn.setStyleSheet(u"color: rgb(0, 0, 0);\n"
-"background-color: rgb(206, 103, 114);")
-        self.cancelGameBtn.setIcon(icon12)
-        self.imageGameLabel = QLabel(self.gameInfor)
-        self.imageGameLabel.setObjectName(u"imageGameLabel")
-        self.imageGameLabel.setGeometry(QRect(500, 120, 91, 30))
-        self.imageGameLabel.setFont(font6)
-        self.imageGameLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.imageGameText = QLineEdit(self.gameInfor)
-        self.imageGameText.setObjectName(u"imageGameText")
-        self.imageGameText.setEnabled(True)
-        self.imageGameText.setGeometry(QRect(600, 110, 371, 41))
-        self.imageGameText.setFont(font9)
-        self.imageGameText.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.videoGameLabel = QLabel(self.gameInfor)
-        self.videoGameLabel.setObjectName(u"videoGameLabel")
-        self.videoGameLabel.setGeometry(QRect(500, 170, 91, 30))
-        self.videoGameLabel.setFont(font6)
-        self.videoGameLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.videoGameText = QLineEdit(self.gameInfor)
-        self.videoGameText.setObjectName(u"videoGameText")
-        self.videoGameText.setEnabled(True)
-        self.videoGameText.setGeometry(QRect(600, 160, 371, 41))
-        self.videoGameText.setFont(font9)
-        self.videoGameText.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.demoGameText = QLineEdit(self.gameInfor)
-        self.demoGameText.setObjectName(u"demoGameText")
-        self.demoGameText.setEnabled(True)
-        self.demoGameText.setGeometry(QRect(610, 10, 371, 41))
-        self.demoGameText.setFont(font9)
-        self.demoGameText.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.demoGameLabel = QLabel(self.gameInfor)
-        self.demoGameLabel.setObjectName(u"demoGameLabel")
-        self.demoGameLabel.setGeometry(QRect(510, 20, 91, 30))
-        self.demoGameLabel.setFont(font6)
-        self.demoGameLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-
-        self.verticalLayout_12.addWidget(self.gameInfor)
-
-        self.rightMenuPages.addWidget(self.gameProfile)
-
-        self.verticalLayout_10.addWidget(self.rightMenuPages)
-
-
-        self.verticalLayout_9.addWidget(self.rightMenuSubContainer, 0, Qt.AlignRight)
-
-
-        self.horizontalLayout_10.addWidget(self.rightMenuContainer)
 
 
         self.verticalLayout_8.addWidget(self.mainBodyContent)
@@ -1152,7 +758,6 @@ class Ui_MainWindow(object):
 
         self.centerMenuPages.setCurrentIndex(0)
         self.mainPages.setCurrentIndex(0)
-        self.rightMenuPages.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1180,18 +785,6 @@ class Ui_MainWindow(object):
         self.paymentsBtn.setToolTip(QCoreApplication.translate("MainWindow", u"View Payments", None))
 #endif // QT_CONFIG(tooltip)
         self.paymentsBtn.setText(QCoreApplication.translate("MainWindow", u"   Payments", None))
-#if QT_CONFIG(tooltip)
-        self.settingsBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Go to Setting", None))
-#endif // QT_CONFIG(tooltip)
-        self.settingsBtn.setText(QCoreApplication.translate("MainWindow", u"  Settings", None))
-#if QT_CONFIG(tooltip)
-        self.infoBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Information for App", None))
-#endif // QT_CONFIG(tooltip)
-        self.infoBtn.setText(QCoreApplication.translate("MainWindow", u"  Information", None))
-#if QT_CONFIG(tooltip)
-        self.helpBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Any Help", None))
-#endif // QT_CONFIG(tooltip)
-        self.helpBtn.setText(QCoreApplication.translate("MainWindow", u"  Help", None))
         self.titleCenterMenu.setText(QCoreApplication.translate("MainWindow", u"   Details", None))
 #if QT_CONFIG(tooltip)
         self.closeCenterMenuBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close Menu", None))
@@ -1217,6 +810,7 @@ class Ui_MainWindow(object):
         self.delUserBtn.setText(QCoreApplication.translate("MainWindow", u"X\u00f3a", None))
         self.editUserBtn.setText(QCoreApplication.translate("MainWindow", u"S\u1eeda", None))
         self.addUserBtn.setText(QCoreApplication.translate("MainWindow", u"Th\u00eam", None))
+        self.userLabel.setText(QCoreApplication.translate("MainWindow", u"USERS", None))
         ___qtablewidgetitem = self.userView.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"ID", None));
         ___qtablewidgetitem1 = self.userView.horizontalHeaderItem(1)
@@ -1228,6 +822,7 @@ class Ui_MainWindow(object):
         self.delGameBtn.setText(QCoreApplication.translate("MainWindow", u"X\u00f3a", None))
         self.editGameBtn.setText(QCoreApplication.translate("MainWindow", u"S\u1eeda", None))
         self.addGameBtn.setText(QCoreApplication.translate("MainWindow", u"Th\u00eam", None))
+        self.userLabel_2.setText(QCoreApplication.translate("MainWindow", u"GAMES", None))
         ___qtablewidgetitem4 = self.gameView.horizontalHeaderItem(0)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"ID", None));
         ___qtablewidgetitem5 = self.gameView.horizontalHeaderItem(1)
@@ -1242,7 +837,8 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"Video", None));
         ___qtablewidgetitem10 = self.gameView.horizontalHeaderItem(6)
         ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"M\u00f4 t\u1ea3", None));
-        self.delTransactionBtn.setText(QCoreApplication.translate("MainWindow", u"Delete", None))
+        self.delTransactionBtn.setText(QCoreApplication.translate("MainWindow", u"X\u00f3a", None))
+        self.userLabel_3.setText(QCoreApplication.translate("MainWindow", u"TRANSACTIONS", None))
         ___qtablewidgetitem11 = self.transactionView.horizontalHeaderItem(0)
         ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"ID", None));
         ___qtablewidgetitem12 = self.transactionView.horizontalHeaderItem(1)
@@ -1257,7 +853,8 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"Ng\u00e0y t\u1ea1o", None));
         ___qtablewidgetitem17 = self.transactionView.horizontalHeaderItem(6)
         ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"Ng\u00e0y s\u1eeda \u0111\u1ed5i", None));
-        self.delPaymentBtn.setText(QCoreApplication.translate("MainWindow", u"Delete", None))
+        self.delPaymentBtn.setText(QCoreApplication.translate("MainWindow", u"X\u00f3a", None))
+        self.userLabel_4.setText(QCoreApplication.translate("MainWindow", u"PAYMENTS", None))
         ___qtablewidgetitem18 = self.paymentView.horizontalHeaderItem(0)
         ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"ID", None));
         ___qtablewidgetitem19 = self.paymentView.horizontalHeaderItem(1)
@@ -1268,40 +865,6 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"Ph\u01b0\u01a1ng th\u1ee9c thanh to\u00e1n", None));
         ___qtablewidgetitem22 = self.paymentView.horizontalHeaderItem(4)
         ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"M\u00e3 giao d\u1ecbch ph\u1ee5", None));
-        self.rightMenuTile.setText(QCoreApplication.translate("MainWindow", u"   Menu", None))
-#if QT_CONFIG(tooltip)
-        self.closeRightMenuBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close Menu", None))
-#endif // QT_CONFIG(tooltip)
-        self.closeRightMenuBtn.setText("")
-        self.idLabel.setText(QCoreApplication.translate("MainWindow", u"ID:", None))
-        self.nameLabel.setText(QCoreApplication.translate("MainWindow", u"Name:", None))
-        self.emailLabel.setText(QCoreApplication.translate("MainWindow", u"Email:", None))
-        self.passwordLabel.setText(QCoreApplication.translate("MainWindow", u"Password:", None))
-        self.idText.setInputMask("")
-        self.idText.setText(QCoreApplication.translate("MainWindow", u"2055010153", None))
-        self.nameText.setText("")
-        self.AvatarLabel.setText("")
-        self.doneBtn.setText(QCoreApplication.translate("MainWindow", u" Done", None))
-        self.cancelBtn.setText(QCoreApplication.translate("MainWindow", u" Cancel", None))
-        self.idGameLabel.setText(QCoreApplication.translate("MainWindow", u"ID:", None))
-        self.nameGameLabel.setText(QCoreApplication.translate("MainWindow", u"Name:", None))
-        self.genreGameLabel.setText(QCoreApplication.translate("MainWindow", u"Genre:", None))
-        self.priceGameLabel.setText(QCoreApplication.translate("MainWindow", u"Price:", None))
-        self.idGameText.setInputMask("")
-        self.idGameText.setText(QCoreApplication.translate("MainWindow", u"2055010153", None))
-        self.nameGameText.setText("")
-        self.descriptionGameLabel.setText(QCoreApplication.translate("MainWindow", u"Description:", None))
-        self.doneGameBtn.setText(QCoreApplication.translate("MainWindow", u" Done", None))
-        self.cancelGameBtn.setText(QCoreApplication.translate("MainWindow", u" Cancel", None))
-        self.imageGameLabel.setText(QCoreApplication.translate("MainWindow", u"Image:", None))
-        self.imageGameText.setInputMask("")
-        self.imageGameText.setText("")
-        self.videoGameLabel.setText(QCoreApplication.translate("MainWindow", u"Video:", None))
-        self.videoGameText.setInputMask("")
-        self.videoGameText.setText("")
-        self.demoGameText.setInputMask("")
-        self.demoGameText.setText("")
-        self.demoGameLabel.setText(QCoreApplication.translate("MainWindow", u"File:", None))
         self.copyRightTitle.setText(QCoreApplication.translate("MainWindow", u"Copyright By Nhom 3", None))
     # retranslateUi
 

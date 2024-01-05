@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1072</width>
-    <height>721</height>
+    <height>603</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -226,7 +226,7 @@
                </property>
                <property name="icon">
                 <iconset resource="resources.qrc">
-                 <normaloff>:/icons/EC8482/home.svg</normaloff>:/icons/EC8482/home.svg</iconset>
+                 <normaloff>:/icons/EC8482/users.svg</normaloff>:/icons/EC8482/users.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -257,7 +257,7 @@
                </property>
                <property name="icon">
                 <iconset resource="resources.qrc">
-                 <normaloff>:/icons/EC8482/github.svg</normaloff>:/icons/EC8482/github.svg</iconset>
+                 <normaloff>:/icons/EC8482/zap.svg</normaloff>:/icons/EC8482/zap.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -288,7 +288,7 @@
                </property>
                <property name="icon">
                 <iconset resource="resources.qrc">
-                 <normaloff>:/icons/EC8482/home.svg</normaloff>:/icons/EC8482/home.svg</iconset>
+                 <normaloff>:/icons/EC8482/layers.svg</normaloff>:/icons/EC8482/layers.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -319,7 +319,7 @@
                </property>
                <property name="icon">
                 <iconset resource="resources.qrc">
-                 <normaloff>:/icons/EC8482/shopping-cart.svg</normaloff>:/icons/EC8482/shopping-cart.svg</iconset>
+                 <normaloff>:/icons/EC8482/file-text.svg</normaloff>:/icons/EC8482/file-text.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -369,81 +369,6 @@
              <property name="bottomMargin">
               <number>10</number>
              </property>
-             <item>
-              <widget class="QPushButton" name="settingsBtn">
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="toolTip">
-                <string>Go to Setting</string>
-               </property>
-               <property name="text">
-                <string>  Settings</string>
-               </property>
-               <property name="icon">
-                <iconset resource="resources.qrc">
-                 <normaloff>:/icons/EC8482/settings.svg</normaloff>:/icons/EC8482/settings.svg</iconset>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>25</width>
-                 <height>25</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="infoBtn">
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="toolTip">
-                <string>Information for App</string>
-               </property>
-               <property name="text">
-                <string>  Information</string>
-               </property>
-               <property name="icon">
-                <iconset resource="resources.qrc">
-                 <normaloff>:/icons/EC8482/info.svg</normaloff>:/icons/EC8482/info.svg</iconset>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>25</width>
-                 <height>25</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="helpBtn">
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="toolTip">
-                <string>Any Help</string>
-               </property>
-               <property name="text">
-                <string>  Help</string>
-               </property>
-               <property name="icon">
-                <iconset resource="resources.qrc">
-                 <normaloff>:/icons/EC8482/help-circle.svg</normaloff>:/icons/EC8482/help-circle.svg</iconset>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>25</width>
-                 <height>25</height>
-                </size>
-               </property>
-              </widget>
-             </item>
             </layout>
            </widget>
           </item>
@@ -651,7 +576,7 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_8" stretch="1,8,1">
        <property name="spacing">
-        <number>55</number>
+        <number>0</number>
        </property>
        <property name="leftMargin">
         <number>0</number>
@@ -857,7 +782,7 @@
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">border: 1px solid rgb(255,255,255)</string>
+          <string notr="true"/>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_10">
           <property name="leftMargin">
@@ -887,7 +812,7 @@
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">border: 1px solid rgb(255,255,255)</string>
+             <string notr="true"/>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_19">
              <item>
@@ -902,37 +827,20 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">border: 1px solid rgb(255,255,255)</string>
+                <string notr="true"/>
                </property>
                <property name="currentIndex">
                 <number>0</number>
                </property>
                <widget class="QWidget" name="usersPage">
                 <property name="styleSheet">
-                 <string notr="true">border: 1px solid rgb(255,255,255)</string>
+                 <string notr="true"/>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_14">
                  <item>
                   <widget class="QWidget" name="userContent" native="true">
                    <property name="styleSheet">
-                    <string notr="true">QLineEdit
-{
-	background-color: #fff;
-	border-radius: 20px;
-	border: 1px solid rgba(0, 0, 0, 100);
-	padding: 10px;
-	padding-left: 17px;
-	color: #rgb(0,255,255);
-}
-QPushButton
-{
-	border-radius: 20px;
-	border: 1px solid rgba(0, 0, 0, 100);
-}
-QPushButton:hover
-{
-	background-color: rgb(244, 244, 244);
-}</string>
+                    <string notr="true"/>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_13" stretch="1,5">
                     <item>
@@ -940,7 +848,7 @@ QPushButton:hover
                       <widget class="QPushButton" name="delUserBtn">
                        <property name="geometry">
                         <rect>
-                         <x>680</x>
+                         <x>760</x>
                          <y>20</y>
                          <width>151</width>
                          <height>41</height>
@@ -963,7 +871,7 @@ background-color: rgb(255, 0, 0);</string>
                       <widget class="QPushButton" name="editUserBtn">
                        <property name="geometry">
                         <rect>
-                         <x>520</x>
+                         <x>600</x>
                          <y>20</y>
                          <width>151</width>
                          <height>41</height>
@@ -988,7 +896,7 @@ color: #000
                       <widget class="QPushButton" name="addUserBtn">
                        <property name="geometry">
                         <rect>
-                         <x>360</x>
+                         <x>440</x>
                          <y>20</y>
                          <width>151</width>
                          <height>41</height>
@@ -1007,6 +915,26 @@ color: #000</string>
                        </property>
                        <property name="text">
                         <string>Thêm</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="userLabel">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>161</width>
+                         <height>51</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>15</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>USERS</string>
                        </property>
                       </widget>
                      </widget>
@@ -1098,25 +1026,7 @@ background-color: rgb(0, 191, 64);</string>
                  <item>
                   <widget class="QWidget" name="gameContent" native="true">
                    <property name="styleSheet">
-                    <string notr="true">border: 1px solid rgba(255, 0, 0, 100);
-QLineEdit
-{
-	background-color: #fff;
-	border-radius: 20px;
-	border: 1px solid rgba(0, 0, 0, 100);
-	padding: 10px;
-	padding-left: 17px;
-	color: #rgb(0,255,255);
-}
-QPushButton
-{
-	border-radius: 20px;
-	border: 1px solid rgba(0, 0, 0, 100);
-}
-QPushButton:hover
-{
-	background-color: rgb(244, 244, 244);
-}</string>
+                    <string notr="true"/>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_15" stretch="1,5">
                     <item>
@@ -1124,7 +1034,7 @@ QPushButton:hover
                       <widget class="QPushButton" name="delGameBtn">
                        <property name="geometry">
                         <rect>
-                         <x>680</x>
+                         <x>760</x>
                          <y>20</y>
                          <width>151</width>
                          <height>41</height>
@@ -1147,7 +1057,7 @@ background-color: rgb(255, 0, 0);</string>
                       <widget class="QPushButton" name="editGameBtn">
                        <property name="geometry">
                         <rect>
-                         <x>520</x>
+                         <x>600</x>
                          <y>20</y>
                          <width>151</width>
                          <height>41</height>
@@ -1172,7 +1082,7 @@ color: #000
                       <widget class="QPushButton" name="addGameBtn">
                        <property name="geometry">
                         <rect>
-                         <x>360</x>
+                         <x>440</x>
                          <y>20</y>
                          <width>151</width>
                          <height>41</height>
@@ -1191,6 +1101,26 @@ color: #000</string>
                        </property>
                        <property name="text">
                         <string>Thêm</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="userLabel_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>161</width>
+                         <height>51</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>15</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>GAMES</string>
                        </property>
                       </widget>
                      </widget>
@@ -1327,26 +1257,7 @@ background-color: rgb(255, 133, 133);</string>
                  <item>
                   <widget class="QWidget" name="transactionContent" native="true">
                    <property name="styleSheet">
-                    <string notr="true">border: 1px solid rgba(0, 255, 0, 100);
-QLineEdit
-{
-	background-color: #fff;
-	border-radius: 20px;
-	border: 1px solid rgba(0, 0, 0, 100);
-	padding: 10px;
-	padding-left: 17px;
-	color: #rgb(0,255,255);
-}
-QPushButton
-{
-	border-radius: 20px;
-	border: 1px solid rgba(0, 0, 0, 100);
-	font: 14pt &quot;Terminal&quot;;
-}
-QPushButton:hover
-{
-	background-color: rgb(244, 244, 244);
-}</string>
+                    <string notr="true"/>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_16" stretch="1,5">
                     <item>
@@ -1354,7 +1265,7 @@ QPushButton:hover
                       <widget class="QPushButton" name="delTransactionBtn">
                        <property name="geometry">
                         <rect>
-                         <x>660</x>
+                         <x>760</x>
                          <y>20</y>
                          <width>151</width>
                          <height>41</height>
@@ -1371,7 +1282,27 @@ border: 1px solid rgb(255,255,255);
 background-color: rgb(255, 0, 0);</string>
                        </property>
                        <property name="text">
-                        <string>Delete</string>
+                        <string>Xóa</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="userLabel_3">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>231</width>
+                         <height>51</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>15</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>TRANSACTIONS</string>
                        </property>
                       </widget>
                      </widget>
@@ -1508,26 +1439,7 @@ background-color: rgb(0, 102, 255);</string>
                  <item>
                   <widget class="QWidget" name="paymentContent" native="true">
                    <property name="styleSheet">
-                    <string notr="true">border: 1px solid rgba(0, 0, 255, 100);
-QLineEdit
-{
-	background-color: #fff;
-	border-radius: 20px;
-	border: 1px solid rgba(0, 0, 0, 100);
-	padding: 10px;
-	padding-left: 17px;
-	color: #rgb(0,255,255);
-}
-QPushButton
-{
-	border-radius: 20px;
-	border: 1px solid rgba(0, 0, 0, 100);
-	font: 14pt &quot;Terminal&quot;;
-}
-QPushButton:hover
-{
-	background-color: rgb(244, 244, 244);
-}</string>
+                    <string notr="true"/>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_17" stretch="1,5">
                     <item>
@@ -1543,7 +1455,7 @@ QPushButton:hover
                       <widget class="QPushButton" name="delPaymentBtn">
                        <property name="geometry">
                         <rect>
-                         <x>660</x>
+                         <x>760</x>
                          <y>20</y>
                          <width>151</width>
                          <height>41</height>
@@ -1560,7 +1472,27 @@ border: 1px solid rgb(255,255,255);
 background-color: rgb(255, 0, 0);</string>
                        </property>
                        <property name="text">
-                        <string>Delete</string>
+                        <string>Xóa</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="userLabel_4">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>161</width>
+                         <height>51</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>15</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>PAYMENTS</string>
                        </property>
                       </widget>
                      </widget>

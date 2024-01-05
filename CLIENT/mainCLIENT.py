@@ -60,13 +60,10 @@ class CLIENT:
             if not os.path.exists(f'Assets/images/games/{filename}'):
                 img_data = requests.get(game['images']).content
                 if not os.path.exists(f'Assets/images/games/{filename}'):
-                    # print('open')
                     open(filename, 'w').close()
                 if not os.path.exists(f'Assets/images/games/{filename}'):
-                    # print('rename ' + filename)
                     os.rename(filename, f'Assets/images/games/{filename}')
                 with open(f'Assets/images/games/{filename}', 'wb') as handler:
-                    # print('write')
                     handler.write(img_data)
 
     def get_game_image_by_id(self, game_id):
@@ -123,7 +120,6 @@ class CLIENT:
             data = json.load(f)
         return data
 
-    
     def post_transaction(self, new_transaction):
         list_game_carts, _ = self.get_list_games_carts()
         for game in list_game_carts:

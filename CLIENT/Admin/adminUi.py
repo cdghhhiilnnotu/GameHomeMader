@@ -2,7 +2,7 @@ import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from mainCLIENT import *
-from ui_AdminForm1 import *
+from ui_AdminForm import *
 from PySide2.QtWidgets import QMainWindow, QApplication
 from Custom_Widgets.Widgets import *
 
@@ -27,10 +27,6 @@ class MainWindowApp(QMainWindow):
 
 
     def init_default_buttons(self):
-        self.ui.settingsBtn.clicked.connect(lambda: self.ui.centerMenuSubContainer.expandMenu())
-        self.ui.helpBtn.clicked.connect(lambda: self.ui.centerMenuSubContainer.expandMenu())
-        self.ui.infoBtn.clicked.connect(lambda: self.ui.centerMenuSubContainer.expandMenu())
-        
         self.ui.closeCenterMenuBtn.clicked.connect(lambda: self.ui.centerMenuSubContainer.collapseMenu())
 
         self.ui.addUserBtn.clicked.connect(lambda: self.popAddUser())
@@ -251,7 +247,6 @@ class MainWindowApp(QMainWindow):
         self.init_gameTable()
         self.clearGame()
         self.ui.rightMenuContainer.collapseMenu()
-
 
     def deleteUser(self):
         if self.ui.userView.currentRow() >= 0:

@@ -135,20 +135,6 @@
 			]
 		},
         {
-			"name":"centerMenuPages",
-			"navigation":[
-				{
-					"navigationButtons":[
-						{
-							"settingsBtn": "settingsPage",
-                            "infoBtn": "infoPage",
-							"helpBtn": "helpPage"
-						}
-					]
-				}
-			]
-		},
-        {
 			"name":"rightMenuPages",
 			"navigation":[
 				{
@@ -174,18 +160,6 @@
             ],
             "Style":[{
                 "Active": "background-color: #1f232a;",
-                "NotActive": "background-color: transparent;"
-            }]
-        },
-        {
-            "Buttons": [
-                "settingsBtn",
-                "infoBtn",
-                "helpBtn",
-                "closeCenterMenuBtn"
-            ],
-            "Style":[{
-                "Active": "background-color: #2c313c;",
                 "NotActive": "background-color: transparent;"
             }]
         }
