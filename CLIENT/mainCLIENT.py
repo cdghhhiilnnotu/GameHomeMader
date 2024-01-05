@@ -60,15 +60,13 @@ class CLIENT:
             if not os.path.exists(f'Assets/images/games/{filename}'):
                 img_data = requests.get(game['images']).content
                 if not os.path.exists(f'Assets/images/games/{filename}'):
-                    print('open')
+                    # print('open')
                     open(filename, 'w').close()
-                if os.path.exists(filename):
-                    print('created ' + filename)
                 if not os.path.exists(f'Assets/images/games/{filename}'):
-                    print('rename ' + filename)
+                    # print('rename ' + filename)
                     os.rename(filename, f'Assets/images/games/{filename}')
                 with open(f'Assets/images/games/{filename}', 'wb') as handler:
-                    print('write')
+                    # print('write')
                     handler.write(img_data)
 
     def get_game_image_by_id(self, game_id):
@@ -148,10 +146,10 @@ class CLIENT:
 
     def deleteTransaction(self, id_deleted):
         list_transactions = getElementsBy('user_id', self.user['id'], self.dataJson['transactions'])
-        print(list_transactions)
+        # print(list_transactions)
         id_trans = [transac['id'] for transac in list_transactions if transac['status'] == 'pending'
                                                                                 and transac['game_id'] == id_deleted]
-        print(id_trans)
+        # print(id_trans)
 
         return requests.delete(self.BASE + f'transactions/{id_trans[0]}')
 

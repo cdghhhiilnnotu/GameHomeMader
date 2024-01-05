@@ -117,7 +117,7 @@ class MainUserApp(QMainWindow):
             pixmapBtn = QtGui.QPixmap(self.client.get_game_image_by_id(self.listHomeGames[thisIndex]['id']))
             self.listHomeGamesBtn[thisIndex].setIcon(pixmapBtn)
             self.listHomeGamesBtn[thisIndex].setIconSize(QSize(320,165))
-        self.listHomeGamesBtn[thisIndex].clicked.connect(lambda: self.show_Game_Info(self.listHomeGames[thisIndex], mode='Buy'))
+            self.listHomeGamesBtn[thisIndex].clicked.connect(lambda: self.show_Game_Info(self.listHomeGames[thisIndex], mode='Buy'))
 
 
     def initLibraryPage(self, searchStr=''):
@@ -148,10 +148,11 @@ class MainUserApp(QMainWindow):
             pixmapBtn = QtGui.QPixmap(self.client.get_game_image_by_id(self.listLibraryGames[thisIndex]['id']))
             self.listLibraryGamesBtn[thisIndex].setIcon(pixmapBtn)
             self.listLibraryGamesBtn[thisIndex].setIconSize(QSize(320,165))
-        self.listLibraryGamesBtn[thisIndex].clicked.connect(lambda: self.show_Game_Info(self.listLibraryGames[thisIndex], mode='Play'))
+            self.listLibraryGamesBtn[thisIndex].clicked.connect(lambda: self.show_Game_Info(self.listLibraryGames[thisIndex], mode='Play'))
 
 
     def initCartsPage(self):
+        self.client.reset_api()
         self.listCartsGames, self.totalPrice = self.client.get_list_games_carts()
         self.listCartsGameBoxes = [
             self.ui.gameOrderBox_1,
@@ -214,7 +215,7 @@ class MainUserApp(QMainWindow):
             self.listCartsNameGameBoxes[index].setText(self.listCartsGames[index]['name'])
             icon = QtGui.QPixmap(self.client.get_game_image_by_id(self.listCartsGames[index]['id']))
             self.listCartsAvtGameBoxes[index].setPixmap(QtGui.QPixmap(icon))
-            self.listCartsDeleteGameBoxes[index].clicked.connect(lambda: self.removeCartsGameBox(self.listCartsGames[index]['id']))
+            self.listCartsDeleteGameBoxes[index].clicked.connect(lambda: self.show_Game_Info(self.listCartsGames[index], 'Delete'))
 
     # def initDeleteCartBtn(self, index):
         
@@ -222,7 +223,8 @@ class MainUserApp(QMainWindow):
     def removeCartsGameBox(self, id):
         self.client.deleteTransaction(id)
         self.client.reset_api()
-        self.initCartsPage()
+        self.ui.mainPages.setCurrentWidget(self.ui.homePage)
+        # self.initCartsPage()
         # for i in range(len(self.listCartsGameBoxes)):
         #     self.initCartsGameBoxes(i)
         # pass
@@ -237,7 +239,6 @@ class MainUserApp(QMainWindow):
         self.initCartsPage()
         self.initHomePage()
         self.initLibraryPage()
-        
 
     def initUserProfile(self):
         userJson = self.client.user
@@ -266,15 +267,23 @@ class MainUserApp(QMainWindow):
         self.client.reset_api()
 
     def buyPlayEvent(self, game, mode):
-        print(game)
+        print('BUY: ' + str(game))
         if mode == 'Buy':
             new_transaction = Transaction(datetime.now().strftime("%Y-%m-%d %H:%M:%S"), game['id'], Transaction.transaction_number+1,game['price'],'pending', datetime.now().strftime("%Y-%m-%d %H:%M:%S"),self.client.user['id'])
             self.client.post_transaction(new_transaction.toJson())
             self.client.reset_api()
             self.initCartsPage()
-        self.ui.mainPages.setCurrentWidget(self.ui.homePage)
+            self.ui.mainPages.setCurrentWidget(self.ui.cartsPage)
+        elif mode == "Delete":
+            self.removeCartsGameBox(game['id'])
+            self.initCartsPage()
+            self.ui.mainPages.setCurrentWidget(self.ui.cartsPage)
+        else:
+            self.ui.mainPages.setCurrentWidget(self.ui.homePage)
+        
  
     def show_Game_Info(self, thisGame, mode):
+        print('VIEW: ' + str(thisGame))
         self.ui.mainPages.setCurrentWidget(self.ui.gameInfoPage)
         self.ui.descriptionGame.setText(thisGame["description"])
         self.ui.idGameText.setText(str(thisGame["id"]))
