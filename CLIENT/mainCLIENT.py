@@ -140,7 +140,7 @@ class CLIENT:
         amount_pending_transac = [transac['price'] for transac in self.transactions_list if transac['status'] == 'pending']
         return amount_pending_transac
 
-    def deleteTransaction(self, id_deleted):
+    def deleteTransactionByID(self, id_deleted):
         list_transactions = getElementsBy('user_id', self.user['id'], self.dataJson['transactions'])
         id_trans = [transac['id'] for transac in list_transactions if transac['status'] == 'pending'
                                                                                 and transac['game_id'] == id_deleted]

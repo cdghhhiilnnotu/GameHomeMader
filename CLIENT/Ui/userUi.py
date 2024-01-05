@@ -5,7 +5,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from mainCLIENT import *
 from PySide2.QtWidgets import QMainWindow, QApplication
 from PySide2 import QtGui
-from ui_UserForm13 import *
+from ui_UserForm import *
 from Custom_Widgets.Widgets import *
 import urllib
 
@@ -215,7 +215,7 @@ class MainUserApp(QMainWindow):
             self.listCartsDeleteGameBoxes[index].clicked.connect(lambda: self.show_Game_Info(self.listCartsGames[index], 'Delete'))
       
     def removeCartsGameBox(self, id):
-        self.client.deleteTransaction(id)
+        self.client.deleteTransactionByID(id)
         self.client.reset_api()
         self.ui.mainPages.setCurrentWidget(self.ui.homePage)
 
