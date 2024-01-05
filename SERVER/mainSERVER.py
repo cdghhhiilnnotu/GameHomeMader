@@ -113,7 +113,8 @@ def get_transaction_id(transaction_id):
 
 @app.route('/transactions/user/<int:user_id_get>', methods=['GET'])
 def get_transaction_user_id(user_id_get):
-    return jsonify([trans for trans in jsonDict['transactions'] if trans['user_id'] == user_id_get and trans['status'] == 'completed'])
+    list_game_id = [trans['game_id'] for trans in jsonDict['transactions'] if trans['user_id'] == user_id_get and trans['status'] == 'completed']
+    return jsonify([game for game in jsonDict['games'] if game['id'] in list_game_id])
 
 @app.route('/transactions', methods=['POST'])
 def post_transaction():

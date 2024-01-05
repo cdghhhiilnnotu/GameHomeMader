@@ -29,15 +29,6 @@ class CLIENT:
         self.reset_api()
 
         self.user = self.get_user(user_email)
-        # self.init_game_images()
-        # self.get_list_games(self.user['id'])
-        # print(self.user)
-        
-        # self.user_id = self.get_user_id(user_email)
-        # self.user_password = self.get_user(user_email)['password']
-
-        # self.user = getElementBy('id', self.user_id, self.dataJson['users'])
-        # self.transactions_list = getElementsBy('user_id', self.user_id, self.dataJson['transactions'])
 
     def get_api_json(self):
         try:
@@ -141,51 +132,6 @@ class CLIENT:
             if game['id'] == new_transaction['game_id']:
                 return {}
         return requests.post(self.BASE + 'transactions', data=new_transaction)
-
-
-    # def get_home_games(self):
-    #     id_completed_games = [id_game['game_id'] for id_game in self.transactions_list if id_game['status'] == 'completed']
-    #     games = [game for game in self.dataJson['games'] if game['id'] not in id_completed_games]
-    #     return games
-    
-    # def get_home_games_by_search(self, searchStr):
-    #     id_completed_games = [id_game['game_id'] for id_game in self.transactions_list if id_game['status'] == 'completed']
-    #     games = [game for game in self.dataJson['games'] if game['id'] not in id_completed_games 
-    #                                                         and (str(game['id']) in searchStr
-    #                                                              or 
-    #                                                              str(game['name']) in searchStr)]
-    #     return games
-        
-    # def get_library_games(self):
-    #     id_completed_games = [id_game['game_id'] for id_game in self.transactions_list if id_game['status'] == 'completed']
-    #     games = [game for game in self.dataJson['games'] if game['id'] in id_completed_games]
-    #     return games
-    
-    # def get_library_games_by_search(self, searchStr):
-    #     id_completed_games = [id_game['game_id'] for id_game in self.transactions_list if id_game['status'] == 'completed']
-    #     games = [game for game in self.dataJson['games'] if game['id'] in id_completed_games 
-    #                                                         and (str(game['id']) in searchStr
-    #                                                              or 
-    #                                                              str(game['name']) in searchStr)]
-    #     return games
-
-    # def get_cart_games(self):
-    #     self.get_api_json()
-    #     self.transactions_list = getElementsBy('user_id', self.user_id, self.dataJson['transactions'])  
-    #     id_pending_games = [id_game['game_id'] for id_game in self.transactions_list if id_game['status'] == 'pending']
-    #     games = [game for game in self.dataJson['games'] if game['id'] in id_pending_games]
-    #     totalCost = [game['price'] for game in self.dataJson['games'] if game['id'] in id_pending_games]
-    #     self.totalCost = sum(totalCost)
-    #     return games
-
-    # def get_user_id(self, user_email):
-    #     return getElementBy('email', user_email, self.dataJson['users'])['id']
-
-    
-
-    # @staticmethod
-    # def postUser(new_user):
-    #     return requests.post('http://127.0.0.1:5000/users', data=new_user)
 
     def postPayment(self, new_payment):
         return requests.post(self.BASE + 'payments', data=new_payment)
