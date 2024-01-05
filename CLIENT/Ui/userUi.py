@@ -216,18 +216,11 @@ class MainUserApp(QMainWindow):
             icon = QtGui.QPixmap(self.client.get_game_image_by_id(self.listCartsGames[index]['id']))
             self.listCartsAvtGameBoxes[index].setPixmap(QtGui.QPixmap(icon))
             self.listCartsDeleteGameBoxes[index].clicked.connect(lambda: self.show_Game_Info(self.listCartsGames[index], 'Delete'))
-
-    # def initDeleteCartBtn(self, index):
-        
-            
+      
     def removeCartsGameBox(self, id):
         self.client.deleteTransaction(id)
         self.client.reset_api()
         self.ui.mainPages.setCurrentWidget(self.ui.homePage)
-        # self.initCartsPage()
-        # for i in range(len(self.listCartsGameBoxes)):
-        #     self.initCartsGameBoxes(i)
-        # pass
 
     def payingGame(self):
         id_transacs = self.client.get_pending_id()

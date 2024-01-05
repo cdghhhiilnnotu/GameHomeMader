@@ -59,11 +59,9 @@ def put_game_by_id(game_id_put):
 
 @app.route('/games/<int:game_id_delete>', methods=['DELETE'])
 def delete_game_by_id(game_id_delete):
-    itemDelete = ''
-    for item in jsonDict['games']:
-        if int(jsonDict['games'][item]['id']) == int(game_id_delete):
-            itemDelete = item
-    jsonDict['games'].pop(itemDelete)
+    database.execute_SQL(f"""DELETE FROM games WHERE id = {game_id_delete}""")
+    database.init_data()
+
     return jsonify(jsonDict)
 
 
@@ -94,11 +92,9 @@ def put_user_by_id(user_id_put):
 
 @app.route('/users/<int:user_id_delete>', methods=['DELETE'])
 def delete_user_by_id(user_id_delete):
-    itemDelete = ''
-    for item in jsonDict['users']:
-        if int(jsonDict['users'][item]['id']) == int(user_id_delete):
-            itemDelete = item
-    jsonDict['users'].pop(itemDelete)
+    database.execute_SQL(f"""DELETE FROM users WHERE id = {user_id_delete}""")
+    database.init_data()
+
     return jsonify(jsonDict)
 
 
@@ -183,11 +179,16 @@ def put_payment_by_id(payment_id_put):
 
 @app.route('/payments/<int:payment_id_delete>', methods=['DELETE'])
 def delete_payment_by_id(payment_id_delete):
-    itemDelete = ''
-    for item in jsonDict['payments']:
-        if int(jsonDict['payments'][item]['id']) == int(payment_id_delete):
-            itemDelete = item
-    jsonDict['payments'].pop(itemDelete)
+    # itemDelete = ''
+    # for item in jsonDict['payments']:
+    #     if int(jsonDict['payments'][item]['id']) == int(payment_id_delete):
+    #         itemDelete = item
+    # jsonDict['payments'].pop(itemDelete)
+    # return jsonify(jsonDict)
+
+    database.execute_SQL(f"""DELETE FROM payments WHERE id = {payment_id_delete}""")
+    database.init_data()
+
     return jsonify(jsonDict)
 
 

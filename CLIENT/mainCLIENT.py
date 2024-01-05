@@ -146,12 +146,45 @@ class CLIENT:
 
     def deleteTransaction(self, id_deleted):
         list_transactions = getElementsBy('user_id', self.user['id'], self.dataJson['transactions'])
-        # print(list_transactions)
         id_trans = [transac['id'] for transac in list_transactions if transac['status'] == 'pending'
                                                                                 and transac['game_id'] == id_deleted]
-        # print(id_trans)
-
         return requests.delete(self.BASE + f'transactions/{id_trans[0]}')
+    
+    @staticmethod
+    def deletePayment(id):
+        requests.delete("http://127.0.0.1:5000/" + f'payments/{id}')
+
+    @staticmethod
+    def deleteTransaction(id):
+        requests.delete("http://127.0.0.1:5000/" + f'transactions/{id}')
+
+    @staticmethod
+    def deleteUser(id):
+        requests.delete("http://127.0.0.1:5000/" + f'users/{id}')
+
+    @staticmethod
+    def postUser(id):
+        pass
+        # requests.post("http://127.0.0.1:5000/" + f'users/{id}')
+
+    @staticmethod
+    def putUser(id):
+        pass
+        # requests.put("http://127.0.0.1:5000/" + f'users/{id}')
+
+    @staticmethod
+    def deleteGame(id):
+        requests.delete("http://127.0.0.1:5000/" + f'games/{id}')
+
+    @staticmethod
+    def postGame(id):
+        pass
+        # requests.post("http://127.0.0.1:5000/" + f'games/{id}')
+
+    @staticmethod
+    def putGame(id):
+        pass
+        # requests.put("http://127.0.0.1:5000/" + f'games/{id}')
 
 # myCLIENT = CLIENT('nguyenee@example.com')
 # myCLIENT.deleteTransaction(5)

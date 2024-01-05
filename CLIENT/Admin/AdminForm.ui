@@ -892,6 +892,9 @@
             <layout class="QVBoxLayout" name="verticalLayout_19">
              <item>
               <widget class="QCustomQStackedWidget" name="mainPages">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -1010,6 +1013,9 @@ color: #000</string>
                     </item>
                     <item>
                      <widget class="QTableWidget" name="userView">
+                      <property name="enabled">
+                       <bool>false</bool>
+                      </property>
                       <property name="font">
                        <font>
                         <family>MS Shell Dlg 2</family>
@@ -1017,7 +1023,8 @@ color: #000</string>
                        </font>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">color: rgb(0, 0, 0);</string>
+                       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(0, 191, 64);</string>
                       </property>
                       <column>
                        <property name="text">
@@ -1189,7 +1196,126 @@ color: #000</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QTableView" name="gameView"/>
+                     <widget class="QTableWidget" name="gameView">
+                      <property name="enabled">
+                       <bool>false</bool>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>MS Shell Dlg 2</family>
+                        <pointsize>11</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #000;
+background-color: rgb(255, 133, 133);</string>
+                      </property>
+                      <column>
+                       <property name="text">
+                        <string>ID</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Tên</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Thể loại</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Giá</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Ảnh</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Video</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Mô tả</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                     </widget>
                     </item>
                    </layout>
                   </widget>
@@ -1251,7 +1377,126 @@ background-color: rgb(255, 0, 0);</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QTableView" name="transactionView"/>
+                     <widget class="QTableWidget" name="transactionView">
+                      <property name="enabled">
+                       <bool>false</bool>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>MS Shell Dlg 2</family>
+                        <pointsize>11</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(0, 102, 255);</string>
+                      </property>
+                      <column>
+                       <property name="text">
+                        <string>ID</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Mã Người dùng</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Mã Game</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Giá game</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Trạng thái</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Ngày tạo</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Ngày sửa đổi</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                     </widget>
                     </item>
                    </layout>
                   </widget>
@@ -1321,7 +1566,96 @@ background-color: rgb(255, 0, 0);</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QTableView" name="paymentView"/>
+                     <widget class="QTableWidget" name="paymentView">
+                      <property name="enabled">
+                       <bool>false</bool>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>MS Shell Dlg 2</family>
+                        <pointsize>11</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 217, 0);</string>
+                      </property>
+                      <column>
+                       <property name="text">
+                        <string>ID</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Mã giao dịch</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Số tiền</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Phương thức thanh toán</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Mã giao dịch phụ</string>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignCenter</set>
+                       </property>
+                      </column>
+                     </widget>
                     </item>
                    </layout>
                   </widget>

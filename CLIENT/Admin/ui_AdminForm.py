@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'AdminFormLmiHic.ui'
+## Form generated from reading UI file 'AdminFormMRfqkW.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -423,6 +423,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_19.setObjectName(u"verticalLayout_19")
         self.mainPages = QCustomQStackedWidget(self.mainContentsContainer)
         self.mainPages.setObjectName(u"mainPages")
+        self.mainPages.setEnabled(True)
         self.mainPages.setMinimumSize(QSize(0, 0))
         self.mainPages.setStyleSheet(u"border: 1px solid rgb(255,255,255)")
         self.usersPage = QWidget()
@@ -503,11 +504,13 @@ class Ui_MainWindow(object):
         __qtablewidgetitem3.setFont(font2);
         self.userView.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         self.userView.setObjectName(u"userView")
+        self.userView.setEnabled(False)
         font5 = QFont()
         font5.setFamily(u"MS Shell Dlg 2")
         font5.setPointSize(11)
         self.userView.setFont(font5)
-        self.userView.setStyleSheet(u"color: rgb(0, 0, 0);")
+        self.userView.setStyleSheet(u"color: rgb(0, 0, 0);\n"
+"background-color: rgb(0, 191, 64);")
 
         self.verticalLayout_13.addWidget(self.userView)
 
@@ -573,8 +576,42 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_15.addWidget(self.gameBtns)
 
-        self.gameView = QTableView(self.gameContent)
+        self.gameView = QTableWidget(self.gameContent)
+        if (self.gameView.columnCount() < 7):
+            self.gameView.setColumnCount(7)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        __qtablewidgetitem4.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem4.setFont(font2);
+        self.gameView.setHorizontalHeaderItem(0, __qtablewidgetitem4)
+        __qtablewidgetitem5 = QTableWidgetItem()
+        __qtablewidgetitem5.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem5.setFont(font2);
+        self.gameView.setHorizontalHeaderItem(1, __qtablewidgetitem5)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        __qtablewidgetitem6.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem6.setFont(font2);
+        self.gameView.setHorizontalHeaderItem(2, __qtablewidgetitem6)
+        __qtablewidgetitem7 = QTableWidgetItem()
+        __qtablewidgetitem7.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem7.setFont(font2);
+        self.gameView.setHorizontalHeaderItem(3, __qtablewidgetitem7)
+        __qtablewidgetitem8 = QTableWidgetItem()
+        __qtablewidgetitem8.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem8.setFont(font2);
+        self.gameView.setHorizontalHeaderItem(4, __qtablewidgetitem8)
+        __qtablewidgetitem9 = QTableWidgetItem()
+        __qtablewidgetitem9.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem9.setFont(font2);
+        self.gameView.setHorizontalHeaderItem(5, __qtablewidgetitem9)
+        __qtablewidgetitem10 = QTableWidgetItem()
+        __qtablewidgetitem10.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem10.setFont(font2);
+        self.gameView.setHorizontalHeaderItem(6, __qtablewidgetitem10)
         self.gameView.setObjectName(u"gameView")
+        self.gameView.setEnabled(False)
+        self.gameView.setFont(font5)
+        self.gameView.setStyleSheet(u"color: #000;\n"
+"background-color: rgb(255, 133, 133);")
 
         self.verticalLayout_15.addWidget(self.gameView)
 
@@ -624,8 +661,42 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_16.addWidget(self.transactionBtns)
 
-        self.transactionView = QTableView(self.transactionContent)
+        self.transactionView = QTableWidget(self.transactionContent)
+        if (self.transactionView.columnCount() < 7):
+            self.transactionView.setColumnCount(7)
+        __qtablewidgetitem11 = QTableWidgetItem()
+        __qtablewidgetitem11.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem11.setFont(font2);
+        self.transactionView.setHorizontalHeaderItem(0, __qtablewidgetitem11)
+        __qtablewidgetitem12 = QTableWidgetItem()
+        __qtablewidgetitem12.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem12.setFont(font2);
+        self.transactionView.setHorizontalHeaderItem(1, __qtablewidgetitem12)
+        __qtablewidgetitem13 = QTableWidgetItem()
+        __qtablewidgetitem13.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem13.setFont(font2);
+        self.transactionView.setHorizontalHeaderItem(2, __qtablewidgetitem13)
+        __qtablewidgetitem14 = QTableWidgetItem()
+        __qtablewidgetitem14.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem14.setFont(font2);
+        self.transactionView.setHorizontalHeaderItem(3, __qtablewidgetitem14)
+        __qtablewidgetitem15 = QTableWidgetItem()
+        __qtablewidgetitem15.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem15.setFont(font2);
+        self.transactionView.setHorizontalHeaderItem(4, __qtablewidgetitem15)
+        __qtablewidgetitem16 = QTableWidgetItem()
+        __qtablewidgetitem16.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem16.setFont(font2);
+        self.transactionView.setHorizontalHeaderItem(5, __qtablewidgetitem16)
+        __qtablewidgetitem17 = QTableWidgetItem()
+        __qtablewidgetitem17.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem17.setFont(font2);
+        self.transactionView.setHorizontalHeaderItem(6, __qtablewidgetitem17)
         self.transactionView.setObjectName(u"transactionView")
+        self.transactionView.setEnabled(False)
+        self.transactionView.setFont(font5)
+        self.transactionView.setStyleSheet(u"color: rgb(0, 0, 0);\n"
+"background-color: rgb(0, 102, 255);")
 
         self.verticalLayout_16.addWidget(self.transactionView)
 
@@ -677,8 +748,34 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_17.addWidget(self.paymentBtns)
 
-        self.paymentView = QTableView(self.paymentContent)
+        self.paymentView = QTableWidget(self.paymentContent)
+        if (self.paymentView.columnCount() < 5):
+            self.paymentView.setColumnCount(5)
+        __qtablewidgetitem18 = QTableWidgetItem()
+        __qtablewidgetitem18.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem18.setFont(font2);
+        self.paymentView.setHorizontalHeaderItem(0, __qtablewidgetitem18)
+        __qtablewidgetitem19 = QTableWidgetItem()
+        __qtablewidgetitem19.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem19.setFont(font2);
+        self.paymentView.setHorizontalHeaderItem(1, __qtablewidgetitem19)
+        __qtablewidgetitem20 = QTableWidgetItem()
+        __qtablewidgetitem20.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem20.setFont(font2);
+        self.paymentView.setHorizontalHeaderItem(2, __qtablewidgetitem20)
+        __qtablewidgetitem21 = QTableWidgetItem()
+        __qtablewidgetitem21.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem21.setFont(font2);
+        self.paymentView.setHorizontalHeaderItem(3, __qtablewidgetitem21)
+        __qtablewidgetitem22 = QTableWidgetItem()
+        __qtablewidgetitem22.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem22.setFont(font2);
+        self.paymentView.setHorizontalHeaderItem(4, __qtablewidgetitem22)
         self.paymentView.setObjectName(u"paymentView")
+        self.paymentView.setEnabled(False)
+        self.paymentView.setFont(font5)
+        self.paymentView.setStyleSheet(u"color: rgb(0, 0, 0);\n"
+"background-color: rgb(255, 217, 0);")
 
         self.verticalLayout_17.addWidget(self.paymentView)
 
@@ -1125,8 +1222,46 @@ class Ui_MainWindow(object):
         self.delGameBtn.setText(QCoreApplication.translate("MainWindow", u"X\u00f3a", None))
         self.editGameBtn.setText(QCoreApplication.translate("MainWindow", u"S\u1eeda", None))
         self.addGameBtn.setText(QCoreApplication.translate("MainWindow", u"Th\u00eam", None))
+        ___qtablewidgetitem4 = self.gameView.horizontalHeaderItem(0)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"ID", None));
+        ___qtablewidgetitem5 = self.gameView.horizontalHeaderItem(1)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"T\u00ean", None));
+        ___qtablewidgetitem6 = self.gameView.horizontalHeaderItem(2)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Th\u1ec3 lo\u1ea1i", None));
+        ___qtablewidgetitem7 = self.gameView.horizontalHeaderItem(3)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"Gi\u00e1", None));
+        ___qtablewidgetitem8 = self.gameView.horizontalHeaderItem(4)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"\u1ea2nh", None));
+        ___qtablewidgetitem9 = self.gameView.horizontalHeaderItem(5)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"Video", None));
+        ___qtablewidgetitem10 = self.gameView.horizontalHeaderItem(6)
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"M\u00f4 t\u1ea3", None));
         self.delTransactionBtn.setText(QCoreApplication.translate("MainWindow", u"Delete", None))
+        ___qtablewidgetitem11 = self.transactionView.horizontalHeaderItem(0)
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"ID", None));
+        ___qtablewidgetitem12 = self.transactionView.horizontalHeaderItem(1)
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"M\u00e3 Ng\u01b0\u1eddi d\u00f9ng", None));
+        ___qtablewidgetitem13 = self.transactionView.horizontalHeaderItem(2)
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"M\u00e3 Game", None));
+        ___qtablewidgetitem14 = self.transactionView.horizontalHeaderItem(3)
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"Gi\u00e1 game", None));
+        ___qtablewidgetitem15 = self.transactionView.horizontalHeaderItem(4)
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"Tr\u1ea1ng th\u00e1i", None));
+        ___qtablewidgetitem16 = self.transactionView.horizontalHeaderItem(5)
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"Ng\u00e0y t\u1ea1o", None));
+        ___qtablewidgetitem17 = self.transactionView.horizontalHeaderItem(6)
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"Ng\u00e0y s\u1eeda \u0111\u1ed5i", None));
         self.delPaymentBtn.setText(QCoreApplication.translate("MainWindow", u"Delete", None))
+        ___qtablewidgetitem18 = self.paymentView.horizontalHeaderItem(0)
+        ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"ID", None));
+        ___qtablewidgetitem19 = self.paymentView.horizontalHeaderItem(1)
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"M\u00e3 giao d\u1ecbch", None));
+        ___qtablewidgetitem20 = self.paymentView.horizontalHeaderItem(2)
+        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"S\u1ed1 ti\u1ec1n", None));
+        ___qtablewidgetitem21 = self.paymentView.horizontalHeaderItem(3)
+        ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"Ph\u01b0\u01a1ng th\u1ee9c thanh to\u00e1n", None));
+        ___qtablewidgetitem22 = self.paymentView.horizontalHeaderItem(4)
+        ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"M\u00e3 giao d\u1ecbch ph\u1ee5", None));
         self.rightMenuTile.setText(QCoreApplication.translate("MainWindow", u"   Menu", None))
 #if QT_CONFIG(tooltip)
         self.closeRightMenuBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close Menu", None))
