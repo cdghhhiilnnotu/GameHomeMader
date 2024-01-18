@@ -107,6 +107,7 @@ class MainUserApp(QMainWindow):
 
     def initHomeGameBtns(self, thisIndex):
         if thisIndex >= len(self.listHomeGames):
+            print(f"empty image - {thisIndex}")
             pixmapBtn = QtGui.QPixmap('Assets\images\games\empty.png')
             self.listHomeGamesBtn[thisIndex].setIcon(pixmapBtn)
             self.listHomeGamesBtn[thisIndex].setIconSize(QSize(320,165))

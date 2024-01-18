@@ -27,7 +27,6 @@ class CLIENT:
     def __init__(self, user_email='') -> None:
         self.BASE = "http://127.0.0.1:5000/"
         self.reset_api()
-
         self.user = self.get_user(user_email)
 
     def get_api_json(self):
@@ -47,6 +46,7 @@ class CLIENT:
     def reset_api(self):
         self.get_api_json()
         self.dataJson = self.read_api()
+        self.init_game_images()
 
     def get_user(self, user_email):
         return getElementBy('email', user_email, self.dataJson['users'])
